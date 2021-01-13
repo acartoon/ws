@@ -1401,6 +1401,8 @@ html.mfp-helper.ios .modal-dialog {
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-top: -10px;
+  margin-bottom: -10px;
 }
 
 .footer-menu__item {
@@ -1423,9 +1425,29 @@ html.mfp-helper.ios .modal-dialog {
   position: relative;
 }
 
-.footer-menu__link span:before {
-  content: '';
+.footer-menu__link span::before {
+  content: "";
   position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/************** page-footer *******************/
+
+.page-footer {
+  padding: 80px 0;
+  background: #333333;
+}
+
+.page-footer__wrap {
+  margin-bottom: 64px;
+}
+
+.page-footer__in {
+  padding-left: 48px;
+  padding-right: 48px;
 }
 
 /********* payment-systems **********/
