@@ -198,10 +198,10 @@ function onSendAjax(params) {
         cache: false,
         success: function (data) {
          // при интеграции нужно перенести сюда функцию из complete
-            params.onSuccess(data);
+         //    params.onSuccess(data);
         },
         error: function (data) {
-            params.onError();
+            // params.onError();
         },
         complete: function () {
             params.onSuccess();
@@ -213,9 +213,14 @@ function onSendAjax(params) {
  * закрывает попап
  * */
 
-function onClosePopup() {
+function closePopup() {
     $.magnificPopup.close();
     onOverflow();
+}
+
+function onBtnCloseClick() {
+    closePopup();
+    $('#id-success-form').off('click', '.js-modal-close', onBtnCloseClick);
 }
 
 /**
@@ -233,9 +238,6 @@ function onOpenPopup(params) {
             open: function () {
                 params.closePopup();
             },
-            close: function () {
-                params.removeListener();
-            }
         },
         type: params.type,
         closeBtnInside: params.showCloseBtn,
@@ -255,11 +257,8 @@ function openSuccessFormPopup() {
         closeBtnInside: true,
         showCloseBtn: true,
         closePopup: function () {
-            $('#id-success-form').on('click', '.js-modal-close', onClosePopup);
+            $('#id-success-form').on('click', '.js-modal-close', onBtnCloseClick);
         },
-        removeListener() {
-            $('#id-success-form').off('click', '.js-modal-close', onClosePopup);
-        }
     });
 
 }
@@ -275,11 +274,8 @@ function openErrorFormPopup() {
         closeBtnInside: true,
         showCloseBtn: true,
         closePopup: function () {
-            $('#id-error-form').on('click', '.js-modal-close', onClosePopup);
+            onBtnCloseClick();
         },
-        removeListener() {
-            $('#id-error-form').off('click', '.js-modal-close', onClosePopup);
-        }
     })
 
 }
@@ -300,7 +296,7 @@ function onInitForm(formClass, params) {
         evt.preventDefault();
         validate.checkAllError();
 
-        if(!validate.isSubmitForm()) return;
+        // if(!validate.isSubmitForm()) return;
 
         var paramsAjax = {
             type: 'POST',
@@ -336,6 +332,10 @@ onInitForm('.js-form-cases', {
     url: '',
 });
 
+// функция отправки формы на странице кейсов
+onInitForm('.js-form-questions', {
+    url: '',
+});
 
 // удалить при интеграции
 // как пример для активного элемента списка
