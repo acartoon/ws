@@ -1,4 +1,4 @@
-mixin form(fieldList, formName)
+mixin form(fieldList, formName, textBtn)
     form.form(class=`js-form-${formName}`)
         ._in
             each item in fieldList
@@ -8,7 +8,7 @@ mixin form(fieldList, formName)
                     else
                         +formInput(item)
         ._button
-            +buttonBlue(btnText.questions)
+            +buttonBlue(textBtn)
         p.__disclaimer.disclaimer
             | Нажимая на кнопку «Получить ответ», вы даете согласие на отправку и обработку своих &nbsp
             a(href="#") персональных данных

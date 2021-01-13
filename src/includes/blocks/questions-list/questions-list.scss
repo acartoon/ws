@@ -2,13 +2,27 @@
 
 $marging: 30px;
 
+@import "src/style/_";
+
 .questions-list {
     margin: 0;
     margin-bottom: -$marging;
     padding: 0;
     list-style: none;
 
+    @media(min-width: $ml) {
+        column-gap: 30px;
+        column-count: 2;
+        overflow: hidden; /* Fix for firefox and IE 10-11  */
+
+    }
+
     &__item {
+        //display: inline-block;
+        -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+        page-break-inside: avoid; /* Firefox */
+        break-inside: avoid; /* IE 10+ */
+        break-inside: avoid-column;
         margin-bottom: $marging;
     }
 }

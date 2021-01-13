@@ -30,6 +30,15 @@
         letter-spacing: 0.5px;
     }
 
+    &__title {
+        margin: 0;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 52px;
+        line-height: 60px;
+        font-family: $fontHelvetica;
+    }
+
     &__subheading {
         margin-bottom: 56px;
     }

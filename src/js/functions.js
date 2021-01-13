@@ -201,7 +201,7 @@ function onSendAjax(params) {
             params.onSuccess(data);
         },
         error: function (data) {
-            // params.onError();
+            params.onError();
         },
         complete: function () {
             params.onSuccess();
@@ -209,10 +209,10 @@ function onSendAjax(params) {
     });
 }
 
-
 /**
  * закрывает попап
  * */
+
 function onClosePopup() {
     $.magnificPopup.close();
     onOverflow();

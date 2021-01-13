@@ -1,2 +1,36 @@
+-
+    var fieldList = [
+        {
+            isError: false,
+            label: 'Ваше имя',
+            errorText: 'Введите Ваше имя',
+            requireType: 'text',
+            type: 'text',
+            placeholder: 'Введите имя и фамилию',
+            isRequire: true,
+            value: ''
+        },
+        {
+            isError: false,
+            label: 'Адрес электронной почты',
+            errorText: 'Введите адрес почты',
+            requireType: 'email',
+            type: 'email',
+            placeholder: 'e-mail@example.com',
+            isRequire: true,
+            value: ''
+        },
+        {
+            isError: false,
+            label: 'Телефон',
+            errorText: 'Введите номер телефона',
+            requireType: 'tel',
+            type: 'tel',
+            placeholder: 'X (XXX) XX-XX-XX',
+            isRequire: true,
+            value: ''
+        },
+    ]
+
 mixin formCases
-    body
+    +form(fieldList, 'cases', btnText.send)

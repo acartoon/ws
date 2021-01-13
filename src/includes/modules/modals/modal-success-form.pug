@@ -1,13 +1,13 @@
 -
-    var param = {
+    var paramSuccessForm = {
         class: "modal",
         title: "Спасибо за обращение",
         id: "id-success-form",
-        titleclass: "subtitle"
+        titleClass: "subtitle"
     }
 mixin modalSuccessForm
-    +modal(param)
-        p Наш специалист перезвонит вам в ближайшее время
+    +modal(paramSuccessForm)
+        p.modal__subheading.page-subheading Наш специалист перезвонит вам в ближайшее время
         +buttonBlue(btnText.ok)
 
 

@@ -1,2 +1,26 @@
+-
+    var questionsForm = [
+        {
+            isError: false,
+            isRequire: true,
+            label: 'Адрес электронной почты',
+            errorText: 'Введите адрес почты',
+            requireType: 'email',
+            type: 'email',
+            placeholder: 'e-mail@example.com',
+            value: ''
+        },
+        {
+            isError: false,
+            isRequire: false,
+            label: 'ваш Вопрос',
+            errorText: 'Напишите свой вопрос',
+            requireType: 'textarea',
+            type: 'textarea',
+            placeholder: 'Напишите свой вопрос',
+            value: ''
+        },
+    ]
+
 mixin formQuestions
-    body
+    +form(questionsForm, 'questions', btnText.questions)

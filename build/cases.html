@@ -11,7 +11,7 @@
     <title>Кейсы</title>
   </head>
   <body>
-    <header class="page-header" style="background-image: url(/i/header/cases.png)">
+    <header class="page-header page-header--cases" style="background-image: url(/i/header/cases.png)">
       <div class="page-header__in">
         <div class="page-header__preheader d-xs-none d-m-block">
           <div class="page-header__contacts">
@@ -91,7 +91,7 @@
         </div>
       </div>
       <div class="page-header__body">
-        <h1 class="page-header__title page-title page-title--cases">Кейсы</h1>
+        <h1 class="page-header__title page-title">Кейсы</h1>
       </div>
     </header>
     <main class="cases-page page">
@@ -191,12 +191,46 @@
             </li>
           </ul>
         </section>
-        <section class="casess-page__form">
+        <section class="casess-page__form page__form">
           <div class="page__title-block">
             <h2 class="page-subtitle cases-page__page-subtitle">Свяжитесь с нами</h2>
             <p class="cases-page__subheading page-subheading">Мы работаем со всей страной от Владивостока до Калининграда</p>
           </div>
-          <body></body>
+          <form class="form js-form-cases">
+            <div class="form__in">
+              <div class="form__input">
+                <label class="form-input">
+                  <div class="form-input__wrap">
+                    <p class="form-input__label">Ваше имя</p>
+                    <p class="form-input__error" data-field-error>Введите Ваше имя</p>
+                  </div>
+                  <input class="form-input__input" data-type="text" type="text" placeholder="Введите имя и фамилию" required value="">
+                </label>
+              </div>
+              <div class="form__input">
+                <label class="form-input">
+                  <div class="form-input__wrap">
+                    <p class="form-input__label">Адрес электронной почты</p>
+                    <p class="form-input__error" data-field-error>Введите адрес почты</p>
+                  </div>
+                  <input class="form-input__input" data-type="email" type="email" placeholder="e-mail@example.com" required value="">
+                </label>
+              </div>
+              <div class="form__input">
+                <label class="form-input">
+                  <div class="form-input__wrap">
+                    <p class="form-input__label">Телефон</p>
+                    <p class="form-input__error" data-field-error>Введите номер телефона</p>
+                  </div>
+                  <input class="form-input__input" data-type="tel" type="tel" placeholder="X (XXX) XX-XX-XX" required value="">
+                </label>
+              </div>
+            </div>
+            <div class="form__button">
+              <button class="button--blue button" type="submit">Отправить</button>
+            </div>
+            <p class="form__disclaimer disclaimer">Нажимая на кнопку «Получить ответ», вы даете согласие на отправку и обработку своих &nbsp<a href="#">персональных данных</a></p>
+          </form>
         </section>
       </div>
     </main>
@@ -204,20 +238,20 @@
       <div class="main-footer__modal-block">
         <div class="modal--modal modal" id="id-success-form">
           <div class="modal__in">
-            <h4 class="modal__undefined gradient-text">Спасибо за обращение</h4>
+            <h4 class="modal__subtitle gradient-text">Спасибо за обращение</h4>
             <!--button(type='button')._close.button-close-->
             <div class="modal__body">
-              <p>Наш специалист перезвонит вам в ближайшее время</p>
+              <p class="modal__subheading page-subheading">Наш специалист перезвонит вам в ближайшее время</p>
               <button class="button--blue button" type="submit">Хорошо</button>
             </div>
           </div>
         </div>
-        <div class="modal--modal modal" id="id-success-form">
+        <div class="modal--modal modal" id="id-error-form">
           <div class="modal__in">
-            <h4 class="modal__undefined gradient-text">Спасибо за обращение</h4>
+            <h4 class="modal__subtitle gradient-text">Ошибка отправки формы</h4>
             <!--button(type='button')._close.button-close-->
             <div class="modal__body">
-              <p>Извините, попробуйте позднее</p>
+              <p class="modal__subheading page-subheading">Извините, попробуйте позднее</p>
               <button class="button--blue button" type="submit">Хорошо</button>
             </div>
           </div>
