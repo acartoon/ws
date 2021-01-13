@@ -12,6 +12,18 @@ body {
   overflow: hidden;
 }
 
+.hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 .container {
   max-width: 1300px;
   margin-right: auto;
@@ -205,15 +217,20 @@ body {
 }
 
 .page__main-title {
+  width: 100%;
   margin-bottom: 64px;
   text-align: center;
-  width: 100%;
+}
+
+.page__footer {
+  padding: 80px 48px 40px;
+  background: #333333;
 }
 
 .page__form {
   max-width: 420px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 .page__section {
@@ -222,6 +239,10 @@ body {
 
 .page__title-block {
   margin: 0 0 64px;
+}
+
+.page__modal-block {
+  display: none;
 }
 
 /*********** button-close *************/
@@ -1374,8 +1395,54 @@ html.mfp-helper.ios .modal-dialog {
   background: #F8F8FA;
 }
 
-.main-footer__modal-block {
-  display: none;
+/*************** footer-menu ****************/
+
+.footer-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-menu__item {
+  display: block;
+}
+
+.footer-menu__link {
+  display: block;
+  padding: 10px 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.footer-menu__link span {
+  position: relative;
+}
+
+.footer-menu__link span:before {
+  content: '';
+  position: absolute;
+}
+
+/********* payment-systems **********/
+
+.payment-systems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: -32px;
+  padding: 0;
+  list-style: none;
+}
+
+.payment-systems__item {
+  height: 24px;
+  margin-bottom: 32px;
 }
 
 @charset "UTF-8";

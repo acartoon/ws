@@ -1,0 +1,14 @@
+-
+    var paymentSystemsList = [
+        {name: 'MasterCard', img: 'payment_master'},
+        {name: 'WebMoney', img: 'payment_web'},
+        {name: 'Yandex', img: 'payment_yandex'},
+        {name: 'Visa', img: 'payment_visa'}
+    ];
+
+mixin paymentSystems
+    ul.payment-systems
+        each val in paymentSystemsList
+            li._item
+                img(src=`i/footer/${val.img}.svg`)
+                p.hidden=val.name

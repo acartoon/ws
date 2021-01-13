@@ -1,0 +1,36 @@
+/*************** footer-menu ****************/
+
+@import "src/style/_";
+
+
+.footer-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__item {
+        display: block;
+    }
+
+    &__link {
+        display: block;
+        padding: 10px 0;
+        font-family: $fontOpenSans;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 20px;
+        color: color(white);
+        text-align: center;
+        text-decoration: none;
+
+        span {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+            }
+        }
+
+    }
+}

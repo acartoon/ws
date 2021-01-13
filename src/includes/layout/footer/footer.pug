@@ -1,5 +1,18 @@
+-
+    var footerMenu = [
+        [
+            'О компании', 'Магазин задач', 'FAQ', 'Блог', 'Кейсы', 'Партнерам', 'Контакты'
+        ],
+        [
+            'Пользовательское соглашение', 'Политика конфиденциальности', 'Скачать реквизиты'
+        ]
+    ]
+
+
 mixin footer(pageTitle)
-    footer.main-footer
-        ._modal-block
+    footer.page__footer
+        .page__main-footer
+            +mainFooter
+        .page__modal-block
             +modalSuccessForm
             +modalErrorForm

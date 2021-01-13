@@ -1,0 +1,19 @@
+/********* payment-systems **********/
+
+$margin: 32px;
+
+
+.payment-systems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: -$margin;
+    padding: 0;
+    list-style: none;
+
+    &__item {
+        height: 24px;
+        margin-bottom: $margin;
+    }
+}
