@@ -1,0 +1,15 @@
+mixin form(fieldList, formName)
+    form.form(class=`js-form-${formName}`)
+        ._in
+            each item in fieldList
+                ._input
+                    if(item.type == 'textarea')
+                        +formTextarea(item)
+                    else
+                        +formInput(item)
+        ._button
+            +buttonBlue(btnText.questions)
+        p.__disclaimer.disclaimer
+            | Нажимая на кнопку «Получить ответ», вы даете согласие на отправку и обработку своих &nbsp
+            a(href="#") персональных данных
+

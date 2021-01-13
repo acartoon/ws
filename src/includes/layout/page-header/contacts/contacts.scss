@@ -1,0 +1,58 @@
+/************ контакты в шапке ***************/
+
+@import "src/style/_";
+
+.contacts {
+    &__link {
+        display: block;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 28px;
+        font-family: $fontOpenSans;
+        text-align: center;
+        color: color(black);
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: color(black);
+        }
+
+        @media (min-width: $mobMenu) {
+            margin-right: 24px;
+            padding: 0;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: right;
+            color: color(white);
+        }
+
+        @media (min-width: 768px) {
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+    }
+
+    &--preheader {
+
+        @media (min-width: $mobMenu) {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        @media (min-width: $preheaderPoint) {
+            flex-wrap: nowrap;
+            flex-direction: row;
+        }
+
+        @media (min-width: $desktop) {
+            justify-content: flex-start;
+        }
+    }
+}
+
+/************ end контакты в шапке ***************/

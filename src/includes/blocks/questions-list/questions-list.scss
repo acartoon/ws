@@ -1,0 +1,14 @@
+/************** questions-list  *******************/
+
+$marging: 30px;
+
+.questions-list {
+    margin: 0;
+    margin-bottom: -$marging;
+    padding: 0;
+    list-style: none;
+
+    &__item {
+        margin-bottom: $marging;
+    }
+}

@@ -1,0 +1,13 @@
+mixin formInput(param)
+    label(class=param.isError ? 'form-input--error' : '').form-input
+        ._wrap
+            p._label=param.label
+            p(data-field-error=true)._error=param.errorText
+        input(
+            data-type=param.requireType,
+            type=param.type,
+            placeholder=param.placeholder,
+            required=param.isRequire,
+            value=param.value,
+            )._input
+

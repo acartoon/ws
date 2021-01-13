@@ -1,0 +1,74 @@
+/************навигация по сайту***************/
+
+$speed: 250ms;
+$transition: border-color $speed ease-in, text-decoration-color $speed ease-in;
+
+@import "src/style/_";
+
+.site-nav {
+    margin: -12px 0 0;
+    padding: 0;
+    list-style: none;
+
+    &__item {
+
+        @media (min-width: $desktop) {
+            margin-right: 6px;
+            margin-left: 6px;
+        }
+    }
+
+    &__link {
+        display: block;
+        box-sizing: border-box;
+        padding: 12px 12px 20px;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 33px;
+        font-family: "Open Sans", "Arial", sans-serif;
+        text-align: left;
+        color: #000000;
+        text-decoration: none;
+        letter-spacing: 0.5px;
+
+        &:hover {
+
+        }
+
+        @media (min-width: 480px) {
+            text-align: center;
+        }
+
+        @media (min-width: $desktop) {
+            margin-bottom: 6px;
+            padding: 10px 20px;
+            font-size: 14px;
+            line-height: 19px;
+            color: color(white);
+            text-decoration-line: underline;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            transition: $transition;
+
+            &:hover {
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                transition: $transition;
+            }
+
+            &--active {
+                text-decoration-color: transparent;
+                border: 1px solid color(white);
+                transition: $transition;
+            }
+        }
+    }
+
+    @media (min-width: $desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 63px -6px;
+    }
+}
+
+/************ end навигация по сайту ***************/

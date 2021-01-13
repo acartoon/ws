@@ -1,0 +1,5 @@
+mixin questionBlock(question)
+    div.question-block
+        p._title=question.title
+        p._text=question.text
+        i(class=`question-block__icon--${question.icon}`)._icon

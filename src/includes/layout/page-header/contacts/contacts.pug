@@ -1,0 +1,14 @@
+mixin _contactsBlock(mixin)
+    - var mixin = mixin ? mixin : '';
+    div(class=mixin).contacts
+        ._item
+            a(href=contacts.email)._link=contacts.email
+        ._item
+            a(href=contacts.telLink)._link=contacts.tel
+
+mixin contactsBlock()
+    +_contactsBlock()
+
+mixin contactsPreheader()
+    +_contactsBlock('contacts--preheader')
+

@@ -1,0 +1,27 @@
+$xs: 0;
+$sm: 480px;
+$m: 560;
+$ml: 640px;
+$md: 1024;
+
+
+$colors: (
+    blue: #0ABAEE,
+    green: #5CD384,
+    white: #ffffff,
+    black: #000000,
+    grey: #ECECEC,
+    light_grey: #F8F8FA,
+    dark_grey: #696969,
+    placeholder: #808080,
+    disclaimer: #989898,
+    error: #e94e1d
+);
+
+$fontOpenSans: "Open Sans", "Arial", sans-serif;
+$fontHelvetica: "Helvetica Neue",  "Arial", sans-serif;
+$mobMenu: 560px;
+$desktop: 1024px;
+$preheaderPoint: 768px;
+
+$speed: 300ms;

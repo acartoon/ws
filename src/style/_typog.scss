@@ -1,0 +1,59 @@
+/************ типографка ***************/
+
+@import "_";
+
+.page-title {
+    margin: 0;
+    font-weight: 200;
+    font-size: 32px;
+    line-height: 44px;
+    font-family: $fontHelvetica;
+    text-align: center;
+    color: color(white);
+    letter-spacing: 2px;
+
+    &--cases {
+        padding-top: 105px;
+        padding-bottom: 216px;
+    }
+}
+
+.page-main-title {
+    @include gradientText;
+    margin: 0;
+    font-size: 40px;
+    line-height: 50px;
+    font-family: $fontHelvetica;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.page-subtitle {
+    margin: 0;
+    font-style: normal;
+    font-family: $fontHelvetica;
+    text-align: center;
+    font-weight: 100;
+    font-size: 40px;
+    line-height: 50px;
+    color: color(black);
+    letter-spacing: 2px;
+}
+
+.page-subheading {
+    margin: 0;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 165%;
+    font-family: $fontOpenSans;
+    text-align: center;
+    color: color(black);
+
+}
+
+.gradient-text {
+
+    @include gradientText;
+}
+
+/************ end типографика ***************/

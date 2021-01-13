@@ -1,0 +1,21 @@
+mixin pageHeader(image, contentClassModifier)
+    header.page-header(style=`background-image: url(/i/header/${image}.png)`)
+        ._in
+            ._preheader.d-xs-none.d-m-block
+                ._contacts
+                    +contactsPreheader()
+                ._callback
+                    +buttonWhite(btnText.callback)
+                p._separatop.d-none.d-md-block
+            ._logo
+                +logo()
+            ._main-nav
+                +mainNav()
+        ._body
+            h1._title.page-title(class=`page-title--${contentClassModifier}`)=pageTitle
+            if(indexPage)
+                ._wrap
+                    ._block.-partner
+                        +partner()
+                    ._block
+                        +minPrice()

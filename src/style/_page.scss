@@ -1,0 +1,19 @@
+/************ page ***************/
+
+.page {
+    padding-top: 96px;
+    padding-bottom: 96px;
+
+    &__main-title {
+        margin-bottom: 64px;
+        text-align: center;
+    }
+
+    &__section {
+        margin-bottom: 96px;
+    }
+
+    &__title-block {
+        margin: 0 0 64px;
+    }
+}

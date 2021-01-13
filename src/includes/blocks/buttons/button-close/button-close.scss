@@ -1,0 +1,38 @@
+/*********** button-close *************/
+
+@import "src/style/_";
+
+.button-close {
+    position: relative;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: color(blue);
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: color(blue);
+        transform: translateY(-50%) rotate(-45deg);
+    }
+}
+
+/*********** end button-close *************/

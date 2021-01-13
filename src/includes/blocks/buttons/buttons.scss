@@ -1,0 +1,100 @@
+/************ кнопки ***************/
+
+@import "src/style/_";
+
+$radius: 4px;
+
+.button {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 24px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: $fontOpenSans;
+    color: color(blue);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: transparent;
+    border: 1px solid color(blue);
+    border-radius: $radius;
+    cursor: pointer;
+
+    &--gradient {
+        position: relative;
+        margin: 1px;
+        background: color(white);
+        border: none;
+        border-radius: $radius;
+
+        span {
+
+            @include gradientText;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            bottom: -1px;
+            left: -1px;
+            z-index: -1;
+            background: $gradient;
+            border-radius: $radius;
+            border-radius: $radius;
+            border-radius: $radius;
+        }
+    }
+
+    &--white {
+        display: inline-block;
+        box-sizing: border-box;
+        width: auto;
+        padding: 6px 16px;
+        font-size: 14px;
+        line-height: 24px;
+        color: color(white);
+        letter-spacing: 0.03em;
+        background: transparent;
+        border-color: color(white);
+        border-radius: $radius;
+    }
+
+    &--blue {
+        color: color(white);
+        background: color(blue);
+    }
+
+    &--icon {
+        display: flex;
+        padding: 10px 23px;
+        background: color(white);
+        border: none;
+
+        span {
+            font-size: 14px;
+            line-height: 19px;
+        }
+
+        & span {
+
+            @include gradientText;
+            font-weight: normal;
+            text-transform: none;
+            letter-spacing: normal;
+        }
+
+        & .button__icon {
+            $size: 16px;
+            display: block;
+            width: $size;
+            height: $size;
+            margin-left: 4px;
+            line-height: 0;
+        }
+    }
+}
+
+/************ end кнопки ***************/

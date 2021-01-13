@@ -1,0 +1,14 @@
+-
+    var params = {
+        class: "modal",
+        title: "Ошибка отправки формы",
+        id: "id-error-form",
+        titleclass: "subtitle"
+    }
+
+
+mixin modalErrorForm
+    +modal(param)
+        p Извините, попробуйте позднее
+        +buttonBlue(btnText.ok)
+

@@ -1,0 +1,14 @@
+-
+    var param = {
+        class: "modal",
+        title: "Спасибо за обращение",
+        id: "id-success-form",
+        titleclass: "subtitle"
+    }
+mixin modalSuccessForm
+    +modal(param)
+        p Наш специалист перезвонит вам в ближайшее время
+        +buttonBlue(btnText.ok)
+
+
+

@@ -1,0 +1,83 @@
+/***************** form-input *********************/
+
+@import "src/style/_";
+$point: 640px;
+
+.form-input {
+    $this: &;
+
+    position: relative;
+    display: block;
+
+
+    &__wrap {
+        margin: 0 0 10px;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 13px;
+        font-family: $fontOpenSans;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        @media (min-width: $point) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__error {
+        position: absolute;
+        bottom: 0;
+        display: none;
+        margin: 0;
+        color: color(error);
+
+        #{$this}--error & {
+            display: block;
+        }
+
+        @media (min-width: $point) {
+            position: relative;
+        }
+    }
+
+    &__label {
+        margin: 0;
+        color: color(dark_grey);
+    }
+
+    &__input {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 19px;
+        font-size: 18px;
+        line-height: 30px;
+        background: transparent;
+        border: 1px solid color(blue);
+        outline: none;
+
+        #{$this}--error & {
+            border: 1px solid color(error);
+        }
+
+        @include placeholder {
+            align-items: center;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 30px;
+            font-family: $fontOpenSans;
+            color: color(placeholder);
+            letter-spacing: 0.05em;
+        }
+    }
+
+    &--error {
+        padding-bottom: 30px;
+
+        @media (min-width: $point) {
+            padding-bottom: 0;
+        }
+    }
+}
+
+/***************** end form-input *********************/

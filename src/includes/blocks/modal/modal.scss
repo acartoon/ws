@@ -1,0 +1,36 @@
+/*************** modal ******************/
+
+@import "src/style/_";
+
+.modal {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 790px;
+    margin: 0 auto;
+    padding: 54px 20px 66px;
+    background: color(white);
+
+    &__in {
+        max-width: 560px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    @media (min-width: 560px) {
+        padding: 60px 56px 64px;
+    }
+
+    &__subtitle {
+        width: 100%;
+        margin: 0 0 8px;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 41px;
+        text-align: center;
+        letter-spacing: 0.5px;
+    }
+
+    &__subheading {
+        margin-bottom: 56px;
+    }
+}

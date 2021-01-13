@@ -1,0 +1,60 @@
+-
+    var casesList = [
+        {
+            text: 'Автодобавление контактов в email-рассылку UniSender',
+            icons: 'workshop',
+            img: 'office'
+        },
+        {
+            text: 'Создание личных кабинетов на сайте для существующих клиентов из базы 1С',
+            icons: 'delta',
+            img: 'cabinet'
+        },
+        {
+            text: 'Удаление вредоносного кода (вирусов) с сайта',
+            icons: 'wine',
+            img: 'open-shop'
+        },
+        {
+            text: 'Вывод разделов каталога на главной',
+            icons: 'cosmodrome',
+            img: 'sections'
+        },
+        {
+            text: 'Вывод региональных данных на сайте',
+            icons: 'mamaki',
+            img: 'data'
+        },
+        {
+            text: 'Генерации прайс-листа каталога товаров в xls-формате',
+            icons: 'kitchen-team',
+            img: 'price-list'
+        },
+        {
+            text: 'Создание пользовательского типа свойства заказа',
+            icons: '',
+            img: 'properties'
+        },
+        {
+            text: 'Генерации прайс-листа каталога товаров в xls-формате',
+            icons: '',
+            img: 'price-list'
+        },
+        {
+            text: 'Создание robots.txt, sitemap.xml и счетчиков для разных поддоменов',
+            icons: '',
+            img: 'robots'
+        },
+        {
+            text: 'Синхронизация статей тестовой площадки с продакшн-сайтом',
+            icons: 'workshop',
+            img: 'syncing'
+        }
+    ]
+
+mixin caseList
+    ul.case-list
+        each val in casesList
+            li._item
+                ._in
+                    +caseBlock(val)

@@ -1,0 +1,13 @@
+{
+  "projectName": "gen beauty",
+  "pages": {
+    "components.html": "Компоненты",
+    "index.html": "Главная",
+    "catalog.html": "Каталог",
+    "product.html": "Карточка товара",
+    "product-states.html": "Карточка товара",
+    "new-pass.html": "Восстановление пароля",
+    "basket.html": "Корзина",
+    "all-reg.html": "Регистрация/авторизация/смена пароля"
+  }
+}

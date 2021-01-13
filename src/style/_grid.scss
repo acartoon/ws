@@ -1,0 +1,37 @@
+@import "_";
+
+
+/************ стили сетки ***************/
+$grid-breakpoints: (
+    xs: $xs,
+    sm: 480,
+    m: $m,
+    md: $md,
+);
+
+@each $key, $breakpoints in $grid-breakpoints {
+
+    .d-#{$key}-block {
+
+        @include get-adaptive($breakpoints) {
+            display: block;
+        }
+    }
+
+    .d-#{$key}-none {
+
+        @include get-adaptive($breakpoints) {
+            display: none;
+        }
+    }
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block !important;
+}
+
+/************ end стили сетки ***************/
