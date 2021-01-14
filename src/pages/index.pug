@@ -2,17 +2,15 @@ extends ../includes/layout/layout.pug
 
 block test
     include ../includes/_var
-    - var indexPage = true;
     - var headerImage = paramsPage.INDEX.image;
     - var contentClassModifier = paramsPage.INDEX.class
-    - var pageTitle = "Понятная техподдержка сайтов на 1С-Битрикс с гарантией выполнения задач";
 
 block header
     .page-header__wrap
-        .page-header__block.page-header--partner
+        .page-header__block.page-header--partners
             +partner()
         .page-header__block
             +minPrice()
-        h1.page-header__title.page-title=pageTitle
+        h1.page-header__title.page-title=paramsPage.INDEX.header
 block content
     h2 главная страница сайта
