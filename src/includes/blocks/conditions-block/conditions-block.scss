@@ -1,0 +1,35 @@
+/**************** conditions-block *****************/
+
+$conditionsList: ("conditions-more", "conditions-status", "conditions-benefit");
+
+@import "src/style/_";
+
+
+.conditions-block {
+    padding: 40px 30px 10px;
+
+    &__text {
+        font-style: normal;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 165%;
+        font-family: $fontOpenSans;
+        text-align: center;
+    }
+    &__icon {
+        display: block;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 35px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @each $item in $conditionsList {
+            &--#{$item} {
+                background-image: url("i/partners/#{$item}.svg");
+            }
+        }
+    }
+
+}

@@ -1,0 +1,19 @@
+mixin _partnersList(mixin, list, state)
+    ul(class=state ? "partner-list--arrow": "").partner-list
+        each val in list
+            li._item
+                ._in
+                if(mixin == 'benefit')
+                    +benefitBlock(val)
+                else if(mixin == 'conditions')
+                    +conditionsBlock(val)
+                else if(mixin == 'advantages')
+                    +advantagesBlock(val)
+
+
+mixin partnersList(mixin, list)
+    +_partnersList(mixin, list)
+
+mixin partnersListArrow(mixin, list)
+    - var state = "arrow";
+    +_partnersList(mixin, list, state)

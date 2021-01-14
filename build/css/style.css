@@ -36,6 +36,10 @@ body {
   }
 }
 
+.bg-white {
+  background: #ffffff;
+}
+
 /************ стили сетки ***************/
 
 .d-xs-block {
@@ -220,6 +224,7 @@ body {
 .page {
   padding-top: 96px;
   padding-bottom: 96px;
+  background: #F8F8FA;
 }
 
 .page__main-title {
@@ -230,8 +235,8 @@ body {
 
 .page__form {
   max-width: 420px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 .page__section {
@@ -240,6 +245,65 @@ body {
 
 .page__title-block {
   margin: 0 0 64px;
+}
+
+/****************** benefit-block *******************/
+
+.benefit-block {
+  position: relative;
+  padding: 30px;
+  padding-left: 38px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 8px 12px 25px rgba(11, 24, 36, 0.1);
+}
+
+.benefit-block:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: calc(100% - 8px);
+  background: linear-gradient(188.47deg, #326BD2 0%, #5CD384 87.04%);
+  opacity: 0.6;
+}
+
+.benefit-block__icon {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.benefit-block__icon--persent-benefit {
+  background-image: url("..//i/partners/persent-benefit.svg");
+}
+
+.benefit-block__icon--payment-benefit {
+  background-image: url("..//i/partners/payment-benefit.svg");
+}
+
+.benefit-block__icon--limit-benefit {
+  background-image: url("..//i/partners/limit-benefit.svg");
+}
+
+.benefit-block__title {
+  margin: 0 0 20px;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: 0.01em;
+}
+
+.benefit-block__text {
+  margin: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 165%;
 }
 
 /*********** button-close *************/
@@ -512,6 +576,43 @@ body {
 }
 
 /******************* end case-list *********************/
+
+/**************** conditions-block *****************/
+
+.conditions-block {
+  padding: 40px 30px 10px;
+}
+
+.conditions-block__text {
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 165%;
+  font-family: "Open Sans", "Arial", sans-serif;
+  text-align: center;
+}
+
+.conditions-block__icon {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.conditions-block__icon--conditions-more {
+  background-image: url("..//i/partners/conditions-more.svg");
+}
+
+.conditions-block__icon--conditions-status {
+  background-image: url("..//i/partners/conditions-status.svg");
+}
+
+.conditions-block__icon--conditions-benefit {
+  background-image: url("..//i/partners/conditions-benefit.svg");
+}
 
 /********************** disclaimer **************************/
 
@@ -1255,6 +1356,40 @@ html.mfp-helper.ios .modal-dialog {
   margin-bottom: 56px;
 }
 
+.partner-list {
+  margin: 0;
+  margin-bottom: -30px;
+  padding: 0;
+  list-style: none;
+}
+
+.partner-list--arrow {
+  margin-bottom: 0;
+}
+
+.partner-list--arrow .partner-list__item {
+  position: relative;
+  margin-bottom: 0;
+  padding-bottom: 32px;
+}
+
+.partner-list--arrow .partner-list__item:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  background: url("..//i/icons/arrow-down.svg") no-repeat center;
+  background-size: contain;
+  transform: translateX(-50%);
+}
+
+.partner-list__item {
+  display: block;
+  margin-bottom: 30px;
+}
+
 /*********** question-block *************/
 
 .question-block {
@@ -1385,6 +1520,21 @@ html.mfp-helper.ios .modal-dialog {
 }
 
 /******************* end cases-page *********************/
+
+/****************** partner-page *******************/
+
+.partners-page {
+  padding-top: 0;
+}
+
+.partners-page__section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.partners-page__section--white {
+  background: #ffffff;
+}
 
 /*********** questions-page **************/
 

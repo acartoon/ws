@@ -2,11 +2,9 @@
 
 @import "src/style/_";
 
-$questionsIcon: [
-    "man", "time", "price", "payment",
+$questionsIcon: ("man", "time", "price", "payment",
     "prepaid", "hosting", "bags", "testing",
-    "priority", "access", "syncing", "portal", "beginning"
-];
+    "priority", "access", "syncing", "portal", "beginning");
 
 .question-block {
     padding: 30px;
