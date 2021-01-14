@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="preload" href="/fonts/helveticaneuecyr-thin-webfont.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/opensans-bold-webfont.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/opensans-light-webfont.woff2" as="font" crossorigin="anonymous">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/style.css" rel="stylesheet">
-    <title>Вопросы и ответы</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="preload" href="/fonts/helveticaneuecyr-thin-webfont.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="/fonts/opensans-bold-webfont.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="/fonts/opensans-light-webfont.woff2" as="font" crossorigin="anonymous"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <title>pageTitle</title>
   </head>
   <body>
     <header class="page-header page-header--questions" style="background-image: url(/i/header/questions.png)">
@@ -215,16 +215,16 @@
                 <label class="form-input">
                   <div class="form-input__wrap">
                     <p class="form-input__label">Адрес электронной почты</p>
-                    <p class="form-input__error" data-field-error>Введите адрес почты</p>
+                    <p class="form-input__error" data-field-error="data-field-error">Введите адрес почты</p>
                   </div>
-                  <input class="form-input__input" data-type="email" type="email" placeholder="e-mail@example.com" required value="">
+                  <input class="form-input__input" data-type="email" type="email" placeholder="e-mail@example.com" required="required" value=""/>
                 </label>
               </div>
               <div class="form__input">
                 <label class="form-input">
                   <div class="form-input__wrap">
                     <p class="form-input__label">ваш Вопрос</p>
-                    <p class="form-input__error" data-field-error>Напишите свой вопрос</p>
+                    <p class="form-input__error" data-field-error="data-field-error">Напишите свой вопрос</p>
                   </div>
                   <textarea class="form-input__input" data-type="textarea" placeholder="Напишите свой вопрос" value=""></textarea>
                 </label>
