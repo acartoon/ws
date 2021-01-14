@@ -1,0 +1,56 @@
+/****************** benefit-block *******************/
+
+@import "src/style/_";
+
+$modCss: ("persent-benefit", "payment-benefit", "limit-benefit");
+
+.benefit-block {
+    position: relative;
+    padding: 30px;
+    padding-left: 38px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 8px 12px 25px rgba(11, 24, 36, 0.1);
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 8px;
+        height: calc(100% - 8px);
+        background: linear-gradient(188.47deg, #326BD2 0%, #5CD384 87.04%);
+        opacity: 0.6;
+    }
+
+    &__icon {
+        display: block;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 40px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @each $item in $modCss {
+            &--#{$item} {
+                background-image: url("i/partners/#{$item}.svg");
+            }
+        }
+    }
+
+    &__title {
+        margin: 0 0 20px;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: 0.01em;
+    }
+
+    &__text {
+        margin: 0;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 165%;
+    }
+}

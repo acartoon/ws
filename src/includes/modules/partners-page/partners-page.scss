@@ -1,0 +1,17 @@
+/****************** partner-page *******************/
+
+@import "src/style/_";
+
+
+.partners-page {
+    padding-top: 0;
+
+    &__section {
+        padding-top: 96px;
+        padding-bottom: 96px;
+
+        &--white {
+            background: color(white);
+        }
+    }
+}
