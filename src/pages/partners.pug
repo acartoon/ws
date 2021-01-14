@@ -1,0 +1,11 @@
+extends ../includes/layout/layout.pug
+
+block test
+    include ../includes/_var
+    - var headerImage = paramsPage.PARTNERS.image;
+    - var contentClassModifier = paramsPage.PARTNERS.class
+
+block header
+    h1.page-header__title.page-title=paramsPage.PARTNERS.header
+    h3.page-header__h3.page-h3 Поможем заработать на клиентах нуждающихся в поддержке сайта или интернет-магазина на 1С-Битрикс
+block content
