@@ -8,7 +8,7 @@ html
             block header
         main(class=`${contentClassModifier}-page `).page
             .container
-                h2(class=pageMainTitleHide ? 'hide ' : '').page__main-title.page-main-title=pageMainTitle
+                h2(class=pageMainTitleHide ? 'hidden ' : '').page__main-title.page-main-title=pageMainTitle
                 block content
         +footer()
         script(src="js/libs/jquery-3.5.1.min.js", type="text/javascript")

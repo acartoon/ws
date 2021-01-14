@@ -3,7 +3,9 @@ extends ../includes/layout/layout.pug
 block test
     include ../includes/_var
     - var headerImage = paramsPage.QUESTIONS.image;
-    - var contentClassModifier = paramsPage.QUESTIONS.class
+    - var contentClassModifier = paramsPage.QUESTIONS.class;
+    - var pageMainTitleHide = paramsPage.QUESTIONS.isHideMainTitle;
+    - var pageMainTitle = paramsPage.QUESTIONS.pageMainTitle
 
 block header
     h1.page-header__title.page-title=paramsPage.QUESTIONS.header
