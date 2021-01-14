@@ -12,10 +12,4 @@ mixin pageHeader(image, contentClassModifier)
             ._main-nav
                 +mainNav()
         ._body
-            h1._title.page-title=pageTitle
-            if(indexPage)
-                ._wrap
-                    ._block.-partner
-                        +partner()
-                    ._block
-                        +minPrice()
+            block
