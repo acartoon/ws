@@ -18,6 +18,15 @@
     }
 }
 
+.page-h3 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 165%;
+    font-weight: 300;
+    font-family: $fontOpenSans;
+    color: color(white)
+}
+
 .page-main-title {
     @include gradientText;
     margin: 0;
