@@ -1,9 +1,16 @@
-include ../includes/_
+extends ../includes/layout/layout.pug
 
-- var indexPage = true;
-// -var pageId = "indexPage";
-// -var headerBackground = "bg_index.jpg";
--var pageTitle = "Понятная техподдержка сайтов на 1С-Битрикс с гарантией выполнения задач";
+block test
+    include ../includes/_var
+    - var headerImage = paramsPage.INDEX.image;
+    - var contentClassModifier = paramsPage.INDEX.class
 
-+structure(paramsPage.INDEX.header, paramsPage.INDEX.class, paramsPage.INDEX.image)
-
+block header
+    .page-header__wrap
+        .page-header__block.page-header--partners
+            +partner()
+        .page-header__block
+            +minPrice()
+        h1.page-header__title.page-title=paramsPage.INDEX.header
+block content
+    h2 главная страница сайта

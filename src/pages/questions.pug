@@ -1,6 +1,11 @@
-include ../includes/_
+extends ../includes/layout/layout.pug
 
-- var indexPage = false;
-- var pageTitle = paramsPage.QUESTIONS.header;
-+structure(paramsPage.QUESTIONS.header, paramsPage.QUESTIONS.class, paramsPage.QUESTIONS.image)
+block test
+    include ../includes/_var
+    - var headerImage = paramsPage.QUESTIONS.image;
+    - var contentClassModifier = paramsPage.QUESTIONS.class
+
+block header
+    h1.page-header__title.page-title=paramsPage.QUESTIONS.header
+block content
     +questionsPage
