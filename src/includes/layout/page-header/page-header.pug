@@ -1,7 +1,7 @@
 mixin pageHeader(image, contentClassModifier)
     header.page-header(class=`page-header--${contentClassModifier}` style=`background-image: url(/i/header/${image}.png)`)
         ._in
-            ._preheader.d-xs-none.d-m-block
+            ._preheader.d-none.d-m-block
                 ._contacts
                     +contactsPreheader()
                 ._callback
