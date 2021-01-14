@@ -9,13 +9,14 @@ $conditionsList: ("conditions-more", "conditions-status", "conditions-benefit");
     padding: 40px 30px 10px;
 
     &__text {
-        font-style: normal;
-        font-size: 18px;
         font-weight: 300;
+        font-size: 18px;
         line-height: 165%;
         font-family: $fontOpenSans;
         text-align: center;
+        font-style: normal;
     }
+
     &__icon {
         display: block;
         width: 100px;
@@ -31,5 +32,4 @@ $conditionsList: ("conditions-more", "conditions-status", "conditions-benefit");
             }
         }
     }
-
 }

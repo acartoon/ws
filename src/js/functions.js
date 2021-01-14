@@ -1,15 +1,3 @@
-var paramsValidate = {
-    errorClass: 'form-input--error',
-    attr: 'data-type',
-    attrError: 'data-field-error',
-    errors: {
-        TEXT: 'Введите Ваше имя',
-        TEL: 'Введите корректный номер',
-        DEFAULT: 'Заполните поле',
-        EMAIL: 'Неверный формат почты',
-    },
-}
-
 /*******
  *
  * переключает класс overflow у body
@@ -40,15 +28,19 @@ var dataType = {
  * *******/
 
 
-function validateForm(form, params) {
-    console.log(params)
+function validateForm(form) {
     var validate = {
-        errorClass: params.errorClass,
+        errorClass: 'form-input--error',
         input: null,
-        attr: params.attr,
-        attrError: params.attrError,
+        attr: 'data-type',
+        attrError: 'data-field-error',
         arrayInput: [],
-        errors: params.errors,
+        errors: {
+            TEXT: 'Введите Ваше имя',
+            TEL: 'Введите корректный номер',
+            DEFAULT: 'Заполните поле',
+            EMAIL: 'Неверный формат почты',
+        },
         form: form,
         isSubmitForm: function () {
             var that = this;
@@ -289,14 +281,14 @@ function openErrorFormPopup() {
  * */
 function onInitForm(formClass, params) {
     var form = $(formClass);
-    var validate = validateForm(form, paramsValidate);
+    var validate = validateForm(form);
     validate.init();
 
     form.on('click', 'button[type="submit"]', function (evt) {
         evt.preventDefault();
         validate.checkAllError();
 
-        // if(!validate.isSubmitForm()) return;
+        if(!validate.isSubmitForm()) return;
 
         var paramsAjax = {
             type: 'POST',

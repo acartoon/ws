@@ -3,11 +3,22 @@
 
 /************ стили сетки ***************/
 $grid-breakpoints: (
-    xs: $xs,
+    ex: $ex,
     sm: 480,
     m: $m,
-    md: $md,
+    ml: 640,
+    l: 992,
+    xl: 1024,
 );
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block !important;
+}
+
 
 @each $key, $breakpoints in $grid-breakpoints {
 
@@ -26,12 +37,5 @@ $grid-breakpoints: (
     }
 }
 
-.d-none {
-    display: none;
-}
-
-.d-block {
-    display: block !important;
-}
 
 /************ end стили сетки ***************/

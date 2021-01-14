@@ -1,20 +1,33 @@
+/********** partner-list ***********/
+
+@import "src/style/_";
+
+$marging: 15px;
+
 .partner-list {
     $this: &;
 
     margin: 0;
-    margin-bottom: -30px;
+    margin-bottom: -$marging * 2;
     padding: 0;
     list-style: none;
 
+    @media (min-width: $ml) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -$marging;
+        margin-left: -$marging;
+    }
+
     &--arrow {
         margin-bottom: 0;
-        
+
         #{$this}__item {
             position: relative;
             margin-bottom: 0;
             padding-bottom: 32px;
 
-            &:before {
+            &::before {
                 content: "";
                 position: absolute;
                 bottom: 0;
@@ -24,6 +37,26 @@
                 background: url("i/icons/arrow-down.svg") no-repeat center;
                 background-size: contain;
                 transform: translateX(-50%);
+
+                @media (min-width: $ml) {
+                    top: 50%;
+                    right: 0;
+                    left: auto;
+                    transform: translateY(-50%) rotate(-90deg);
+                }
+            }
+
+            @media (min-width: $ml) {
+                padding-right: 32px;
+                padding-bottom: 0;
+
+                &:last-child {
+                    margin-right: 0;
+
+                    &::before {
+                        content: none;
+                    }
+                }
             }
         }
     }
@@ -31,5 +64,17 @@
     &__item {
         display: block;
         margin-bottom: 30px;
+
+        @media (min-width: $ml) {
+            display: flex;
+            width: 50%;
+            box-sizing: border-box;
+            padding-right: $marging;
+            padding-left: $marging;
+        }
+
+        @media (min-width: $l) {
+            width: 33.33%;
+        }
     }
 }
