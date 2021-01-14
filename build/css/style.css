@@ -1685,13 +1685,6 @@ html.mfp-helper.ios .modal-dialog {
   margin-left: auto;
 }
 
-.page-header__title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 @media (min-width: 560px) {
   .page-header__preheader {
     display: flex;
@@ -1802,6 +1795,13 @@ html.mfp-helper.ios .modal-dialog {
   padding: 0;
   overflow: hidden;
   background-image: url("..//i/separator.svg");
+}
+
+.page-header__body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /************ end шапка сайта ***************/
