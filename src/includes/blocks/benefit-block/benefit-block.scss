@@ -12,7 +12,7 @@ $modCss: ("persent-benefit", "payment-benefit", "limit-benefit");
     border-radius: 4px;
     box-shadow: 8px 12px 25px rgba(11, 24, 36, 0.1);
 
-    &:before {
+    &::before {
         content: "";
         position: absolute;
         top: 4px;
@@ -20,7 +20,14 @@ $modCss: ("persent-benefit", "payment-benefit", "limit-benefit");
         width: 8px;
         height: calc(100% - 8px);
         background: linear-gradient(188.47deg, #326BD2 0%, #5CD384 87.04%);
+        border-radius: 2px;
         opacity: 0.6;
+    }
+
+    @media (min-width: $ml) {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
     }
 
     &__icon {
@@ -28,9 +35,9 @@ $modCss: ("persent-benefit", "payment-benefit", "limit-benefit");
         width: 80px;
         height: 80px;
         margin-bottom: 40px;
-        background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+        background-size: contain;
 
         @each $item in $modCss {
             &--#{$item} {

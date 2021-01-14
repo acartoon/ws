@@ -42,11 +42,19 @@ body {
 
 /************ стили сетки ***************/
 
-.d-xs-block {
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-ex-block {
   display: block;
 }
 
-.d-xs-none {
+.d-ex-none {
   display: none;
 }
 
@@ -74,24 +82,40 @@ body {
   }
 }
 
+@media (min-width: 640px) {
+  .d-ml-block {
+    display: block;
+  }
+}
+
+@media (min-width: 640px) {
+  .d-ml-none {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .d-l-block {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .d-l-none {
+    display: none;
+  }
+}
+
 @media (min-width: 1024px) {
-  .d-md-block {
+  .d-xl-block {
     display: block;
   }
 }
 
 @media (min-width: 1024px) {
-  .d-md-none {
+  .d-xl-none {
     display: none;
   }
-}
-
-.d-none {
-  display: none;
-}
-
-.d-block {
-  display: block !important;
 }
 
 /************ end стили сетки ***************/
@@ -227,10 +251,14 @@ body {
   background: #F8F8FA;
 }
 
-.page__main-title {
+.page__title-wrap {
+  width: 100%;
   margin-bottom: 64px;
   text-align: center;
-  width: 100%;
+}
+
+.page__subtitle {
+  margin-bottom: 24px;
 }
 
 .page__form {
@@ -243,8 +271,41 @@ body {
   margin-bottom: 96px;
 }
 
-.page__title-block {
-  margin: 0 0 64px;
+/***************** advantages-block ************************/
+
+.advantages-block {
+  position: relative;
+  box-sizing: border-box;
+  padding: 40px 40px 48px;
+  text-align: center;
+  background: #FFFFFF;
+  border: 2px solid #ECECEC;
+  border-radius: 4px;
+}
+
+.advantages-block::before {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 8px);
+  height: 8px;
+  background: linear-gradient(260.07deg, #326BD2 0%, #5CD384 100%);
+  border-radius: 2px;
+  opacity: 0.6;
+}
+
+.advantages-block__title {
+  margin: 0 0 20px;
+  font-size: 26px;
+  line-height: 35px;
+}
+
+.advantages-block__text {
+  margin: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 165%;
 }
 
 /****************** benefit-block *******************/
@@ -258,7 +319,7 @@ body {
   box-shadow: 8px 12px 25px rgba(11, 24, 36, 0.1);
 }
 
-.benefit-block:before {
+.benefit-block::before {
   content: "";
   position: absolute;
   top: 4px;
@@ -266,7 +327,16 @@ body {
   width: 8px;
   height: calc(100% - 8px);
   background: linear-gradient(188.47deg, #326BD2 0%, #5CD384 87.04%);
+  border-radius: 2px;
   opacity: 0.6;
+}
+
+@media (min-width: 640px) {
+  .benefit-block {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
 }
 
 .benefit-block__icon {
@@ -274,9 +344,9 @@ body {
   width: 80px;
   height: 80px;
   margin-bottom: 40px;
-  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
 }
 
 .benefit-block__icon--persent-benefit {
@@ -584,12 +654,12 @@ body {
 }
 
 .conditions-block__text {
-  font-style: normal;
-  font-size: 18px;
   font-weight: 300;
+  font-size: 18px;
   line-height: 165%;
   font-family: "Open Sans", "Arial", sans-serif;
   text-align: center;
+  font-style: normal;
 }
 
 .conditions-block__icon {
@@ -1345,22 +1415,33 @@ html.mfp-helper.ios .modal-dialog {
 
 .modal__title {
   margin: 0;
-  font-style: normal;
   font-weight: 200;
   font-size: 52px;
   line-height: 60px;
   font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-style: normal;
 }
 
 .modal__subheading {
   margin-bottom: 56px;
 }
 
+/********** partner-list ***********/
+
 .partner-list {
   margin: 0;
   margin-bottom: -30px;
   padding: 0;
   list-style: none;
+}
+
+@media (min-width: 640px) {
+  .partner-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
 }
 
 .partner-list--arrow {
@@ -1373,7 +1454,7 @@ html.mfp-helper.ios .modal-dialog {
   padding-bottom: 32px;
 }
 
-.partner-list--arrow .partner-list__item:before {
+.partner-list--arrow .partner-list__item::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1385,9 +1466,49 @@ html.mfp-helper.ios .modal-dialog {
   transform: translateX(-50%);
 }
 
+@media (min-width: 640px) {
+  .partner-list--arrow .partner-list__item::before {
+    top: 50%;
+    right: 0;
+    left: auto;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+}
+
+@media (min-width: 640px) {
+  .partner-list--arrow .partner-list__item {
+    padding-right: 32px;
+    padding-bottom: 0;
+  }
+
+  .partner-list--arrow .partner-list__item:last-child {
+    margin-right: 0;
+  }
+
+  .partner-list--arrow .partner-list__item:last-child::before {
+    content: none;
+  }
+}
+
 .partner-list__item {
   display: block;
   margin-bottom: 30px;
+}
+
+@media (min-width: 640px) {
+  .partner-list__item {
+    display: flex;
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .partner-list__item {
+    width: 33.33%;
+  }
 }
 
 /*********** question-block *************/
@@ -1489,34 +1610,31 @@ html.mfp-helper.ios .modal-dialog {
 
 @media (min-width: 640px) {
   .questions-list {
-    -moz-column-gap: 30px;
-    column-gap: 30px;
-    -moz-column-count: 2;
-    column-count: 2;
     overflow: hidden;
     /* Fix for firefox and IE 10-11  */
+    -moz-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
   }
 }
 
 .questions-list__item {
-  /* Chrome, Safari, Opera */
+  margin-bottom: 30px;
   page-break-inside: avoid;
   /* Firefox */
+  column-break-inside: avoid;
+  /* Chrome, Safari, Opera */
   -moz-column-break-inside: avoid;
   break-inside: avoid;
   /* IE 10+ */
   break-inside: avoid-column;
-  margin-bottom: 30px;
 }
 
 /******************* cases-page *********************/
 
 .cases-page {
   background: #F8F8FA;
-}
-
-.cases-page__page-subtitle {
-  margin-bottom: 24px;
 }
 
 /******************* end cases-page *********************/
@@ -1534,6 +1652,21 @@ html.mfp-helper.ios .modal-dialog {
 
 .partners-page__section--white {
   background: #ffffff;
+}
+
+.partners-page__section:last-child {
+  padding-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  .partners-page__section {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+}
+
+.partners-page__form {
+  padding-top: 0;
 }
 
 /*********** questions-page **************/
@@ -1847,6 +1980,12 @@ html.mfp-helper.ios .modal-dialog {
   min-height: 580px;
 }
 
+@media (min-width: 480px) {
+  .page-header--partners {
+    min-height: 470px;
+  }
+}
+
 .page-header__in {
   display: flex;
   flex-wrap: wrap;
@@ -1856,6 +1995,12 @@ html.mfp-helper.ios .modal-dialog {
   margin-right: auto;
   margin-bottom: 19px;
   margin-left: auto;
+}
+
+@media (min-width: 1024px) {
+  .page-header__in {
+    margin-bottom: 64px;
+  }
 }
 
 .page-header__h3 {
@@ -1926,6 +2071,7 @@ html.mfp-helper.ios .modal-dialog {
 @media (min-width: 1024px) {
   .page-header__main-nav {
     flex: 1 0;
+    align-self: center;
   }
 }
 
@@ -1966,7 +2112,6 @@ html.mfp-helper.ios .modal-dialog {
 }
 
 .page-header__separatop {
-  display: block;
   width: 100%;
   height: 2px;
   margin: 8px 0 0;
@@ -1980,6 +2125,13 @@ html.mfp-helper.ios .modal-dialog {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media (min-width: 1024px) {
+  .page-header__body {
+    position: static;
+    transform: none;
+  }
 }
 
 /************ end шапка сайта ***************/

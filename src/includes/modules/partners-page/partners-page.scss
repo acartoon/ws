@@ -13,5 +13,18 @@
         &--white {
             background: color(white);
         }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        @media (min-width: $xl) {
+            padding-top: 140px;
+            padding-bottom: 140px;
+        }
+    }
+
+    &__form {
+        padding-top: 0;
     }
 }

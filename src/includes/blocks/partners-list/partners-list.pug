@@ -2,7 +2,6 @@ mixin _partnersList(mixin, list, state)
     ul(class=state ? "partner-list--arrow": "").partner-list
         each val in list
             li._item
-                ._in
                 if(mixin == 'benefit')
                     +benefitBlock(val)
                 else if(mixin == 'conditions')
