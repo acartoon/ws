@@ -133,6 +133,15 @@ body {
   padding-bottom: 216px;
 }
 
+.page-h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 165%;
+  font-weight: 300;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: #ffffff;
+}
+
 .page-main-title {
   display: table;
   margin-right: auto;
@@ -1644,12 +1653,13 @@ html.mfp-helper.ios .modal-dialog {
 
 .page-header {
   position: relative;
+  min-height: 470px;
   z-index: 3;
+  box-sizing: border-box;
   padding: 30px 20px 29px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  min-height: 470px;
 }
 
 .page-header::before {
@@ -1674,6 +1684,10 @@ html.mfp-helper.ios .modal-dialog {
   }
 }
 
+.page-header--partners {
+  min-height: 580px;
+}
+
 .page-header__in {
   display: flex;
   flex-wrap: wrap;
@@ -1683,6 +1697,11 @@ html.mfp-helper.ios .modal-dialog {
   margin-right: auto;
   margin-bottom: 19px;
   margin-left: auto;
+}
+
+.page-header__h3 {
+  margin-top: 16px;
+  text-align: center;
 }
 
 @media (min-width: 560px) {
