@@ -1,0 +1,8 @@
+mixin cardGroup(mixin, arr)
+    ul.card-group
+        each val in arr
+            li._item
+                if(mixin == cardType.DEFAULT)
+                    +card(val)
+                else if (mixin  == cardType.BORDER)
+                    +cardBorder(val)

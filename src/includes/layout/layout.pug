@@ -7,9 +7,9 @@ html
         +pageHeader(headerImage, contentClassModifier)
             block header
         main(class=`${contentClassModifier}-page `).page
-            if(isNoContainer == true)
+            if(isContainer == true)
                 .container
-                block content
+                    block content
             else
                 h2(class=pageMainTitleHide ? 'hidden ' : '').page__main-title.page-main-title=pageMainTitle
                 block content
