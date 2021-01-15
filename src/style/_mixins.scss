@@ -16,15 +16,19 @@ $gradient: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
 
 
 @function get ($map, $key) {
+
     @if map-has-key($map, $key) {
+
         @return map-get($map, $key);
     }
 
     @warn "Unknown `#{$key}` in `#{$map}`.";
+
     @return null;
 }
 
 @function color ($key) {
+
     @return get($colors, $key);
 }
 
@@ -35,7 +39,7 @@ $gradient: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
     font-weight: bold;
     color: color(green);
     background: $gradient;
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 
     @media (-ms-high-contrast: none) {
@@ -44,8 +48,19 @@ $gradient: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
 }
 
 @mixin placeholder {
-    &::-webkit-input-placeholder { @content; }
-    &:-moz-placeholder           { @content; }
-    &::-moz-placeholder          { @content; }
-    &:-ms-input-placeholder      { @content; }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
 }

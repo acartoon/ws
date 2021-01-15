@@ -172,14 +172,22 @@ body {
 
 .page-h3 {
   margin: 0;
+  font-weight: 300;
   font-size: 18px;
   line-height: 165%;
-  font-weight: 300;
   font-family: "Open Sans", "Arial", sans-serif;
   color: #ffffff;
 }
 
-.page-main-title {
+.page-h4 {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 35px;
+  color: #000000;
+  letter-spacing: 0.5px;
+}
+
+.section-title {
   display: table;
   margin-right: auto;
   margin-left: auto;
@@ -187,30 +195,32 @@ body {
   color: #5CD384;
   background: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: 100%;
   margin: 0;
+  font-weight: 300;
   font-size: 40px;
   line-height: 50px;
   font-family: "Helvetica Neue", "Arial", sans-serif;
   letter-spacing: 2px;
-  font-weight: 300;
 }
 
 @media (-ms-high-contrast: none) {
-  .page-main-title {
+  .section-title {
     background: transparent;
   }
 }
 
 .page-subtitle {
   margin: 0;
-  font-style: normal;
-  font-family: "Helvetica Neue", "Arial", sans-serif;
-  text-align: center;
   font-weight: 100;
   font-size: 40px;
   line-height: 50px;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  text-align: center;
   color: #000000;
+  font-style: normal;
   letter-spacing: 2px;
 }
 
@@ -232,6 +242,7 @@ body {
   color: #5CD384;
   background: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -240,8 +251,6 @@ body {
     background: transparent;
   }
 }
-
-/************ end типографика ***************/
 
 /************ page ***************/
 
@@ -269,6 +278,10 @@ body {
 
 .page__section {
   margin-bottom: 96px;
+}
+
+.page__section:last-child {
+  margin-bottom: 0;
 }
 
 /***************** advantages-block ************************/
@@ -450,6 +463,7 @@ body {
   color: #5CD384;
   background: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -512,6 +526,7 @@ body {
   color: #5CD384;
   background: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: normal;
   text-transform: none;
@@ -533,6 +548,46 @@ body {
 }
 
 /************ end кнопки ***************/
+
+/******************* card-group *********************/
+
+.card-deck {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 640px) {
+  .card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -20px;
+    margin-bottom: -40px;
+    margin-left: -20px;
+  }
+}
+
+.card-deck__item {
+  margin-bottom: 40px;
+}
+
+.card-deck__item:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 640px) {
+  .card-deck__item {
+    display: flex;
+    box-sizing: border-box;
+    width: 50%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .card-deck__item:last-child {
+    margin-bottom: 40px;
+  }
+}
 
 /******************* card-group *********************/
 
@@ -573,6 +628,104 @@ body {
     margin-bottom: 32px;
   }
 }
+
+/******************* card *********************/
+
+.card-horizontal {
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  color: #000000;
+  overflow: hidden;
+}
+
+.card-horizontal__icon-blok {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
+.card-horizontal__img {
+  position: relative;
+  flex: 0 0 100px;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  margin-right: 20px;
+  overflow: hidden;
+  line-height: 0;
+  border-radius: 4px;
+  background: #FAFAFA;
+  box-shadow: inset 0 0 0 2px #ECECEC;
+}
+
+.card-horizontal__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  max-height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.card-horizontal__body {
+  max-width: calc(100% - 120px);
+}
+
+@media (min-width: 640px) {
+  .card-horizontal__body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.card-horizontal__price {
+  margin: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 142%;
+  color: #000000;
+  letter-spacing: 0.02em;
+}
+
+.card-horizontal__tag {
+  margin: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 142%;
+  color: #808080;
+  letter-spacing: 0.02em;
+}
+
+.card-horizontal__title {
+  margin: 0 0 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 142%;
+  color: #000000;
+  letter-spacing: 0.02em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.card-horizontal__link {
+  margin: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: #0ABAEE;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+}
+
+.card-horizontal__wrap {
+  margin-bottom: 6px;
+}
+
+/******************* end case-block *********************/
 
 /******************* card *********************/
 
@@ -1774,6 +1927,23 @@ html.mfp-helper.ios .modal-dialog {
   break-inside: avoid-column;
 }
 
+/********************* side-nav **********************/
+
+.side-nav {
+  margin-right: -8px;
+  margin-left: -8px;
+}
+
+.side-nav__wrap {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.side-nav__item {
+  padding: 8px 20px;
+  box-shadow: inset 0 0 0 2px #ECECEC;
+}
+
 /******************* cases-page *********************/
 
 .cases-page {
@@ -1816,6 +1986,29 @@ html.mfp-helper.ios .modal-dialog {
 
 .questions-page {
   background: #F8F8FA;
+}
+
+/************** store-page *******************/
+
+.store-page {
+  background: #ffffff;
+  padding-top: 0;
+}
+
+.store-page__side-nav {
+  padding-top: 40px;
+  padding-bottom: 48px;
+  background: #F8F8FA;
+}
+
+.store-page__section {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.store-page__section:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 .main-footer__modal-block {
@@ -2267,6 +2460,8 @@ html.mfp-helper.ios .modal-dialog {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding-right: 20px;
+  padding-left: 20px;
   transform: translate(-50%, -50%);
 }
 
@@ -2274,6 +2469,8 @@ html.mfp-helper.ios .modal-dialog {
   .page-header__body {
     position: static;
     transform: none;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 

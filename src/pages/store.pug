@@ -1,0 +1,16 @@
+extends ../includes/layout/layout.pug
+
+block var
+    include ../includes/_var
+    - var headerImage = paramsPage.MARKET.image;
+    - var pageTitle = paramsPage.MARKET.pageMainTitle;
+    - var contentClassModifier = paramsPage.MARKET.class;
+    - var pageMainTitleHide = paramsPage.MARKET.isHideMainTitle;
+    - var pageMainTitle = paramsPage.MARKET.pageMainTitle
+    - var isContainer = false;
+
+
+block header
+    h1.page-header__title.page-title=paramsPage.MARKET.header
+block content
+    +marketPage

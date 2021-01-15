@@ -1,0 +1,37 @@
+extends ../../blocks/card-deck/card-deck
+block arr
+    -
+        var arr = [
+            {
+                title: 'Запил классной штуки',
+                img: 'store/pin.png',
+                price: '2000 ₽',
+                tag: 'Безопасность'
+            },
+            {
+                title: 'Установка полезной фичи',
+                img: 'store/vk.png',
+                price: '2000 ₽',
+                tag: 'SEO'
+            },
+            {
+                title: 'Открытие специального учета',
+                img: 'store/store.png',
+                price: '1000 ₽',
+                tag: 'Навигация'
+            },
+            {
+                title: 'Установка полезной фичи',
+                img: 'store/barcode.png',
+                price: '1000 ₽',
+                tag: 'Безопасность'
+            },
+            {
+                title: 'Запил классной штуки',
+                img: 'store/chat.png',
+                price: 'Бесплатно',
+                tag: 'Аналитика'
+            },
+        ];
+block mixin
+    +cardHorizontal(val)

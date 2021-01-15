@@ -52,21 +52,21 @@
 mixin partnersPage
     section.partners-page__section
         .container
-            h2.page__title-wrap.page-main-title  Выгоды от партнерства с нами
+            h2.page__title-wrap.section-title  Выгоды от партнерства с нами
             +partnersList('benefit', partnersBenefit)
 
     section.partners-page__section.bg-white
         .container
-            h2.page__title-wrap.page-main-title Условия партнерства
+            h2.page__title-wrap.section-title Условия партнерства
             +partnersListArrow('conditions', partnersConditions)
 
     section.partners-page__section
         .container
-            h2.page__title-wrap.page-main-title Почему нас выбирают?
+            h2.page__title-wrap.section-title Почему нас выбирают?
             +partnersList('advantages', partnersAdvantages)
 
     section.partners-page__section.partners-page__form
         .container
-            h2.page__title-wrap.page-main-title Станьте нашим партнером
+            h2.page__title-wrap.section-title Станьте нашим партнером
             .page__form
                 +formDefault('partners')
