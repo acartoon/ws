@@ -1,8 +1,8 @@
-mixin cardGroup(mixin, arr)
+mixin cardGroup(arr, type)
     ul.card-group
         each val in arr
             li._item
-                if(mixin == cardType.DEFAULT)
+                if(type == cardType.CASES)
+                    +cardIcons(val)
+                else
                     +card(val)
-                else if (mixin  == cardType.BORDER)
-                    +cardBorder(val)
