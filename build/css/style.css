@@ -172,19 +172,19 @@ body {
 
 .page-h3 {
   margin: 0;
+  font-weight: 300;
   font-size: 18px;
   line-height: 165%;
-  font-weight: 300;
   font-family: "Open Sans", "Arial", sans-serif;
   color: #ffffff;
 }
 
 .page-h4 {
+  font-weight: 400;
   font-size: 26px;
   line-height: 35px;
-  letter-spacing: 0.5px;
   color: #000000;
-  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 .section-title {
@@ -195,14 +195,15 @@ body {
   color: #5CD384;
   background: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: 100%;
   margin: 0;
+  font-weight: 300;
   font-size: 40px;
   line-height: 50px;
   font-family: "Helvetica Neue", "Arial", sans-serif;
   letter-spacing: 2px;
-  font-weight: 300;
-  width: 100%;
 }
 
 @media (-ms-high-contrast: none) {
@@ -213,13 +214,13 @@ body {
 
 .page-subtitle {
   margin: 0;
-  font-style: normal;
-  font-family: "Helvetica Neue", "Arial", sans-serif;
-  text-align: center;
   font-weight: 100;
   font-size: 40px;
   line-height: 50px;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  text-align: center;
   color: #000000;
+  font-style: normal;
   letter-spacing: 2px;
 }
 
@@ -241,6 +242,7 @@ body {
   color: #5CD384;
   background: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -249,8 +251,6 @@ body {
     background: transparent;
   }
 }
-
-/************ end типографика ***************/
 
 /************ page ***************/
 
@@ -463,6 +463,7 @@ body {
   color: #5CD384;
   background: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -525,6 +526,7 @@ body {
   color: #5CD384;
   background: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: normal;
   text-transform: none;
@@ -1990,6 +1992,7 @@ html.mfp-helper.ios .modal-dialog {
 
 .store-page {
   background: #ffffff;
+  padding-top: 0;
 }
 
 .store-page__side-nav {

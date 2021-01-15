@@ -20,42 +20,43 @@
 
 .page-h3 {
     margin: 0;
+    font-weight: 300;
     font-size: 18px;
     line-height: 165%;
-    font-weight: 300;
     font-family: $fontOpenSans;
-    color: color(white)
+    color: color(white);
 }
 
 .page-h4 {
+    font-weight: 400;
     font-size: 26px;
     line-height: 35px;
-    letter-spacing: 0.5px;
     color: color(black);
-    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
 
 .section-title {
+
     @include gradientText;
+    width: 100%;
     margin: 0;
+    font-weight: 300;
     font-size: 40px;
     line-height: 50px;
     font-family: $fontHelvetica;
     letter-spacing: 2px;
-    font-weight: 300;
-    width: 100%;
 }
 
 .page-subtitle {
     margin: 0;
-    font-style: normal;
-    font-family: $fontHelvetica;
-    text-align: center;
     font-weight: 100;
     font-size: 40px;
     line-height: 50px;
+    font-family: $fontHelvetica;
+    text-align: center;
     color: color(black);
+    font-style: normal;
     letter-spacing: 2px;
 }
 
@@ -67,7 +68,6 @@
     font-family: $fontOpenSans;
     text-align: center;
     color: color(black);
-
 }
 
 .gradient-text {
@@ -75,4 +75,3 @@
     @include gradientText;
 }
 
-/************ end типографика ***************/
