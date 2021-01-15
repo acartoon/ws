@@ -1,0 +1,20 @@
+/********************* side-nav **********************/
+
+@import "src/style/_";
+
+$marging: 8px;
+
+.side-nav {
+    margin-right: -$marging;
+    margin-left: -$marging;
+
+    &__wrap {
+        display: inline-block;
+        margin: 0 $marging;
+    }
+
+    &__item {
+        padding: 8px 20px;
+        box-shadow: inset 0 0 0 2px color(grey);
+    }
+}

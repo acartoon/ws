@@ -27,7 +27,16 @@
     color: color(white)
 }
 
-.page-main-title {
+.page-h4 {
+    font-size: 26px;
+    line-height: 35px;
+    letter-spacing: 0.5px;
+    color: color(black);
+    font-weight: 400;
+}
+
+
+.section-title {
     @include gradientText;
     margin: 0;
     font-size: 40px;
@@ -35,6 +44,7 @@
     font-family: $fontHelvetica;
     letter-spacing: 2px;
     font-weight: 300;
+    width: 100%;
 }
 
 .page-subtitle {

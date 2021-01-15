@@ -1,0 +1,23 @@
+/************** store-page *******************/
+
+@import "src/style/_";
+
+.store-page {
+    background: color(white);
+
+    &__side-nav {
+        padding-top: 40px;
+        padding-bottom: 48px;
+        background: color(light_grey);
+    }
+
+    &__section {
+        padding-bottom: 40px;
+        border-bottom: 1px solid color(gray92);
+
+        &:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+}
