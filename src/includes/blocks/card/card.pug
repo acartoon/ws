@@ -1,18 +1,7 @@
-mixin _card(item, border)
+mixin card(item, border)
     a(href="#").card
-        if(border)
-            p._img.card__img--border
-                img(src=`i/${item.img}.png`)
-        else
-            p._img
-                img(src=`i/${item.img}.png`)
+        p._img
+            img(src=`i/${item.img}.png`)
         ._body
             p._title=item.title
             p._link Читать
-
-mixin cardBorder(item)
-    +_card(item, true)
-
-
-mixin card(item)
-    +_card(item, false)

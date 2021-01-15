@@ -1,9 +1,9 @@
 include ../_
 doctype html
 html
+    block var
     +head(pageTitle)
     body
-        block test
         +pageHeader(headerImage, contentClassModifier)
             block header
         main(class=`${contentClassModifier}-page `).page

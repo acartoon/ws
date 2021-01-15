@@ -1,7 +1,8 @@
 extends ../includes/layout/layout.pug
-block test
+block var
     include ../includes/_var
     - var headerImage = paramsPage.BLOG.image;
+    - var pageTitle = paramsPage.BLOG.pageMainTitle;
     - var contentClassModifier = paramsPage.BLOG.class
     - var pageMainTitleHide = paramsPage.BLOG.isHideMainTitle;
     - var pageMainTitle = paramsPage.BLOG.pageMainTitle

@@ -599,9 +599,6 @@ body {
   overflow: hidden;
   line-height: 0;
   border-radius: 4px;
-}
-
-.card__img--border {
   box-shadow: 0 0 0 2px #ECECEC;
 }
 
