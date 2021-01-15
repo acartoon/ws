@@ -1,10 +1,13 @@
 extends ../includes/layout/layout.pug
-block test
+block var
     include ../includes/_var
     - var headerImage = paramsPage.CASES.image;
+    - var pageTitle = paramsPage.CASES.pageMainTitle;
     - var contentClassModifier = paramsPage.CASES.class
     - var pageMainTitleHide = paramsPage.CASES.isHideMainTitle;
-    - var pageMainTitle = paramsPage.CASES.pageMainTitle
+    - var pageMainTitle = paramsPage.CASES.pageMainTitle;
+    - var isContainer = true;
+
 
 
 block header

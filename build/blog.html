@@ -10,10 +10,10 @@
     <link rel="preload" href="/fonts/opensans-light-webfont.woff2" as="font" crossorigin="anonymous"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link href="css/style.css" rel="stylesheet"/>
-    <title>Часто задаваемые вопросы</title>
+    <title>Блог</title>
   </head>
   <body>
-    <header class="page-header page-header--questions" style="background-image: url(/i/header/questions.png)">
+    <header class="page-header page-header--blog" style="background-image: url(/i/header/blog.png)">
       <div class="page-header__in">
         <div class="page-header__preheader d-none d-m-block">
           <div class="page-header__contacts">
@@ -93,149 +93,87 @@
         </div>
       </div>
       <div class="page-header__body">
-        <h1 class="page-header__title page-title">Вопросы и ответы</h1>
+        <h1 class="page-header__title page-title">Блог</h1>
+        <h3 class="page-header__h3 page-h3">Делимся опытом и наработками</h3>
       </div>
     </header>
-    <main class="questions-page  page">
+    <main class="blog-page  page">
       <div class="container">
-        <section class="questions-page__list page__section">
-          <ul class="questions-list">
-            <li class="questions-list__item">
-              <div class="questions-list__in">
-                <div class="question-block">
-                  <p class="question-block__title">Какая квалификация у ваших специалистов?</p>
-                  <p class="question-block__text">Все наши разработчики являются сертифицированными специалистами, прошедшими платные курсы академии &quot;1С-Битрикс&quot;. </p><i class="question-block__icon--man question-block__icon"></i>
-                </div>
-              </div>
+        <section class="page__section">
+          <h2 class="page__title-wrap page-main-title">Список публикаций</h2>
+          <ul class="card-group">
+            <li class="card-group__item"><a class="card" href="#">
+                <p class="card__img"><img src="i/blog/yandex.png"/></p>
+                <div class="card__body">
+                  <p class="card__title">Как подключить интернет-магазин на 1С-Битрикс к Яндекс.Маркет</p>
+                  <p class="card__link">Читать</p>
+                </div></a>
             </li>
-            <li class="questions-list__item">
-              <div class="questions-list__in">
-                <div class="question-block">
-                  <p class="question-block__title">Чем отличается обычная доработка от доработки с оценкой?</p>
-                  <p class="question-block__text">Доработка с оценкой позволяет зафиксировать время, которое будет затрачено на выполнение задачи. В случае обычной доработки к оплате будет выставлено фактически затраченное время на задачу.</p><i class="question-block__icon--time question-block__icon"></i>
-                </div>
-              </div>
+            <li class="card-group__item"><a class="card" href="#">
+                <p class="card__img"><img src="i/blog/time.png"/></p>
+                <div class="card__body">
+                  <p class="card__title">Как мы проводим оценку задач</p>
+                  <p class="card__link">Читать</p>
+                </div></a>
             </li>
-            <li class="questions-list__item">
-              <div class="questions-list__in">
-                <div class="question-block">
-                  <p class="question-block__title">Как происходит оценка времени задачи?</p>
-                  <p class="question-block__text">Оценку производит опытный программист. Он оценивает время необходимое на выполнение задачи с учетом рисков.</p><i class="question-block__icon--price question-block__icon"></i>
-                </div>
-              </div>
+            <li class="card-group__item"><a class="card" href="#">
+                <p class="card__img"><img src="i/blog/google.png"/></p>
+                <div class="card__body">
+                  <p class="card__title">Google Page Insights: что это и как улучшить показатели своего сайта</p>
+                  <p class="card__link">Читать</p>
+                </div></a>
             </li>
-            <li class="questions-list__item">
-              <div class="questions-list__in">
-                <div class="question-block">
-                  <p class="question-block__title">Как вы берете оплату за свои услуги? После каждой задачи выставляете счет?</p>
-                  <p class="question-block__text">Оплату принимаем как на счет ООО &quot;ВС САППОРТ&quot;, так и через банковские карты, webmoney и яндекс.деньги. Вы можете заносить средства на лицевой счет после завершения каждой задачи, либо внести деньги сразу за несколько задач.</p><i class="question-block__icon--payment question-block__icon"></i>
-                </div>
-              </div>
-            </li>
-            <li class="questions-list__item">
-              <div class="questions-list__in">
-                <div class="question-block">
-                  <p class="question-block__title">Правильно я понимаю, что вы берете предоплату?</p>
-                  <p class="question-block__text">Для больших задач может потребоваться взнос предоплаты. Все новые клиенты могут выполнить задачу до 5 часов без внесения предоплаты. В случае успешного сотрудничества лимит в 5 часов может быть расширен для вашего удобства.</p><i class="question-block__icon--prepaid question-block__icon"></i>
-                </div>
-              </div>
-            </li>
-            <li class="questions-list__item">
-              <div class="questions-list__in">
-                <div class="question-block">
-                  <p class="question-block__title">Какие требования к площадке/хостингу моего сайта?</p>
-                  <p class="question-block__text">Площадка сайта должна удовлетворять требованиям CMS &quot;1С-Битрикс&quot;. Перед началом работ мы бесплатно делаем проверку площадки сайта. Также хостинг должен позволять использовать GIT.</p><i class="question-block__icon--hosting question-block__icon"></i>
-                </div>
-              </div>
-            </li>
-            <li class="questions-list__item">
-              <div class="questions-list__in">
-                <div class="question-block">
-                  <p class="question-block__title">Если я найду баги уже после принятия работы, то вы их исправите?</p>
-                  <p class="question-block__text">Свои ошибки мы исправляем за свой счет, при условии того,что исходный код проекта не менялся третьими лицами. Для исправления наших ошибок вы можете создать обращение с пометкой &quot;Ошибка&quot;.</p><i class="question-block__icon--bags question-block__icon"></i>
-                </div>
-              </div>
-            </li>
-            <li class="questions-list__item">
-              <div class="questions-list__in">
-                <div class="question-block">
-                  <p class="question-block__title">Кто тестирует вашу работу?</p>
-                  <p class="question-block__text">В нашей компании есть отдел тестирования, который обязательно проверяет работу наших программистов. В статистике затраченного времени на задачу работы по программированию и тестированию разделены. </p><i class="question-block__icon--testing question-block__icon"></i>
-                </div>
-              </div>
-            </li>
-            <li class="questions-list__item">
-              <div class="questions-list__in">
-                <div class="question-block">
-                  <p class="question-block__title">Если я поставлю высокий приоритет всем задачам, то вы сделаете их быстрее?</p>
-                  <p class="question-block__text">К задаче приступим сразу же, но стоимость за услуги будет увеличена в два раза. Рекомендуется использовать для действительно срочных задач, которые влияют на работоспособность проекта.</p><i class="question-block__icon--priority question-block__icon"></i>
-                </div>
-              </div>
-            </li>
-            <li class="questions-list__item">
-              <div class="questions-list__in">
-                <div class="question-block">
-                  <p class="question-block__title">Могу ли я дать доступ своим сотрудникам? Например для SEO-специалиста.</p>
-                  <p class="question-block__text">В личном кабинете есть возможность подключать сотрудников к проектам на нашем сайте. Сотрудники получют все те же права, что и владелец личного кабинета. </p><i class="question-block__icon--access question-block__icon"></i>
-                </div>
-              </div>
-            </li>
-            <li class="questions-list__item">
-              <div class="questions-list__in">
-                <div class="question-block">
-                  <p class="question-block__title">Как быстро проставляется время в задачах?</p>
-                  <p class="question-block__text">Синхронизация с нашим внутренним порталом происходит каждый час.</p><i class="question-block__icon--syncing question-block__icon"></i>
-                </div>
-              </div>
-            </li>
-            <li class="questions-list__item">
-              <div class="questions-list__in">
-                <div class="question-block">
-                  <p class="question-block__title">Принимаете ли вы задачи по телефону или почте?</p>
-                  <p class="question-block__text">Мы принимаем задачи только через личный кабинет на нашем сайте.</p><i class="question-block__icon--portal question-block__icon"></i>
-                </div>
-              </div>
-            </li>
-            <li class="questions-list__item">
-              <div class="questions-list__in">
-                <div class="question-block">
-                  <p class="question-block__title">Мне нужно сделать полноценный проект. Вы беретесь за это?</p>
-                  <p class="question-block__text">Наша компания, помимо поддержки уже готовых проектов на &quot;1С-Битрикс&quot;, может выполнить работы по созданию нового проекта. Напишите нам на info@wssupport.ru</p><i class="question-block__icon--beginning question-block__icon"></i>
-                </div>
-              </div>
+            <li class="card-group__item"><a class="card" href="#">
+                <p class="card__img"><img src="i/blog/bitrix.png"/></p>
+                <div class="card__body">
+                  <p class="card__title">Чем опасно самостоятельное обновление «1С-Битрикс»</p>
+                  <p class="card__link">Читать</p>
+                </div></a>
             </li>
           </ul>
         </section>
-        <section class="questions-page__form page__form">
+        <section class="page__section">
           <div class="page__title-wrap">
-            <h2 class="page-subtitle page__subtitle">Задайте вопрос</h2>
+            <h2 class="page-subtitle page__subtitle">Свяжитесь с нами</h2>
+            <p class="page__subheading page-subheading">Мы работаем со всей страной от Владивостока до Калининграда</p>
           </div>
-          <form class="form js-form-questions">
-            <div class="form__in">
-              <div class="form__input">
-                <label class="form-input">
-                  <div class="form-input__wrap">
-                    <p class="form-input__label">Адрес электронной почты</p>
-                    <p class="form-input__error" data-field-error="data-field-error">Введите адрес почты</p>
-                  </div>
-                  <input class="form-input__input" data-type="email" type="email" placeholder="e-mail@example.com" required="required" value=""/>
-                </label>
+          <div class="page__form">
+            <form class="form js-form-blog">
+              <div class="form__in">
+                <div class="form__input">
+                  <label class="form-input">
+                    <div class="form-input__wrap">
+                      <p class="form-input__label">Ваше имя</p>
+                      <p class="form-input__error" data-field-error="data-field-error">Введите Ваше имя</p>
+                    </div>
+                    <input class="form-input__input" data-type="text" type="text" placeholder="Введите имя и фамилию" required="required" value=""/>
+                  </label>
+                </div>
+                <div class="form__input">
+                  <label class="form-input">
+                    <div class="form-input__wrap">
+                      <p class="form-input__label">Адрес электронной почты</p>
+                      <p class="form-input__error" data-field-error="data-field-error">Введите адрес почты</p>
+                    </div>
+                    <input class="form-input__input" data-type="email" type="email" placeholder="e-mail@example.com" required="required" value=""/>
+                  </label>
+                </div>
+                <div class="form__input">
+                  <label class="form-input">
+                    <div class="form-input__wrap">
+                      <p class="form-input__label">Телефон</p>
+                      <p class="form-input__error" data-field-error="data-field-error">Введите номер телефона</p>
+                    </div>
+                    <input class="form-input__input" data-type="tel" type="tel" placeholder="X (XXX) XX-XX-XX" required="required" value=""/>
+                  </label>
+                </div>
               </div>
-              <div class="form__input">
-                <label class="form-input">
-                  <div class="form-input__wrap">
-                    <p class="form-input__label">ваш Вопрос</p>
-                    <p class="form-input__error" data-field-error="data-field-error">Напишите свой вопрос</p>
-                  </div>
-                  <textarea class="form-input__input" data-type="textarea" placeholder="Напишите свой вопрос" value=""></textarea>
-                </label>
+              <div class="form__button">
+                <button class="button--blue button" type="submit">Отправить</button>
               </div>
-            </div>
-            <div class="form__button">
-              <button class="button--blue button" type="submit">Получить ответ</button>
-            </div>
-            <p class="form__disclaimer disclaimer">Нажимая на кнопку «Получить ответ», вы даете согласие на отправку и обработку своих &nbsp<a href="#">персональных данных</a></p>
-          </form>
+              <p class="form__disclaimer disclaimer">Нажимая на кнопку «Получить ответ», вы даете согласие на отправку и обработку своих &nbsp<a href="#">персональных данных</a></p>
+            </form>
+          </div>
         </section>
       </div>
     </main>

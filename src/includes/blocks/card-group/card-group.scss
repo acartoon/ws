@@ -1,0 +1,39 @@
+/******************* card-group *********************/
+
+@import "src/style/_";
+
+$padding: 16px;
+
+.card-group {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $ml) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -$padding;
+        margin-bottom: $padding * 2;
+        margin-left: -$padding;
+    }
+
+    &__item {
+        margin-bottom: $padding * 2;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: $ml) {
+            display: flex;
+            box-sizing: border-box;
+            width: 50%;
+            padding-right: $padding;
+            padding-left: $padding;
+
+            &:last-child {
+                margin-bottom: $padding * 2;
+            }
+        }
+    }
+}

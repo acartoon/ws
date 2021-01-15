@@ -1,0 +1,16 @@
+extends ../includes/layout/layout.pug
+block var
+    include ../includes/_var
+    - var headerImage = paramsPage.BLOG.image;
+    - var pageTitle = paramsPage.BLOG.pageMainTitle;
+    - var contentClassModifier = paramsPage.BLOG.class
+    - var pageMainTitleHide = paramsPage.BLOG.isHideMainTitle;
+    - var pageMainTitle = paramsPage.BLOG.pageMainTitle
+    - var isContainer = true;
+
+
+block header
+    h1.page-header__title.page-title=paramsPage.BLOG.header
+    h3.page-header__h3.page-h3 Делимся опытом и наработками
+block content
+    +blogPage

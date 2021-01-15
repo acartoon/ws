@@ -1,0 +1,35 @@
+-
+    var blogList = [
+        {
+            img: "blog/yandex",
+            title: "Как подключить интернет-магазин на 1С-Битрикс к Яндекс.Маркет",
+
+        },
+        {
+            img: "blog/time",
+            title: "Как мы проводим оценку задач",
+
+        },
+        {
+            img: "blog/google",
+            title: "Google Page Insights: что это и как улучшить показатели своего сайта",
+
+        },
+        {
+            img: "blog/bitrix",
+            title: "Чем опасно самостоятельное обновление «1С-Битрикс»",
+
+        }
+    ]
+
+mixin blogPage
+    section.page__section
+        h2.page__title-wrap.page-main-title Список публикаций
+        +cardGroup(cardType.DEFAULT, blogList)
+    section.page__section
+        .page__title-wrap
+            h2.page-subtitle.page__subtitle Свяжитесь с нами
+            p.page__subheading.page-subheading Мы работаем со всей страной от Владивостока до Калининграда
+        .page__form
+            +formDefault('blog')
+

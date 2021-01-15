@@ -1,0 +1,7 @@
+mixin card(item, border)
+    a(href="#").card
+        p._img
+            img(src=`i/${item.img}.png`)
+        ._body
+            p._title=item.title
+            p._link Читать
