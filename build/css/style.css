@@ -180,6 +180,7 @@ body {
 }
 
 .page-h4 {
+  margin: 0;
   font-weight: 400;
   font-size: 26px;
   line-height: 35px;
@@ -1930,6 +1931,7 @@ html.mfp-helper.ios .modal-dialog {
 /********************* side-nav **********************/
 
 .side-nav {
+  display: flex;
   margin-right: -8px;
   margin-left: -8px;
 }
