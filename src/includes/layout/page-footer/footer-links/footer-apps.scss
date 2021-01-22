@@ -1,0 +1,27 @@
+/*************** footer-links ****************/
+
+@import "src/style/_";
+
+.footer-links {
+
+    &__item {
+        margin-bottom: 56px;
+        text-align: center;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include desktopStyle {
+            text-align: right;
+        }
+    }
+
+    &__footer-app {
+      margin: 0 auto 20px;
+
+        @include desktopStyle {
+            margin-right: 0;
+        }
+    }
+}

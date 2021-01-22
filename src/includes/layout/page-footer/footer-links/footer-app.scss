@@ -1,0 +1,13 @@
+/*************** footer-app ****************/
+
+@import "src/style/_";
+
+.footer-app {
+    display: block;
+    width: 138px;
+    height: 40px;
+    border: 1px solid transparentize(color(white), 0.5);
+    border-radius: 4px;
+    align-items: center;
+    box-sizing: border-box;
+}

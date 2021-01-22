@@ -6,12 +6,113 @@
     padding: 80px 0;
     background: color(footer);
 
-    &__wrap {
-        margin-bottom: 64px;
+    &__in {
+        width: 224px;
+        margin: 0 auto;
+
+        @include desktopStyle {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: inherit;
+        }
     }
 
-    &__in {
-        padding-left: 48px;
-        padding-right: 48px;
+    &__payment-system {
+
+        @include desktopStyle {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__wrap {
+        margin-bottom: 64px;
+
+        @include desktopStyle {
+            margin-bottom: 0;
+        }
+    }
+
+    &__box {
+        margin-bottom: 40px;
+
+        @include desktopStyle {
+            width: 220px;
+        }
+    }
+
+    &__company {
+        text-align: center;
+
+        @include desktopStyle {
+            order: -1;
+            text-align: left;
+            flex: 1 0;
+        }
+    }
+
+    &__wrapping {
+
+        @include desktopStyle {
+            flex: 1 0;
+        }
+    }
+
+    &__logo {
+        display: block;
+        width: 96px;
+        height: 88px;
+        margin-right: auto;
+        margin-left: auto;
+        transition: opacity 200ms ease-in;
+
+        &:hover {
+            opacity: 0.8;
+            transition: opacity 200ms ease-in;
+        }
+
+        @include desktopStyle {
+            margin-left: 0;
+        }
+    }
+
+    &__copyright {
+        margin-bottom: 20px;
+
+
+        p {
+            margin: 0;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 19px;
+            color: color(white);
+        }
+    }
+
+    &__bitrix {
+        display: block;
+        height: 100px;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: center;
+
+        @include desktopStyle {
+            flex: 1 0;
+            justify-content: space-between;
+        }
+    }
+
+    &__apps {
+        flex: 1 0;
     }
 }

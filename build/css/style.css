@@ -295,6 +295,52 @@ body {
   }
 }
 
+.outside-link {
+  position: relative;
+}
+
+.outside-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 5px);
+  width: 12px;
+  height: 10px;
+  background: url("..//i/outside_link.svg");
+  transform: translateY(-50%);
+}
+
+.text-link {
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: border-color 200ms ease-in;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  border-color: #ffffff;
+  transition: border-color 200ms ease-in;
+}
+
+.link {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 200ms ease-in;
+}
+
+.link:hover {
+  opacity: 0.8;
+  transition: opacity 200ms ease-in;
+}
+
 /************ page ***************/
 
 .page {
@@ -310,7 +356,6 @@ body {
 
 @media (min-width: 1024px) {
   .page__title-wrap {
-    margin-bottom: 72px;
     margin-bottom: 72px;
   }
 }
@@ -2088,6 +2133,30 @@ html.mfp-helper.ios .modal-dialog {
   }
 }
 
+/*************** social-links ****************/
+
+.social-links {
+  margin: 0 -10px;
+  padding: 0;
+}
+
+.social-links__item {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 0;
+}
+
+.social-links__link {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
 /******************* cases-page *********************/
 
 .cases-page {
@@ -2198,8 +2267,223 @@ html.mfp-helper.ios .modal-dialog {
   border-bottom: none;
 }
 
-.main-footer__modal-block {
-  display: none;
+/*************** footer-app ****************/
+
+.footer-app {
+  display: block;
+  width: 138px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/*************** footer-links ****************/
+
+.footer-links__item {
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+.footer-links__item:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  .footer-links__item {
+    text-align: right;
+  }
+}
+
+.footer-links__footer-app {
+  margin: 0 auto 20px;
+}
+
+@media (min-width: 1024px) {
+  .footer-links__footer-app {
+    margin-right: 0;
+  }
+}
+
+/*************** footer-menu ****************/
+
+.footer-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.footer-menu__item {
+  display: block;
+}
+
+.footer-menu__link {
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+  .footer-menu__link {
+    text-align: left;
+  }
+}
+
+/************** page-footer *******************/
+
+.page-footer {
+  padding: 80px 0;
+  background: #333333;
+}
+
+.page-footer__in {
+  width: 224px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .page-footer__in {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: inherit;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-footer__payment-system {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.page-footer__wrap {
+  margin-bottom: 64px;
+}
+
+@media (min-width: 1024px) {
+  .page-footer__wrap {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__box {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 1024px) {
+  .page-footer__box {
+    width: 220px;
+  }
+}
+
+.page-footer__company {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .page-footer__company {
+    order: -1;
+    text-align: left;
+    flex: 1 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-footer__wrapping {
+    flex: 1 0;
+  }
+}
+
+.page-footer__logo {
+  display: block;
+  width: 96px;
+  height: 88px;
+  margin-right: auto;
+  margin-left: auto;
+  transition: opacity 200ms ease-in;
+}
+
+.page-footer__logo:hover {
+  opacity: 0.8;
+  transition: opacity 200ms ease-in;
+}
+
+@media (min-width: 1024px) {
+  .page-footer__logo {
+    margin-left: 0;
+  }
+}
+
+.page-footer__copyright {
+  margin-bottom: 20px;
+}
+
+.page-footer__copyright p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+}
+
+.page-footer__bitrix {
+  display: block;
+  height: 100px;
+}
+
+.page-footer__bitrix img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.page-footer__menu {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .page-footer__menu {
+    flex: 1 0;
+    justify-content: space-between;
+  }
+}
+
+.page-footer__apps {
+  flex: 1 0;
+}
+
+/********* payment-systems **********/
+
+.payment-systems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: -32px;
+  padding: 0;
+  list-style: none;
+}
+
+.payment-systems__item {
+  height: 24px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 1024px) {
+  .payment-systems__item {
+    margin-right: 40px;
+  }
+
+  .payment-systems__item:last-child {
+    margin-right: 0;
+  }
 }
 
 @charset "UTF-8";
