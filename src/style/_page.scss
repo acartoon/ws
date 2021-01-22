@@ -3,40 +3,24 @@
 .page {
     padding-top: 96px;
     padding-bottom: 96px;
-    background: color(light_grey);
 
-    &__title-wrap {
-        //width: 100%;
+    &__main-title {
         margin-bottom: 64px;
         text-align: center;
-
-        @include desktopStyle {
-            margin-bottom: 72px;
-        }
+        width: 100%;
     }
-
-
-    &__subtitle {
-        margin-bottom: 24px;
-    }
-
 
     &__form {
         max-width: 420px;
-        margin-right: auto;
         margin-left: auto;
+        margin-right: auto;
     }
 
     &__section {
         margin-bottom: 96px;
+    }
 
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        @include desktopStyle {
-            margin-bottom: 140px;
-        }
-
+    &__title-block {
+        margin: 0 0 64px;
     }
 }
