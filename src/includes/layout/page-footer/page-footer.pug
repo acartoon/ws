@@ -1,0 +1,24 @@
+-
+    var footerMenu = [
+        [
+            'О компании', 'Магазин задач', 'FAQ', 'Блог', 'Кейсы', 'Партнерам', 'Контакты'
+        ],
+        [
+            'Пользовательское соглашение', 'Политика конфиденциальности', 'Скачать реквизиты'
+        ]
+    ]
+
+
+mixin pageFooter(pageTitle)
+    footer.page-footer
+        ._menu
+            ._wrap
+                +footerMenu(footerMenu[0])
+            ._wrap
+                +footerMenu(footerMenu[1])
+        ._apps.page-footer__wrap.page-footer__in
+            +footerApps
+        ._payment-system.page-footer__wrap.page-footer__in
+            +paymentSystems
+        ._contacts.page-footer__in
+            +footerContacts
