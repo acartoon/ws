@@ -6,23 +6,24 @@
     ]
 
 mixin marketPage
-    .store-page__wrap
-        section.store-page__side-nav.page__section
-            .container
-                h4.page-h4.store-page__subtitle Каталог
-                +sideNav(marketNav)
+    .store-page__in.d-container
+        section.store-page__page-nav.page__section
+            .m-container
 
-        section.store-page__section.page__section
-            .container
-                h2.section-title.page__title-wrap Новинки
-                include store-page-new
+                .store-page__side-nav
+                    +sideNavBlock("Каталог", marketNav)
+        .store-page__wrap
+            section.store-page__section.page__section
+                .m-container
+                    h2.store-page__section-title.section-title.page__title-wrap Новинки
+                    include store-page-new
 
-        section.store-page__section.page__section
-            .container
-                h2.section-title.page__title-wrap Рекомендуем для продвижения
-                include store-page-promotion
+            section.store-page__section.page__section
+                .m-container
+                    h2.store-page__section-title.section-title.page__title-wrap Рекомендуем для продвижения
+                    include store-page-promotion
 
-        section.store-page__section.page__section
-            .container
-                h2.section-title.page__title-wrap Рекомендуем для безопасности
-                include store-page-security
+            section.store-page__section.page__section
+                .m-container
+                    h2.store-page__section-title.section-title.page__title-wrap Рекомендуем для безопасности
+                    include store-page-security

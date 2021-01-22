@@ -1,6 +1,5 @@
 mixin sideNav(sideMenu)
-    .side-nav
-        each val in sideMenu
+    div(data-slider="side-nav").side-nav
+        each val, i in sideMenu
             ._wrap
-                ._item
-                    a._link=val
+                a(href="#" class=(i == 0) ? "active" : "")._item=val

@@ -16,6 +16,10 @@ $marging: 30px;
         column-gap: 30px;
     }
 
+    @include desktopStyle {
+        margin-bottom: 0;
+    }
+
     &__item {
         margin-bottom: $marging;
         page-break-inside: avoid; /* Firefox */

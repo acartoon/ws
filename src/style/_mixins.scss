@@ -14,6 +14,12 @@ $gradient: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
     }
 }
 
+@mixin desktopStyle() {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
 
 @function get ($map, $key) {
 

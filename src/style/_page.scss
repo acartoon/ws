@@ -6,10 +6,15 @@
     background: color(light_grey);
 
     &__title-wrap {
-        width: 100%;
+        //width: 100%;
         margin-bottom: 64px;
         text-align: center;
+
+        @include desktopStyle {
+            margin-bottom: 72px;
+        }
     }
+
 
     &__subtitle {
         margin-bottom: 24px;
@@ -28,5 +33,10 @@
         &:last-child {
             margin-bottom: 0;
         }
+
+        @include desktopStyle {
+            margin-bottom: 140px;
+        }
+
     }
 }
