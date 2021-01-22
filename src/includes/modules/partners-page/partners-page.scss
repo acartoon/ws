@@ -1,0 +1,30 @@
+/****************** partner-page *******************/
+
+@import "src/style/_";
+
+
+.partners-page {
+    padding-top: 0;
+
+    &__section {
+        padding-top: 96px;
+        padding-bottom: 96px;
+
+        &--white {
+            background: color(white);
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        @media (min-width: $xl) {
+            padding-top: 140px;
+            padding-bottom: 140px;
+        }
+    }
+
+    &__form {
+        padding-top: 0;
+    }
+}

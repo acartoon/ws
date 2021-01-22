@@ -1,15 +1,3 @@
-var paramsValidate = {
-    errorClass: 'form-input--error',
-    attr: 'data-type',
-    attrError: 'data-field-error',
-    errors: {
-        TEXT: 'Введите Ваше имя',
-        TEL: 'Введите корректный номер',
-        DEFAULT: 'Заполните поле',
-        EMAIL: 'Неверный формат почты',
-    },
-}
-
 /*******
  *
  * переключает класс overflow у body
@@ -40,15 +28,19 @@ var dataType = {
  * *******/
 
 
-function validateForm(form, params) {
-    console.log(params)
+function validateForm(form) {
     var validate = {
-        errorClass: params.errorClass,
+        errorClass: 'form-input--error',
         input: null,
-        attr: params.attr,
-        attrError: params.attrError,
+        attr: 'data-type',
+        attrError: 'data-field-error',
         arrayInput: [],
-        errors: params.errors,
+        errors: {
+            TEXT: 'Введите Ваше имя',
+            TEL: 'Введите корректный номер',
+            DEFAULT: 'Заполните поле',
+            EMAIL: 'Неверный формат почты',
+        },
         form: form,
         isSubmitForm: function () {
             var that = this;
@@ -198,10 +190,10 @@ function onSendAjax(params) {
         cache: false,
         success: function (data) {
          // при интеграции нужно перенести сюда функцию из complete
-            params.onSuccess(data);
+         //    params.onSuccess(data);
         },
         error: function (data) {
-            params.onError();
+            // params.onError();
         },
         complete: function () {
             params.onSuccess();
@@ -213,9 +205,14 @@ function onSendAjax(params) {
  * закрывает попап
  * */
 
-function onClosePopup() {
+function closePopup() {
     $.magnificPopup.close();
     onOverflow();
+}
+
+function onBtnCloseClick() {
+    closePopup();
+    $('#id-success-form').off('click', '.js-modal-close', onBtnCloseClick);
 }
 
 /**
@@ -233,9 +230,6 @@ function onOpenPopup(params) {
             open: function () {
                 params.closePopup();
             },
-            close: function () {
-                params.removeListener();
-            }
         },
         type: params.type,
         closeBtnInside: params.showCloseBtn,
@@ -255,11 +249,8 @@ function openSuccessFormPopup() {
         closeBtnInside: true,
         showCloseBtn: true,
         closePopup: function () {
-            $('#id-success-form').on('click', '.js-modal-close', onClosePopup);
+            $('#id-success-form').on('click', '.js-modal-close', onBtnCloseClick);
         },
-        removeListener() {
-            $('#id-success-form').off('click', '.js-modal-close', onClosePopup);
-        }
     });
 
 }
@@ -275,11 +266,8 @@ function openErrorFormPopup() {
         closeBtnInside: true,
         showCloseBtn: true,
         closePopup: function () {
-            $('#id-error-form').on('click', '.js-modal-close', onClosePopup);
+            onBtnCloseClick();
         },
-        removeListener() {
-            $('#id-error-form').off('click', '.js-modal-close', onClosePopup);
-        }
     })
 
 }
@@ -293,7 +281,7 @@ function openErrorFormPopup() {
  * */
 function onInitForm(formClass, params) {
     var form = $(formClass);
-    var validate = validateForm(form, paramsValidate);
+    var validate = validateForm(form);
     validate.init();
 
     form.on('click', 'button[type="submit"]', function (evt) {
@@ -323,6 +311,22 @@ function onInitForm(formClass, params) {
         onSendAjax(paramsAjax);
     });
 }
+// side-nav
+
+$(document).ready(function(){
+
+    $('[data-slider="side-nav"]').slick({
+        variableWidth: true,
+        arrows: false,
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 1023,
+                settings: "unslick",
+            }
+        ]
+    });
+});
 var mainNav = $('.main-nav');
 
 
@@ -336,6 +340,15 @@ onInitForm('.js-form-cases', {
     url: '',
 });
 
+// функция отправки формы на странице кейсов
+onInitForm('.js-form-partners', {
+    url: '',
+});
+
+// функция отправки формы на странице кейсов
+onInitForm('.js-form-questions', {
+    url: '',
+});
 
 // удалить при интеграции
 // как пример для активного элемента списка

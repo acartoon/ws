@@ -1,26 +1,19 @@
 /************ page ***************/
 
-@import "src/style/_";
-
 .page {
     padding-top: 96px;
     padding-bottom: 96px;
 
     &__main-title {
-        width: 100%;
         margin-bottom: 64px;
         text-align: center;
-    }
-
-    &__footer {
-        padding: 80px 48px 40px;
-        background: color(footer);
+        width: 100%;
     }
 
     &__form {
         max-width: 420px;
-        margin-right: auto;
         margin-left: auto;
+        margin-right: auto;
     }
 
     &__section {
@@ -29,9 +22,5 @@
 
     &__title-block {
         margin: 0 0 64px;
-    }
-
-    &__modal-block {
-        display: none;
     }
 }

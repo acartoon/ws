@@ -1,0 +1,22 @@
+/********************* side-nav **********************/
+
+@import "src/style/_";
+
+.side-nav-block {
+    &__title {
+        margin-bottom: 24px;
+
+        @include desktopStyle {
+            margin-bottom: 10px;
+            padding-right: 20px;
+            padding-left: 40px;
+        }
+    }
+
+    @include desktopStyle {
+        padding-top: 34px;
+        padding-bottom: 34px;
+        border: 2px solid #ECECEC;
+        border-radius: 4px;
+    }
+}

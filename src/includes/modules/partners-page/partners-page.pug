@@ -1,0 +1,72 @@
+-
+    var partnersBenefit = [
+        {
+            icon: 'persent-benefit',
+            title: 'Проценты от счетов',
+            text: 'Вы получаете 10% со всех оплаченных счетов приведенных клиентов'
+        },
+        {
+            icon: 'payment-benefit',
+            title: 'Регулярные выплаты',
+            text: 'Выплаты производятся каждый месяц'
+        },
+        {
+            icon: 'limit-benefit',
+            title: 'Без ограничений',
+            text: 'Размер процентных выплат зависит от выручки ваших клиентов'
+        },
+    ]
+
+-
+    var partnersConditions = [
+        {
+            icon: 'conditions-more',
+            text: 'Приводите нового клиента минимум раз в 6 месяцев '
+        },
+        {
+            icon: 'conditions-status',
+            text: 'В день первой оплаты клиент обретает статус приведенного'
+        },
+        {
+            icon: 'conditions-benefit',
+            text: 'Получаете все преимущества от партнерской программы'
+        },
+    ]
+
+-
+    var partnersAdvantages = [
+        {
+            title: 'Хостинг для разработки',
+            text: 'Для каждой задачи клиента у нас создается отдельный домен с серверным окружением как на production-сервере'
+        },
+        {
+            title: 'Фокусировка на одной услуге',
+            text: 'Мы занимаемся только поддержкой сайтов и интернет-магазинов на 1С-Битрикс\n'
+        },
+        {
+            title: 'Отлаженные бизнес-процессы',
+            text: 'Все задачи клиентов выполняются согласно внутренних регламентов\n'
+        },
+    ]
+
+mixin partnersPage
+    section.partners-page__section
+        .container
+            h2.page__title-wrap.section-title  Выгоды от партнерства с нами
+            +partnersList('benefit', partnersBenefit)
+
+    section.partners-page__section.bg-white
+        .container
+            h2.page__title-wrap.section-title Условия партнерства
+            +partnersListArrow('conditions', partnersConditions)
+
+    section.partners-page__section
+        .container
+            h2.page__title-wrap.section-title Почему нас выбирают?
+            +partnersList('advantages', partnersAdvantages)
+
+    section.partners-page__section.partners-page__form
+        .container
+            h2.page__title-wrap.page-subtitle Станьте нашим партнером
+            .page__form
+                +formDefault('partners')

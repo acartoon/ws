@@ -1,0 +1,20 @@
+mixin _card(item, type)
+    a(href="#").card
+        if(type == cardType.CASES)
+            ._icon-blok
+                i(class=item.icon == "cosmodrome" ? "card__icon--vert" : "")._icon
+                    img(src=`i/clients-logo/${item.icon}.png` alt='')
+        else
+            return
+        p._img
+            img(src=`i/${item.img}.png`)
+        ._body
+            p._title=item.title
+            p._link Читать
+
+
+mixin card(item)
+    +_card(item)
+
+mixin cardIcons(item)
+    +_card(item, cardType.CASES)

@@ -4,12 +4,14 @@
 
 .page-header {
     position: relative;
+    min-height: 470px;
     z-index: 3;
+    box-sizing: border-box;
     padding: 30px 20px 29px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    min-height: 470px;
+
 
     &::before {
         content: "";
@@ -32,6 +34,14 @@
         padding-top: 8px;
     }
 
+    &--partners {
+        min-height: 580px;
+
+        @media (min-width: $sm) {
+            min-height: 470px;
+        }
+    }
+
     &__in {
         display: flex;
         flex-wrap: wrap;
@@ -41,14 +51,23 @@
         margin-right: auto;
         margin-bottom: 19px;
         margin-left: auto;
+
+        @media (min-width: $xl) {
+            margin-bottom: 64px;
+        }
     }
 
     &__title {
         //margin-bottom: 16px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        //position: absolute;
+        //top: 50%;
+        //left: 50%;
+        //transform: translate(-50%, -50%);
+    }
+
+    &__h3 {
+        margin-top: 16px;
+        text-align: center;
     }
 
     &__preheader {
@@ -108,6 +127,7 @@
 
         @media (min-width: $desktop) {
             flex: 1 0;
+            align-self: center;
         }
     }
 
@@ -143,13 +163,28 @@
     }
 
     &__separatop {
-        display: block;
         width: 100%;
         height: 2px;
         margin: 8px 0 0;
         padding: 0;
         overflow: hidden;
         background-image: url("i/separator.svg");
+    }
+
+    &__body {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding-right: 20px;
+        padding-left: 20px;
+        transform: translate(-50%, -50%);
+
+        @media (min-width: $xl) {
+            position: static;
+            transform: none;
+            padding-right: 0;
+            padding-left: 0;
+        }
     }
 }
 /************ end шапка сайта ***************/

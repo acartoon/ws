@@ -1,10 +1,10 @@
 mixin casesPage
     section.cases-page__list.page__section
-        h2.page-subtitle.d-none Список кейсов
         +caseList()
-    section.casess-page__form.page__form
-        .page__title-block
-            h2.page-subtitle.cases-page__page-subtitle Свяжитесь с нами
-            p.cases-page__subheading.page-subheading Мы работаем со всей страной от Владивостока до Калининграда
-        +formCases
+    section.casess-page__form
+        .page__title-wrap
+            h2.page-subtitle.page__subtitle Свяжитесь с нами
+            p.page__subheading.page-subheading Мы работаем со всей страной от Владивостока до Калининграда
+        .page__form
+            +formDefault('cases')
 

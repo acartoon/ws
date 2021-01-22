@@ -10,19 +10,22 @@ $marging: 30px;
     padding: 0;
     list-style: none;
 
-    @media(min-width: $ml) {
-        column-gap: 30px;
-        column-count: 2;
+    @media (min-width: $ml) {
         overflow: hidden; /* Fix for firefox and IE 10-11  */
+        column-count: 2;
+        column-gap: 30px;
+    }
 
+    @include desktopStyle {
+        margin-bottom: 0;
     }
 
     &__item {
-        //display: inline-block;
-        -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+        margin-bottom: $marging;
         page-break-inside: avoid; /* Firefox */
+        //display: inline-block;
+        column-break-inside: avoid; /* Chrome, Safari, Opera */
         break-inside: avoid; /* IE 10+ */
         break-inside: avoid-column;
-        margin-bottom: $marging;
     }
 }

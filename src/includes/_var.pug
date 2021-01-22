@@ -2,32 +2,43 @@
     var paramsPage = {
         INDEX: {
             class: 'index',
-            header: 'Главная',
+            header: 'Понятная техподдержка сайтов на 1С-Битрикс с гарантией выполнения задач',
             image: 'index'
         },
         CASES: {
             class: 'cases',
             header: 'Кейсы',
+            pageMainTitle: 'Кейсы',
+            isHideMainTitle: true,
             image: 'cases'
         },
         QUESTIONS: {
             class: 'questions',
             header: 'Вопросы и ответы',
+            pageMainTitle: 'Часто задаваемые вопросы',
+            isHideMainTitle: false,
             image: 'questions'
+        },
+        BLOG: {
+            class: 'blog',
+            header: 'Блог',
+            pageMainTitle: 'Блог',
+            isHideMainTitle: false,
+            image: 'blog'
+        },
+        PARTNERS: {
+            class: 'partners',
+            header: 'Партнерская программа WS Support',
+            image: 'partners',
+            pageMainTitle: 'Выгоды от партнерства с нами',
+            isHideMainTitle: false
+        },
+        MARKET: {
+            class: 'store',
+            header: 'Магазин задач',
+            image: 'store',
+            pageMainTitle: 'Магазин задач',
         }
-    }
-
--
-    var bgImage = {
-        index: 'index',
-        cases: 'cases'
-    }
-
--
-    var headers = {
-        index: 'Главная',
-        cases: 'Кейсы'
-
     }
 
 -
@@ -45,4 +56,9 @@
         tel: "8 (863) 322-60-25",
         telLink: "88633226025",
         email: "info@wssupport.ru"
+    }
+
+-
+    var cardType = {
+        CASES: "cases",
     }

@@ -1,0 +1,38 @@
+/***************** advantages-block ************************/
+
+@import "src/style/_";
+
+.advantages-block {
+    position: relative;
+    box-sizing: border-box;
+    padding: 40px 40px 48px;
+    text-align: center;
+    background: #FFFFFF;
+    border: 2px solid #ECECEC;
+    border-radius: 4px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        left: 4px;
+        width: calc(100% - 8px);
+        height: 8px;
+        background: linear-gradient(260.07deg, #326BD2 0%, #5CD384 100%);
+        border-radius: 2px;
+        opacity: 0.6;
+    }
+
+    &__title {
+        margin: 0 0 20px;
+        font-size: 26px;
+        line-height: 35px;
+    }
+
+    &__text {
+        margin: 0;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 165%;
+    }
+}

@@ -1,60 +1,56 @@
 -
     var casesList = [
         {
-            text: 'Автодобавление контактов в email-рассылку UniSender',
-            icons: 'workshop',
-            img: 'office'
+            title: 'Автодобавление контактов в email-рассылку UniSender',
+            icon: 'workshop',
+            img: 'cases/office'
         },
         {
-            text: 'Создание личных кабинетов на сайте для существующих клиентов из базы 1С',
-            icons: 'delta',
-            img: 'cabinet'
+            title: 'Создание личных кабинетов на сайте для существующих клиентов из базы 1С',
+            icon: 'delta',
+            img: 'cases/cabinet'
         },
         {
-            text: 'Удаление вредоносного кода (вирусов) с сайта',
-            icons: 'wine',
-            img: 'open-shop'
+            title: 'Удаление вредоносного кода (вирусов) с сайта',
+            icon: 'wine',
+            img: 'cases/open-shop'
         },
         {
-            text: 'Вывод разделов каталога на главной',
-            icons: 'cosmodrome',
-            img: 'sections'
+            title: 'Вывод разделов каталога на главной',
+            icon: 'cosmodrome',
+            img: 'cases/sections'
         },
         {
-            text: 'Вывод региональных данных на сайте',
-            icons: 'mamaki',
-            img: 'data'
+            title: 'Вывод региональных данных на сайте',
+            icon: 'mamaki',
+            img: 'cases/data'
         },
         {
-            text: 'Генерации прайс-листа каталога товаров в xls-формате',
-            icons: 'kitchen-team',
-            img: 'price-list'
+            title: 'Генерации прайс-листа каталога товаров в xls-формате',
+            icon: 'kitchen-team',
+            img: 'cases/price-list'
         },
         {
-            text: 'Создание пользовательского типа свойства заказа',
-            icons: '',
-            img: 'properties'
+            title: 'Создание пользовательского типа свойства заказа',
+            icon: '',
+            img: 'cases/properties'
         },
         {
-            text: 'Генерации прайс-листа каталога товаров в xls-формате',
-            icons: '',
-            img: 'price-list'
+            title: 'Генерации прайс-листа каталога товаров в xls-формате',
+            icon: '',
+            img: 'cases/price-list'
         },
         {
-            text: 'Создание robots.txt, sitemap.xml и счетчиков для разных поддоменов',
-            icons: '',
-            img: 'robots'
+            title: 'Создание robots.txt, sitemap.xml и счетчиков для разных поддоменов',
+            icon: '',
+            img: 'cases/robots'
         },
         {
-            text: 'Синхронизация статей тестовой площадки с продакшн-сайтом',
-            icons: 'workshop',
-            img: 'syncing'
+            title: 'Синхронизация статей тестовой площадки с продакшн-сайтом',
+            icon: 'workshop',
+            img: 'cases/syncing'
         }
     ]
 
 mixin caseList
-    ul.case-list
-        each val in casesList
-            li._item
-                ._in
-                    +caseBlock(val)
+    +cardGroup(casesList, cardType.CASES)

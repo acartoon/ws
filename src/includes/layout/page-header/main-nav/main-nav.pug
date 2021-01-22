@@ -1,17 +1,17 @@
 mixin mainNav()
     nav.main-nav
-        ._burger.d-md-none
+        ._burger.d-xl-none
             +burger()
         ._wrapper
             ._head
             ._body
                 ._site-nav
                     +siteNav()
-                ._login.main-nav__in.d-md-none
+                ._login.main-nav__in.d-xl-none
                     +button(btnText.login)
                 ._contacts.main-nav__in.d-m-none
                     +contactsBlock()
                 ._callback.main-nav__in.d-m-none
                     +buttonGradient(btnText.callback)
-                ._user-nav.d-xs-none.d-md-block
+                ._user-nav.d-none.d-xl-block
                     +buttonLogin()

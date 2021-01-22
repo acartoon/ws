@@ -1,8 +1,9 @@
-$xs: 0;
+$ex: 0;
 $sm: 480px;
 $m: 560;
 $ml: 640px;
-$md: 1024;
+$l: 992px;
+$xl: 1024px;
 
 
 $colors: (
@@ -12,11 +13,14 @@ $colors: (
     white: #ffffff,
     black: #000000,
     grey: #ECECEC,
+    gray98: #FAFAFA,
+    gray92: #EBEBEB,
     light_grey: #F8F8FA,
     dark_grey: #696969,
     placeholder: #808080,
     disclaimer: #989898,
-    error: #e94e1d
+    error: #e94e1d,
+    bg:#F6F6F6,
 );
 
 $fontOpenSans: "Open Sans", "Arial", sans-serif;
