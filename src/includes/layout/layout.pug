@@ -9,8 +9,9 @@ html
         main(class=`${contentClassModifier}-page `).page
             if(isContainer == true)
                 .container
+                    block content
             else
-                return
+                h2(class=pageMainTitleHide ? 'hidden ' : '').page__main-title.section-title=pageMainTitle
                 block content
         +footer()
         script(src="js/libs/jquery-3.5.1.min.js", type="text/javascript")

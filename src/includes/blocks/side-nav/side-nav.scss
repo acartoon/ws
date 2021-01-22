@@ -5,6 +5,7 @@
 $marging: 8px;
 
 .side-nav {
+    display: flex;
     margin-right: -$marging;
     margin-left: -$marging;
 
