@@ -1,0 +1,13 @@
+-
+    var arr = [
+        {name: "инстаграмм", img: "social_insta.svg"},
+        {name: "вконтакте", img: "social_vk.svg"},
+        {name: "фейсбук", img: "social_face.svg"}
+    ]
+
+mixin socialLinks
+    ul.social-links
+        each val in arr
+            li._item
+                a(href="#")._link=val.name
+                    img(src=`i/footer/${val.img}` alt=val.name)

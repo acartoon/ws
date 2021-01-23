@@ -1,0 +1,11 @@
+mixin footerLinks(modClass)
+    div(class=modClass).footer-links
+        ._item
+            ._footer-app
+                +appGoogle
+            ._footer-app
+                +appApple
+        ._item
+            +socialLinks
+        ._item
+            a(href="https://worksolutions.ru/")._link.text-link.outside-link worksolutions.ru

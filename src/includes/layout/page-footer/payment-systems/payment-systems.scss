@@ -2,6 +2,7 @@
 
 $margin: 32px;
 
+@import "src/style/_";
 
 .payment-systems {
     display: flex;
@@ -15,5 +16,13 @@ $margin: 32px;
     &__item {
         height: 24px;
         margin-bottom: $margin;
+
+        @include desktopStyle {
+            margin-right: 40px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
     }
 }

@@ -17,25 +17,23 @@ $margin: 10px;
     &__link {
         display: block;
         padding: $margin 0;
-        font-family: $fontOpenSans;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 20px;
-        color: color(white);
         text-align: center;
         text-decoration: none;
 
-        span {
-            position: relative;
-
-            &::before {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                height: 1px;
-                background: transparentize(color(white), 0.7);
-            }
+        //span {
+        //    position: relative;
+        //    border-bottom: 1px solid transparentize(color(white), 0.7);
+        //    transition: border-color 200ms ease-in;
+        //}
+        //
+        //&:hover {
+        //    span {
+        //        border-color: color(white);
+        //        transition: border-color 200ms ease-in;
+        //    }
+        //}
+        @include desktopStyle {
+            text-align: left;
         }
     }
 }

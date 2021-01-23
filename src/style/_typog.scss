@@ -87,3 +87,49 @@
     @include gradientText;
 }
 
+.outside-link {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 5px);
+        width: 12px;
+        height: 10px;
+        background: url("i/outside_link.svg");
+        transform: translateY(-50%);
+    }
+}
+
+.text-link {
+    position: relative;
+    border-bottom: 1px solid transparentize(color(white), 0.7);
+    transition: border-color 200ms ease-in;
+    font-family: $fontOpenSans;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: color(white);
+    text-decoration: none;
+
+
+    &:hover {
+        border-color: color(white);
+        transition: border-color 200ms ease-in;
+    }
+}
+
+.link {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: color(white);
+    text-decoration: none;
+    transition: opacity 200ms ease-in;
+
+    &:hover {
+        opacity: 0.8;
+        transition: opacity 200ms ease-in;
+    }
+}
