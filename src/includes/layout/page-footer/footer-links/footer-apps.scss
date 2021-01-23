@@ -4,6 +4,18 @@
 
 .footer-links {
 
+    &--page-footer {
+        width: 138px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include desktopStyle {
+            width: 138px;
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+
     &__item {
         margin-bottom: 56px;
         text-align: center;
@@ -13,12 +25,12 @@
         }
 
         @include desktopStyle {
-            text-align: right;
+            text-align: left;
         }
     }
 
     &__footer-app {
-      margin: 0 auto 20px;
+        margin: 0 auto 20px;
 
         @include desktopStyle {
             margin-right: 0;

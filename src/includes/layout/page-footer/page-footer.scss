@@ -103,11 +103,11 @@
     }
 
     &__menu {
-        display: flex;
-        justify-content: center;
 
         @include desktopStyle {
+            display: flex;
             flex: 1 0;
+            justify-content: center;
             justify-content: space-between;
         }
     }

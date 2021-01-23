@@ -10,4 +10,11 @@
     border-radius: 4px;
     align-items: center;
     box-sizing: border-box;
+    transition: border-color 200ms ease-in;
+    cursor: pointer;
+
+    &:hover {
+        border-color: color(white);
+        transition: border-color 200ms ease-in;
+    }
 }

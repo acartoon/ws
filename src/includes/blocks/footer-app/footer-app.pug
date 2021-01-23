@@ -1,0 +1,25 @@
+-
+    var appsBtb = [
+        {
+            link: "i/footer/apps_google.svg",
+            alt: "google play",
+            qrAlt: "qr код google play"
+        },
+        {
+            link: "i/footer/apps_apple.svg",
+            alt: "apple store",
+            qrAlt: "qr код apple store"
+        },
+    ];
+
+mixin appGoogle
+    +_app(appsBtb[0])
+
+mixin appApple
+    +_app(appsBtb[1])
+
+mixin _app(param)
+    .footer-app
+        img(src=param.link atl=param.alt)
+        p.__qr
+            img(src="" alt=param.qrAlt)

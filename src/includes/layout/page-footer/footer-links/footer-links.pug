@@ -1,9 +1,9 @@
-mixin footerLinks
-    .footer-links
+mixin footerLinks(modClass)
+    div(class=modClass).footer-links
         ._item
-            ._footer-app.footer-app
+            ._footer-app
                 +appGoogle
-            ._footer-app.footer-app
+            ._footer-app
                 +appApple
         ._item
             +socialLinks

@@ -1097,6 +1097,49 @@ body {
 
 /********************** end disclaimer **************************/
 
+/*************** footer-app ****************/
+
+.footer-app {
+  line-height: 0;
+}
+
+.footer-app:hover .footer-app__qr {
+  display: block;
+  -webkit-animation: footerQr 400ms forwards;
+  animation: footerQr 400ms forwards;
+}
+
+.footer-app__qr {
+  display: none;
+  margin: 8px 0 0;
+  width: 138px;
+  height: 138px;
+  padding: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+@-webkit-keyframes footerQr {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes footerQr {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /***************** form-input *********************/
 
 .form-input {
@@ -2136,18 +2179,18 @@ html.mfp-helper.ios .modal-dialog {
 /*************** social-links ****************/
 
 .social-links {
+  display: flex;
   margin: 0 -10px;
   padding: 0;
 }
 
 .social-links__item {
-  display: inline-block;
+  display: block;
   margin: 0 10px;
   font-size: 0;
 }
 
 .social-links__link {
-  display: block;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2155,6 +2198,12 @@ html.mfp-helper.ios .modal-dialog {
   height: 30px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 4px;
+  transition: border-color 200ms ease-in;
+}
+
+.social-links__link:hover {
+  border-color: #ffffff;
+  transition: border-color 200ms ease-in;
 }
 
 /******************* cases-page *********************/
@@ -2277,9 +2326,30 @@ html.mfp-helper.ios .modal-dialog {
   border-radius: 4px;
   align-items: center;
   box-sizing: border-box;
+  transition: border-color 200ms ease-in;
+  cursor: pointer;
+}
+
+.footer-app:hover {
+  border-color: #ffffff;
+  transition: border-color 200ms ease-in;
 }
 
 /*************** footer-links ****************/
+
+.footer-links--page-footer {
+  width: 138px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1024px) {
+  .footer-links--page-footer {
+    width: 138px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
 
 .footer-links__item {
   margin-bottom: 56px;
@@ -2292,7 +2362,7 @@ html.mfp-helper.ios .modal-dialog {
 
 @media (min-width: 1024px) {
   .footer-links__item {
-    text-align: right;
+    text-align: left;
   }
 }
 
@@ -2443,14 +2513,11 @@ html.mfp-helper.ios .modal-dialog {
   max-height: 100%;
 }
 
-.page-footer__menu {
-  display: flex;
-  justify-content: center;
-}
-
 @media (min-width: 1024px) {
   .page-footer__menu {
+    display: flex;
     flex: 1 0;
+    justify-content: center;
     justify-content: space-between;
   }
 }
