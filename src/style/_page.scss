@@ -5,6 +5,10 @@
     padding-bottom: 96px;
     background: color(light_grey);
 
+    @include desktopStyle {
+        padding-bottom: 140px;
+    }
+
     &__title-wrap {
         //width: 100%;
         margin-bottom: 64px;

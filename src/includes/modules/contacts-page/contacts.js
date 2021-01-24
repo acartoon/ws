@@ -1,5 +1,5 @@
 // инициализация карты на странице контакты
-
+// ****************************************
 
 // MAP
 if ($('#map').length) {
@@ -21,7 +21,8 @@ if ($('#map').length) {
         // var coordsPoint = new google.maps.LatLng(47.23884047334204,39.689946322623854);
         var coordsPoint = new google.maps.LatLng(47.274529, 39.687058);
         //координаты центра
-        if (device.mobile() || device.tablet() || $(window).width() <= 1024) {
+        // if (device.mobile() || device.tablet() || $(window).width() <= 1024) {
+        if ($(window).width() <= 1024) {
             // coordsCenter = new google.maps.LatLng(47.2745294,39.689946322623854);
             coordsCenter = new google.maps.LatLng(47.274529, 39.687058);
         } else {
@@ -30,9 +31,9 @@ if ($('#map').length) {
         }
 
         function toggleDrag() {
-            if (device.mobile() || device.tablet()) {
-                return false;
-            }
+            // if (device.mobile() || device.tablet()) {
+            //     return false;
+            // }
             return true;
         }
 
@@ -71,11 +72,37 @@ if ($('#map').length) {
             icon: 'i/marker.png'
         });
 
+        // Создаем наполнение для информационного окна
+        var contentString = "<div class=\"map-pin\">\n" +
+            "                <div class=\"map-pin__in\">\n" +
+            "                  <div class=\"map-pin__time\">9:00 — 18:00</div>\n" +
+            "                  <div class=\"map-pin__text\">по рабочим дням</div><a class=\"map-pin__link\" href=\"mailto:info@wssupport.ru\">info@wssupport.ru</a><a class=\"map-pin__link\" href=\"tel:88633226025\">8 (863) 322-60-25</a>\n" +
+            "                </div>\n" +
+            "              </div>";
+
+        // Создаем информационное окно
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 400
+        });
+
         infowindow.open(map, marker);
     };
 
-
     google.maps.event.addDomListener(window, 'load', initMap);
 
+
+    var resizeTimer;
+
+    $(window).on('resize', function (e) {
+
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+
+            initMap();
+
+        }, 250);
+
+    });
 
 }

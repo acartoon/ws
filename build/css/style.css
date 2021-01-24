@@ -357,6 +357,12 @@ body {
   background: #F8F8FA;
 }
 
+@media (min-width: 1024px) {
+  .page {
+    padding-bottom: 140px;
+  }
+}
+
 .page__title-wrap {
   margin-bottom: 64px;
   text-align: center;
@@ -1498,6 +1504,69 @@ body {
 
 /************* end form *************/
 
+/*********** map-pin *************/
+
+.map-pin {
+  position: relative;
+}
+
+.map-pin__time {
+  margin-bottom: 5px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 100%;
+}
+
+.map-pin__text {
+  margin-bottom: 24px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 130%;
+  color: #828282;
+}
+
+.map-pin__link {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 130%;
+  color: #000000;
+  text-decoration: none;
+  transition: opacity 300ms ease-in;
+}
+
+.map-pin__link:last-child {
+  margin-bottom: 0;
+}
+
+.map-pin__link:hover {
+  color: #000000;
+  opacity: 0.7;
+  transition: opacity 300ms ease-in;
+}
+
+.map-pin__in {
+  position: relative;
+  border-radius: 4px;
+  background: #FFFFFF;
+  padding: 32px 40px;
+}
+
+.map-pin__in::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  left: 4px;
+  width: calc(100% - 8px);
+  height: 8px;
+  border-radius: 2px;
+  background: linear-gradient(260.07deg, #326BD2 0%, #5CD384 100%);
+  opacity: 0.6;
+  z-index: 2;
+}
+
 /******** mfp  *******/
 
 .mfp-bg {
@@ -2499,9 +2568,54 @@ html.mfp-helper.ios .modal-dialog {
   }
 }
 
+.contacts-page .gm-style-iw.gm-style-iw-c {
+  padding: 0 !important;
+  max-width: none !important;
+}
+
+.contacts-page .gm-style-iw-d {
+  min-height: auto !important;
+  overflow: auto !important;
+}
+
+.contacts-page__in {
+  border: 2px solid #ECECEC;
+  border-radius: 4px;
+  box-shadow: 20px 30px 60px rgba(11, 24, 36, 0.1);
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .contacts-page__in {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contacts-page__map-wrap {
+    flex: 1 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contacts-page__details {
+    width: 523px;
+  }
+}
+
 .contacts-page__map {
   width: 100%;
   height: 480px;
+}
+
+.contacts-page__map button {
+  display: none !important;
+}
+
+@media (min-width: 1024px) {
+  .contacts-page__map {
+    height: 100%;
+  }
 }
 
 /****************** partner-page *******************/
