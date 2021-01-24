@@ -1,7 +1,7 @@
-mixin siteNav()
+mixin siteNav(activeLink)
     - var nav = ['О компании', 'Магазин задач', 'Цены', 'Вопросы и ответы', 'Блог', 'Кейсы', 'Контакты'];
     ul.site-nav
         each val in nav
             li._item
-                a(href="#")._link=val
+                a(href="#" class=activeLink == val ? "site-nav__link--active" : "")._link=val
 
