@@ -1,0 +1,19 @@
+/******************* contacts-page *********************/
+
+@import "../../../style/_";
+
+.contacts-page {
+
+    &__section {
+        padding-bottom: 94px;
+
+        @include desktopStyle {
+            padding-bottom: 140px;
+        }
+    }
+
+    &__map {
+        width: 100%;
+        height: 480px;
+    }
+}

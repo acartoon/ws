@@ -5,6 +5,8 @@ mixin form(fieldList, formName, textBtn)
                 ._input
                     if(item.type == 'textarea')
                         +formTextarea(item)
+                    else if (item.type ==  'inputFile')
+                        +dropzone
                     else
                         +formInput(item)
         ._button

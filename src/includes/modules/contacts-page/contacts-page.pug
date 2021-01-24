@@ -1,0 +1,13 @@
+mixin contactsPage
+    section.contacts-page__section
+        .contacts-page__wrap
+            .contacts-page__map
+                #map
+            .contacts-page__details
+                +requisite
+    section.contacts-page__form
+        .page__title-wrap
+            h2.page-subtitle.page__subtitle Запросить договор
+        .page__form
+            +formContacts('contacts')
+

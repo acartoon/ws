@@ -1,15 +1,5 @@
 -
-    var fieldList = [
-        {
-            isError: false,
-            label: 'Ваше имя',
-            errorText: 'Введите Ваше имя',
-            requireType: 'text',
-            type: 'text',
-            placeholder: 'Введите имя и фамилию',
-            isRequire: true,
-            value: ''
-        },
+    var contactsList = [
         {
             isError: false,
             label: 'Адрес электронной почты',
@@ -30,7 +20,18 @@
             isRequire: true,
             value: ''
         },
+        {
+            isError: false,
+            label: 'Телефон',
+            errorText: 'Введите номер телефона22',
+            requireType: 'inputFile',
+            type: 'inputFile',
+            placeholder: 'Прикрепить или перетащить файлы',
+            isRequire: false,
+            value: ''
+        },
     ]
 
-mixin formDefault(formName)
-    +form(fieldList, formName, btnText.send)
+mixin formContacts(formName)
+    .page__form
+        +form(contactsList, formName, btnText.send)

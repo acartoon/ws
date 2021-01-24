@@ -104,98 +104,89 @@
     </header>
     <main class="contacts-page  page">
       <div class="container">
-        <section class="contacts-page__section">
-          <div class="contacts-page__wrap">
-            <div class="contacts-page__map">
-              <div id="map"></div>
-            </div>
-            <div class="contacts-page__details">
-              <div class="requisite">
-                <h3 class="requisite__title">Наши реквизиты</h3>
-                <div class="requisite__wrap">
-                  <p class="requisite__text">ООО «ВС САППОРТ»</p>
-                  <p class="requisite__text">ОГРН 1176196061546</p>
-                  <p class="requisite__text">ИНН 6165211290</p>
-                  <p class="requisite__text">КПП 616501001</p>
-                  <p class="requisite__text">ОКПО 22907628</p>
+        <div class="page__form">
+          <form class="form js-form-states">
+            <div class="form__in">
+              <div class="form__input">
+                <label class="form-input--error form-input">
+                  <div class="form-input__wrap">
+                    <p class="form-input__label">Адрес электронной почты</p>
+                    <p class="form-input__error" data-field-error="data-field-error">Неверный формат почты</p>
+                  </div>
+                  <input class="form-input__input" data-type="email" type="email" placeholder="e-mail@example.com" required="required" value=""/>
+                </label>
+              </div>
+              <div class="form__input">
+                <label class="form-input">
+                  <div class="form-input__wrap">
+                    <p class="form-input__label">Телефон</p>
+                    <p class="form-input__error" data-field-error="data-field-error">Введите номер телефона</p>
+                  </div>
+                  <input class="form-input__input" data-type="tel" type="tel" placeholder="X (XXX) XX-XX-XX" required="required" value=""/>
+                </label>
+              </div>
+              <div class="form__input">
+                <label class="form-input">
+                  <div class="form-input__wrap">
+                    <p class="form-input__label">ваш Вопрос</p>
+                    <p class="form-input__error" data-field-error="data-field-error">Напишите свой вопрос</p>
+                  </div>
+                  <textarea class="form-input__input" data-type="textarea" placeholder="Напишите свой вопрос" value=""></textarea>
+                </label>
+              </div>
+              <div class="form__input">
+                <div class="form-input__wrap">
+                  <p class="form-input__label">Ваши реквизиты</p>
                 </div>
-                <div class="requisite__wrap">
-                  <p class="requisite__text">Юридический адрес: 344064, г.Ростов - на - Дону, ул.Вавилова, 62В, офис 503</p>
+                <div class="dropzone-block">
+                  <div class="dropzone-block__container">
+                    <p class="dropzone-block__title">Прикрепить или перетащить файлы</p>
+                    <div class="dropzone-block__clickable" id="dropzone"></div>
+                  </div>
+                  <div class="dropzone-block__files dropzone">
+                    <div class="dz-error dz-complete dropzone-block__preview dz-preview dz-file-preview">
+                      <div class="dropzone-block__img"><img data-dz-thumbnail="" src="i/dropzone/file.svg"/></div>
+                      <div class="dropzone-block__details">
+                        <div class="dropzone-block__filename" data-dz-name="">Реквизиты фирмы.pdf</div>
+                        <div class="dropzone-block__wrap">
+                          <div class="dropzone-block__size" data-dz-size=""><strong>1.5</strong> MB</div><span class="dropzone-block__success-mark"></span><span class="dropzone-block__error-mark">&Ocy;&shcy;&icy;&bcy;&kcy;&acy; &zcy;&acy;&gcy;&rcy;&ucy;&zcy;&kcy;&icy;</span>
+                          <div class="dropzone-block__message" data-dz-errormessage=""></div>
+                        </div>
+                        <div class="dropzone-block__progress"><span class="dropzone-block__upload" data-dz-uploadprogress="" style="width: 50%;"></span></div>
+                      </div><a class="dz-remove" href="javascript:undefined;" data-dz-remove="">Remove file</a>
+                    </div>
+                    <div class="dz-success dz-complete dropzone-block__preview dz-preview dz-file-preview">
+                      <div class="dropzone-block__img"><img data-dz-thumbnail="" src="i/dropzone/file.svg"/></div>
+                      <div class="dropzone-block__details">
+                        <div class="dropzone-block__filename" data-dz-name="">Реквизиты фирмы длинное очень.pdf</div>
+                        <div class="dropzone-block__wrap">
+                          <div class="dropzone-block__size" data-dz-size=""><strong>0.5</strong> MB</div><span class="dropzone-block__success-mark"></span><span class="dropzone-block__error-mark">&Ocy;&shcy;&icy;&bcy;&kcy;&acy; &zcy;&acy;&gcy;&rcy;&ucy;&zcy;&kcy;&icy;</span>
+                          <div class="dropzone-block__message" data-dz-errormessage=""></div>
+                        </div>
+                        <div class="dropzone-block__progress"><span class="dropzone-block__upload" data-dz-uploadprogress="" style="width: 50%;"></span></div>
+                      </div><a class="dz-remove" href="javascript:undefined;" data-dz-remove="">Remove file</a>
+                    </div>
+                    <div class="dropzone-block__preview dz-preview dz-file-preview">
+                      <div class="dropzone-block__img"><img data-dz-thumbnail="" src="i/dropzone/file.svg"/></div>
+                      <div class="dropzone-block__details">
+                        <div class="dropzone-block__filename" data-dz-name="">Короткое.pdf</div>
+                        <div class="dropzone-block__wrap">
+                          <div class="dropzone-block__size" data-dz-size=""><strong>150</strong> MB</div><span class="dropzone-block__success-mark"></span><span class="dropzone-block__error-mark">&Ocy;&shcy;&icy;&bcy;&kcy;&acy; &zcy;&acy;&gcy;&rcy;&ucy;&zcy;&kcy;&icy;</span>
+                          <div class="dropzone-block__message" data-dz-errormessage=""></div>
+                        </div>
+                        <div class="dropzone-block__progress"><span class="dropzone-block__upload" data-dz-uploadprogress="" style="width: 50%;"></span></div>
+                      </div><a class="dz-remove" href="javascript:undefined;" data-dz-remove="">Remove file</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="requisite__wrap">
-                  <p class="requisite__text">р/с 40702810310000263834</p>
-                  <p class="requisite__text">АО &quot;ТИНЬКОФФ БАНК&quot;</p>
-                  <p class="requisite__text">к/с  30101810145250000974</p>
-                  <p class="requisite__text">БИК 044525974</p>
-                </div>
-                <div class="requisite__wrap">
-                  <p class="requisite__text">Директор Мул Максим Юрьевич действует на основании Устава.</p>
-                </div>
-                <div class="requisite__wrap text-right"><a class="requisite__link" href="#">Скачать реквизиты</a></div>
               </div>
             </div>
-          </div>
-        </section>
-        <section class="contacts-page__form">
-          <div class="page__title-wrap">
-            <h2 class="page-subtitle page__subtitle">Запросить договор</h2>
-          </div>
-          <div class="page__form">
-            <div class="page__form">
-              <form class="form js-form-contacts">
-                <div class="form__in">
-                  <div class="form__input">
-                    <label class="form-input">
-                      <div class="form-input__wrap">
-                        <p class="form-input__label">Адрес электронной почты</p>
-                        <p class="form-input__error" data-field-error="data-field-error">Неверный формат почты</p>
-                      </div>
-                      <input class="form-input__input" data-type="email" type="email" placeholder="e-mail@example.com" required="required" value=""/>
-                    </label>
-                  </div>
-                  <div class="form__input">
-                    <label class="form-input">
-                      <div class="form-input__wrap">
-                        <p class="form-input__label">Телефон</p>
-                        <p class="form-input__error" data-field-error="data-field-error">Введите номер телефона</p>
-                      </div>
-                      <input class="form-input__input" data-type="tel" type="tel" placeholder="X (XXX) XX-XX-XX" required="required" value=""/>
-                    </label>
-                  </div>
-                  <div class="form__input">
-                    <div id="dropzone-template-container">
-                      <div class="dropzone-block__preview dz-preview dz-file-preview">
-                        <div class="dropzone-block__img"><img data-dz-thumbnail="" src="i/dropzone/file.svg"/></div>
-                        <div class="dropzone-block__details">
-                          <div class="dropzone-block__filename" data-dz-name=""></div>
-                          <div class="dropzone-block__wrap">
-                            <div class="dropzone-block__size" data-dz-size=""></div><span class="dropzone-block__success-mark"></span><span class="dropzone-block__error-mark">Ошибка загрузки</span>
-                            <div class="dropzone-block__message" data-dz-errormessage=""></div>
-                          </div>
-                          <div class="dropzone-block__progress"><span class="dropzone-block__upload" data-dz-uploadprogress=""></span></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-input__wrap">
-                      <p class="form-input__label">Ваши реквизиты</p>
-                    </div>
-                    <div class="dropzone-block">
-                      <div class="dropzone-block__container">
-                        <p class="dropzone-block__title">Прикрепить или перетащить файлы</p>
-                        <div class="dropzone-block__clickable" id="dropzone"></div>
-                      </div>
-                      <div class="dropzone-block__files dropzone"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form__button">
-                  <button class="button--blue button" type="submit">Отправить</button>
-                </div>
-                <p class="form__disclaimer disclaimer">Нажимая на кнопку «Получить ответ», вы даете согласие на отправку и обработку своих &nbsp<a href="#">персональных данных</a></p>
-              </form>
+            <div class="form__button">
+              <button class="button--blue button" type="submit">Отправить</button>
             </div>
-          </div>
-        </section>
+            <p class="form__disclaimer disclaimer">Нажимая на кнопку «Получить ответ», вы даете согласие на отправку и обработку своих &nbsp<a href="#">персональных данных</a></p>
+          </form>
+        </div>
       </div>
     </main>
     <footer class="page-footer">

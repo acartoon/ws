@@ -1,0 +1,206 @@
+/************* form *************/
+
+@import "src/style/_";
+
+#dropzone-template-container {
+    display: none;
+}
+
+.dropzone-block {
+
+    &__container {
+        position: relative;
+        min-height: 70px;
+        max-height: 70px;
+        padding: 23px 20px;
+        box-sizing: border-box;
+        border: 1px dashed #0ABAEE;
+        cursor: pointer;
+        z-index: 100;
+
+        &:hover .dropzone-block__clickable {
+            background: rgba(10, 186, 238, 0.08);
+            transition: background 200ms ease-in;
+        }
+    }
+
+    .dropzone &__preview {
+        display: flex;
+        width: auto;
+        margin: 0 0 12px;
+        min-height: 0;
+        overflow: hidden;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__progress {
+        position: relative;
+        width: 80px;
+        height: 8px;
+        border: 1px solid color(D8D8D8);
+        box-sizing: border-box;
+        border-radius: 16px;
+        overflow: hidden;
+
+        .dz-complete & {
+            opacity: 0;
+            transition: opacity 300ms ease-in;
+        }
+    }
+
+    &__upload {
+        position: absolute;
+        display: block;
+        background: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
+        left: 0;
+        top: 0;
+        bottom: 0;
+        transition: width 1000ms ease-in;
+    }
+
+    &__details {
+        flex: 0 1 auto;
+        margin-right: 8px;
+    }
+
+    &__filename {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 24px;
+        color: color(black);
+        letter-spacing: 0.05em;
+        margin-bottom: 4px;
+    }
+
+    &__size {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 16px;
+        color: color(placeholder);
+        display: none;
+        margin-right: 4px;
+
+        strong {
+            font-weight: 300;
+        }
+
+        .dz-complete & {
+            display: block;
+        }
+
+        .dz-error & {
+            display: none;
+        }
+    }
+
+    &__error-mark {
+        display: none;
+    }
+
+    .dropzone .dz-remove {
+        display: block;
+        flex: 0 0 auto;
+        width: 24px;
+        height: 24px;
+        font-size: 0;
+        transition: opacity 300ms ease-in;
+        background: url("i/dropzone/remove.svg");
+
+        &:hover {
+            opacity: 0.8;
+            transition: opacity 300ms ease-in;
+        }
+    }
+
+    &__message {
+        display: none;
+    }
+
+    &__img {
+        flex: 0 0 40px;
+        width: 40px;
+        height: 40px;
+        margin-right: 8px;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+    }
+
+    &__success-mark {
+        display: none;
+        width: 16px;
+        height: 16px;
+        background: url("i/dropzone/dropzone-success.svg");
+
+        .dz-success & {
+            display: block;
+        }
+    }
+
+    &__title {
+        position: relative;
+        margin: 0;
+        padding-left: 36px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 24px;
+        color: color(blue);
+        letter-spacing: 0.05em;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url("i/dropzone/attach-file.svg");
+        }
+    }
+
+    &__clickable {
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        bottom: -1px;
+        left: -1px;
+        z-index: 5;
+        transition: background 200ms ease-in;
+    }
+
+    &__files {
+        border: 0;
+        min-height: 0;
+        padding: 0;
+        margin-top: 20px;
+        background: transparent;
+    }
+
+    &__error-mark {
+        display: none;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 16px;
+        color: color(error2);
+
+        .dz-error & {
+            display: block;
+        }
+    }
+
+    .dz-error-message {
+        display: none !important;
+    }
+
+
+}
