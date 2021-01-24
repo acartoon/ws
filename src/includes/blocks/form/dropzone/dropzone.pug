@@ -1,0 +1,73 @@
+-
+    var filesList = [
+        {
+            state: "error",
+            fileName: "Реквизиты фирмы.pdf",
+            size: "1.5"
+        },
+        {
+            state: "success",
+            fileName: "Реквизиты фирмы длинное очень.pdf",
+            size: "0.5"
+        },
+        {
+            state: "complete",
+            fileName: "Короткое.pdf",
+            size: "150"
+        },
+    ]
+
+
+
+mixin dropzone
+    #dropzone-template-container
+        .dropzone-block__preview.dz-preview.dz-file-preview
+            .dropzone-block__img
+                img(data-dz-thumbnail="" src="i/dropzone/file.svg")
+            .dropzone-block__details
+                .dropzone-block__filename(data-dz-name="")
+                .dropzone-block__wrap
+                    .dropzone-block__size(data-dz-size="")
+                    span.dropzone-block__success-mark
+                    span.dropzone-block__error-mark Ошибка загрузки
+                    .dropzone-block__message(data-dz-errormessage='')
+                .dropzone-block__progress
+                    span.dropzone-block__upload(data-dz-uploadprogress="")
+    .form-input__wrap
+        p.form-input__label Ваши реквизиты
+    .dropzone-block
+        ._container
+            p._title Прикрепить или перетащить файлы
+            #dropzone._clickable
+        ._files.dropzone
+
+mixin dropzoneStates
+    .form-input__wrap
+        p.form-input__label Ваши реквизиты
+    .dropzone-block
+        ._container
+            p._title Прикрепить или перетащить файлы
+            #dropzone._clickable
+        ._files.dropzone
+            each val in filesList
+                +dropzoneFile(val)
+
+
+
+mixin dropzoneFile(params)
+    - var stateClass = (params.state == 'error') ? "dz-error dz-complete" : (params.state == 'success') ? "dz-success dz-complete" : ""
+    div(class=stateClass).dropzone-block__preview.dz-preview.dz-file-preview
+        .dropzone-block__img
+            img(data-dz-thumbnail='' src='i/dropzone/file.svg')
+        .dropzone-block__details
+            .dropzone-block__filename(data-dz-name='')=params.fileName
+            .dropzone-block__wrap
+                .dropzone-block__size(data-dz-size='')
+                    strong=params.size
+                    |  MB
+                span.dropzone-block__success-mark
+                span.dropzone-block__error-mark &Ocy;&shcy;&icy;&bcy;&kcy;&acy; &zcy;&acy;&gcy;&rcy;&ucy;&zcy;&kcy;&icy;
+                .dropzone-block__message(data-dz-errormessage='')
+            .dropzone-block__progress
+                span.dropzone-block__upload(data-dz-uploadprogress='' style='width: 50%;')
+        a.dz-remove(href='javascript:undefined;' data-dz-remove='') Remove file

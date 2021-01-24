@@ -1,0 +1,16 @@
+extends ../includes/layout/layout.pug
+block var
+    include ../includes/_var
+    - var headerImage = paramsPage.CONTACTS.image;
+    - var pageTitle = paramsPage.CONTACTS.pageMainTitle;
+    - var contentClassModifier = paramsPage.CONTACTS.class
+    - var isContainer = true;
+    - var activeLink = "Контакты";
+
+
+block header
+    h1.page-header__title.page-title=paramsPage.CONTACTS.header
+    h3.page-header__h3.page-h3 Ростов-на-Дону, ул. Вавилова д.62В, офис 503
+
+block content
+    +contactsPage

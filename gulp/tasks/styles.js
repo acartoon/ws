@@ -9,14 +9,13 @@ const notify = require( 'gulp-notify' )
 const order = require( 'gulp-order' )
 
 module.exports = function styles() {
-  return gulp.src(['src/**/*.scss'])
+  return gulp.src(['src/**/*.scss', '!src/style/libs/*.scss'])
     .pipe(plumber()) // отслеживание ошибок
     .pipe(sourcemaps.init())
     .pipe(order([
         'style/*.scss',
         'includes/blocks/**/*.scss',
         'includes/modules/**/*.scss',
-        // '*.scss'
     ]), { base: './src' })
     .pipe(sass({sourceMap: true})
         .on('error', notify.onError(

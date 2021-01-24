@@ -1,0 +1,139 @@
+-
+    var fieldList = [
+        {
+            isError: true,
+            label: 'Адрес электронной почты',
+            errorText: 'Неверный формат почты',
+            requireType: 'email',
+            type: 'email',
+            placeholder: 'e-mail@example.com',
+            isRequire: true,
+            value: ''
+        },
+        {
+            isError: false,
+            label: 'Телефон',
+            errorText: 'Введите номер телефона',
+            requireType: 'tel',
+            type: 'tel',
+            placeholder: 'X (XXX) XX-XX-XX',
+            isRequire: true,
+            value: ''
+        },
+        {
+            isError: false,
+            isRequire: false,
+            label: 'ваш Вопрос',
+            errorText: 'Напишите свой вопрос',
+            requireType: 'textarea',
+            type: 'textarea',
+            placeholder: 'Напишите свой вопрос',
+            value: ''
+        },
+        {
+            isError: false,
+            label: 'Телефон',
+            errorText: 'Введите номер телефона22',
+            requireType: 'inputFile',
+            type: 'inputFile',
+            placeholder: 'Прикрепить или перетащить файлы222',
+            isRequire: false,
+            value: ''
+        },
+    ]
+
+
+
+mixin formStates
+    form.form.js-form-states
+        ._in
+            each item in fieldList
+                ._input
+                    if(item.type == 'textarea')
+                        +formTextarea(item)
+                    else if (item.type == 'inputFile')
+                        +dropzoneStates
+                    else
+                        +formInput(item)
+        ._button
+            +buttonBlue("Отправить")
+        p.__disclaimer.disclaimer
+            | Нажимая на кнопку «Получить ответ», вы даете согласие на отправку и обработку своих &nbsp
+            a(href="#") персональных данных
+
+
+
+
+mixin _formStates
+    form.form.js-form-contacts
+        .form__in
+            .form__input
+                label.form-input
+                    .form-input__wrap
+                        p.form-input__label &Acy;&dcy;&rcy;&iecy;&scy; &ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&ncy;&ocy;&jcy; &pcy;&ocy;&chcy;&tcy;&ycy;
+                        p.form-input__error(data-field-error='data-field-error') &Vcy;&vcy;&iecy;&dcy;&icy;&tcy;&iecy; &acy;&dcy;&rcy;&iecy;&scy; &pcy;&ocy;&chcy;&tcy;&ycy;
+                    input.form-input__input(data-type='email' type='email' placeholder='e-mail@example.com' required='required' value='')
+            .form__input
+                label.form-input
+                    .form-input__wrap
+                        p.form-input__label &Tcy;&iecy;&lcy;&iecy;&fcy;&ocy;&ncy;
+                        p.form-input__error(data-field-error='data-field-error') &Vcy;&vcy;&iecy;&dcy;&icy;&tcy;&iecy; &ncy;&ocy;&mcy;&iecy;&rcy; &tcy;&iecy;&lcy;&iecy;&fcy;&ocy;&ncy;&acy;
+                    input.form-input__input(data-type='tel' type='tel' placeholder='X (XXX) XX-XX-XX' required='required' value='')
+            .form__input
+                #dropzone-template-container
+                    .dropzone-block__preview.dz-preview.dz-file-preview
+                        .dropzone-block__img
+                            img(data-dz-thumbnail='' src='i/dropzone/file.svg')
+                        .dropzone-block__details
+                            .dropzone-block__filename(data-dz-name='')
+                            .dropzone-block__wrap
+                                .dropzone-block__size(data-dz-size='')
+                                span.dropzone-block__success-mark
+                                span.dropzone-block__error-mark &Ocy;&shcy;&icy;&bcy;&kcy;&acy; &zcy;&acy;&gcy;&rcy;&ucy;&zcy;&kcy;&icy;
+                                .dropzone-block__message(data-dz-errormessage='')
+                            .dropzone-block__progress
+                                span.dropzone-block__upload(data-dz-uploadprogress='')
+                            // .dz-progress.dropzone-block__progress
+                .dropzone-block
+                    .dropzone-block__container
+                        p.dropzone-block__title &Pcy;&rcy;&icy;&kcy;&rcy;&iecy;&pcy;&icy;&tcy;&softcy; &icy;&lcy;&icy; &pcy;&iecy;&rcy;&iecy;&tcy;&acy;&shchcy;&icy;&tcy;&softcy; &fcy;&acy;&jcy;&lcy;&ycy;
+                        #dropzone.dropzone-block__dz-clickable.dz-clickable
+                    .dropzone-block__files.dropzone
+                        .dropzone-block__preview.dz-preview.dz-file-preview.dz-processing.dz-error.dz-complete
+                            .dropzone-block__img
+                                img(data-dz-thumbnail='' src='i/dropzone/file.svg')
+                            .dropzone-block__details
+                                .dropzone-block__filename(data-dz-name='') 3.jpg
+                                .dropzone-block__wrap
+                                    .dropzone-block__size(data-dz-size='')
+                                        strong 3.5
+                                        |  MB
+                                    span.dropzone-block__success-mark
+                                    span.dropzone-block__error-mark &Ocy;&shcy;&icy;&bcy;&kcy;&acy; &zcy;&acy;&gcy;&rcy;&ucy;&zcy;&kcy;&icy;
+                                    .dropzone-block__message(data-dz-errormessage='')
+                                .dropzone-block__progress
+                                    span.dropzone-block__upload(data-dz-uploadprogress='' style='width: 100%;')
+                                // .dz-progress.dropzone-block__progress
+                            a.dz-remove(href='javascript:undefined;' data-dz-remove='') Remove file
+                        .dropzone-block__preview.dz-preview.dz-file-preview.dz-processing.dz-error.dz-complete
+                            .dropzone-block__img
+                                img(data-dz-thumbnail='' src='i/dropzone/file.svg')
+                            .dropzone-block__details
+                                .dropzone-block__filename(data-dz-name='') WhatsApp Image 2021-01-22 at 11.40.48 (2).jpeg
+                                .dropzone-block__wrap
+                                    .dropzone-block__size(data-dz-size='')
+                                        strong 40.4
+                                        |  KB
+                                    span.dropzone-block__success-mark
+                                    span.dropzone-block__error-mark &Ocy;&shcy;&icy;&bcy;&kcy;&acy; &zcy;&acy;&gcy;&rcy;&ucy;&zcy;&kcy;&icy;
+                                    .dropzone-block__message(data-dz-errormessage='')
+
+                                .dropzone-block__progress
+                                    span.dropzone-block__upload(data-dz-uploadprogress='' style='width: 100%;')
+                                // .dz-progress.dropzone-block__progress
+                            a.dz-remove(href='javascript:undefined;' data-dz-remove='') Remove file
+        .form__button
+            button.button--blue.button(type='submit') &Ocy;&tcy;&pcy;&rcy;&acy;&vcy;&icy;&tcy;&softcy;
+        p.form__disclaimer.disclaimer
+            | &Ncy;&acy;&zhcy;&icy;&mcy;&acy;&yacy; &ncy;&acy; &kcy;&ncy;&ocy;&pcy;&kcy;&ucy; &laquo;&Pcy;&ocy;&lcy;&ucy;&chcy;&icy;&tcy;&softcy; &ocy;&tcy;&vcy;&iecy;&tcy;&raquo;, &vcy;&ycy; &dcy;&acy;&iecy;&tcy;&iecy; &scy;&ocy;&gcy;&lcy;&acy;&scy;&icy;&iecy; &ncy;&acy; &ocy;&tcy;&pcy;&rcy;&acy;&vcy;&kcy;&ucy; &icy; &ocy;&bcy;&rcy;&acy;&bcy;&ocy;&tcy;&kcy;&ucy; &scy;&vcy;&ocy;&icy;&khcy; &nbsp;
+            a(href='#') &pcy;&iecy;&rcy;&scy;&ocy;&ncy;&acy;&lcy;&softcy;&ncy;&ycy;&khcy; &dcy;&acy;&ncy;&ncy;&ycy;&khcy;

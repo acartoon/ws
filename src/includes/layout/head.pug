@@ -6,7 +6,5 @@ mixin head(pageTitle)
         link(rel="preload" href="/fonts/opensans-bold-webfont.woff2" as="font" crossorigin="anonymous")
         link(rel="preload" href="/fonts/opensans-light-webfont.woff2" as="font" crossorigin="anonymous")
         meta(http-equiv='X-UA-Compatible', content='ie=edge')
-        link(href="css/style.css", rel="stylesheet")
-        link(href="css/libs/slick.css", rel="stylesheet")
-        link(href="css/libs/slick-theme.css", rel="stylesheet")
+        +styles
         title #{pageTitle ? pageTitle : 'pageTitle'}
