@@ -11,7 +11,6 @@ html
                 .container
                     block content
             else
-                h2(class=pageMainTitleHide ? 'hidden ' : '').page__main-title.section-title=pageMainTitle
                 block content
         +pageFooter()
         +scripts
