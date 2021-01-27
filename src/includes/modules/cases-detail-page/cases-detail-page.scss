@@ -1,0 +1,24 @@
+/******************* cases-detail-page *********************/
+
+@import "src/style/_";
+
+.cases-detail-page {
+    background: transparent;
+
+    &__section {
+        max-width: 870px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &__head {
+        max-width: 870px;
+        margin: 0 auto 64px;
+    }
+
+    &_img {
+        width: auto;
+        height: 80px;
+    }
+
+}

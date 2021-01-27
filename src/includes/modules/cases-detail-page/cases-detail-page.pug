@@ -1,0 +1,17 @@
+
+mixin casesDetailPage
+    section.cases-detail-page__head
+        +caseHeader
+    section.page__section.cases-detail-page__section
+        .block-description
+            include description
+    .page__bg-gray
+        section.page__section
+
+        section.casess-page__form
+            .page__title-wrap
+                h2.page-subtitle.page__subtitle Свяжитесь с нами
+                p.page__subheading.page-subheading Мы работаем со всей страной от Владивостока до Калининграда
+            .page__form
+                +formDefault('cases')
+

@@ -371,14 +371,45 @@ body {
   color: #0ABAEE;
 }
 
+.block-description footer {
+  position: relative;
+  margin-top: 48px;
+  padding-top: 54px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 165%;
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+.block-description footer::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 6px;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("..//i/case-detail/footer.svg");
+  background-repeat: no-repeat;
+}
+
 .block-description figure {
   margin: 0 0 48px;
   line-height: 0;
+  border-radius: 4px;
 }
 
 .block-description figure img {
   max-width: 100%;
   max-height: 100%;
+}
+
+.block-description img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 48px;
+  border-radius: 4px;
 }
 
 .block-description p {
@@ -499,6 +530,10 @@ body {
 
 .page__subtitle {
   margin-bottom: 24px;
+}
+
+.page__bg-gray {
+  background: #F8F8FA;
 }
 
 .page__form {
@@ -1131,6 +1166,54 @@ body {
 }
 
 /******************* end case-block *********************/
+
+/******************* case-header *********************/
+
+.case-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 2px;
+  padding: 26px 39px;
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+.case-header__text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 165%;
+}
+
+.case-header__link {
+  color: #0ABAEE;
+  font-size: 18px;
+  line-height: 165%;
+}
+
+.case-header__in {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.case-header::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  background-image: linear-gradient(#84A6E4 0%, #9DDBE4 100%);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.case-header__img {
+  line-height: 0;
+  box-shadow: 0px 12px 24px rgba(11, 24, 36, 0.08);
+}
 
 /******************* case-list *********************/
 
@@ -2756,6 +2839,28 @@ html.mfp-helper.ios .modal-dialog {
   transition: border-color 200ms ease-in;
 }
 
+/******************* cases-detail-page *********************/
+
+.cases-detail-page {
+  background: transparent;
+}
+
+.cases-detail-page__section {
+  max-width: 870px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.cases-detail-page__head {
+  max-width: 870px;
+  margin: 0 auto 64px;
+}
+
+.cases-detail-page_img {
+  width: auto;
+  height: 80px;
+}
+
 /******************* cases-page *********************/
 
 .cases-page {
@@ -3463,6 +3568,16 @@ html.mfp-helper.ios .modal-dialog {
   }
 }
 
+.page-header--cases-detail {
+  min-height: 580px;
+}
+
+@media (min-width: 480px) {
+  .page-header--cases-detail {
+    min-height: 470px;
+  }
+}
+
 .page-header__in {
   display: flex;
   flex-wrap: wrap;
@@ -3601,9 +3716,13 @@ html.mfp-helper.ios .modal-dialog {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
+  margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
+  box-sizing: border-box;
   transform: translate(-50%, -50%);
+  max-width: 960px;
 }
 
 @media (min-width: 1024px) {
