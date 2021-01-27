@@ -1,0 +1,28 @@
+extends ../../blocks/card-deck/card-deck
+block arr
+    -
+        var arr = [
+            {
+                title: 'Установка счетчика Яндекс.Метрики',
+                img: 'store/counter.png',
+                price: '3000 ₽',
+                tag: 'SEO'
+
+            },
+            {
+                title: 'Подключение хлебных крошек',
+                img: 'store/https.png',
+                price: '1000 ₽',
+                tag: 'SEO'
+
+            },
+            {
+                title: 'Установка SSL-сертификата на сайт',
+                img: 'store/pin.png',
+                price: '3000 ₽',
+                tag: 'SEO'
+
+            },
+        ];
+block mixin
+    +cardHorizontal(val)

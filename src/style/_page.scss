@@ -10,7 +10,6 @@
     }
 
     &__title-wrap {
-        //width: 100%;
         margin-bottom: 64px;
         text-align: center;
 
@@ -25,6 +24,7 @@
         background: color(light_grey);
 
         @include desktopStyle {
+            flex: 0 0 auto;
             width: 300px;
             padding: 0;
             margin-right: 60px;
@@ -44,7 +44,6 @@
             margin: 0;
         }
     }
-
 
 
     &__subtitle {
@@ -68,6 +67,5 @@
         @include desktopStyle {
             margin-bottom: 140px;
         }
-
     }
 }

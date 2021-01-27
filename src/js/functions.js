@@ -311,3 +311,7 @@ function onInitForm(formClass, params) {
         onSendAjax(paramsAjax);
     });
 }
+//
+// function changeUrl(link) {
+//     history.pushState(null, null, link);
+// }

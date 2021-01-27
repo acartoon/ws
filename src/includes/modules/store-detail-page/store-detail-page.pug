@@ -1,10 +1,23 @@
+include description
+
 mixin storeDetailPage
-    .store-detail-page__in.d-container
-        section.page__page-nav
-            .m-container
+    .store-page__in.d-container
+        .m-container.page__page-nav
+            section.page__section
                 .page__side-nav
                     +sideNavBlock("Каталог", marketNav)
-        .store-detail-page__in
-            section.store-detail-page__section
-                .m-container
-                    h2.page__title-wrap.section-title Установка классной штуки на сайт
+        .store-page__wrap
+            .m-container
+                section.page__section
+                    h2.page__title-wrap.text-left.section-title Установка классной штуки на сайт
+                    .store-page__spacer
+                        .store-page__offer
+                            +offer
+                        .store-page__button
+                            +buttonBlue(btnText.offer)
+                    .store-page__spacer
+                        .store-page__description.block-description
+                            +description
+                section.page__section
+                    h2.section-title.page__title-wrap.text-left Также рекомендуем
+                    include store-page-promotion
