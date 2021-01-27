@@ -12,6 +12,16 @@
     color: color(white);
     letter-spacing: 2px;
 
+    @media(min-width: 480px) {
+        font-size: 44px;
+        line-height: 56px;
+    }
+
+    @include desktopStyle {
+        font-size: 52px;
+        line-height: 60px;
+    }
+
     &--cases {
         padding-top: 105px;
         padding-bottom: 216px;
@@ -135,9 +145,90 @@
 }
 
 .text-right {
-    text-align: right;
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
 }
 
 .text-center {
-    text-align: center;
+    text-align: center !important;
 }
+
+.block-description {
+
+    a {
+        color: color(blue);
+    }
+
+    figure {
+        margin: 0 0 48px;
+        line-height: 0;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    p {
+        margin: 0 0 40px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 165%;
+        color: color(black);
+    }
+
+    h3 {
+        margin: 0 0 40px;
+        font-size: 26px;
+        line-height: 35px;
+        letter-spacing: 0.5px;
+        color: color(blue2);
+        font-weight: 400;
+    }
+
+    ol {
+        margin: 0 0 64px;
+        padding: 0;
+        list-style-type: none;
+        counter-reset: item;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        li {
+            padding-bottom: 20px;
+
+            &:last-child {
+                padding: 0;
+            }
+        }
+
+        li::before {
+            padding-right: 5px;
+            content: counter(item) ") ";
+            counter-increment: item;
+        }
+    }
+
+    ul {
+        margin: 0 0 64px;
+        padding: 0 0 0 20px;
+
+        li {
+            padding-bottom: 20px;
+
+            &:last-child {
+                padding: 0;
+            }
+        }
+    }
+
+    &__button {
+        max-width: 320px;
+    }
+}
+

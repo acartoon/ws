@@ -15,10 +15,10 @@
     <link href="css/libs/basic.css" rel="stylesheet"/>
     <link href="css/libs/dropzone.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"/>
-    <title>Магазин задач</title>
+    <title>Установка классной штуки на сайт</title>
   </head>
   <body>
-    <header class="page-header page-header--store" style="background-image: url(/i/header/store.png)">
+    <header class="page-header page-header--store-detail" style="background-image: url(/i/header/store-detail.png)">
       <div class="page-header__in">
         <div class="page-header__preheader d-none d-m-block">
           <div class="page-header__contacts">
@@ -101,10 +101,10 @@
         <h1 class="page-header__title page-title">Магазин задач</h1>
       </div>
     </header>
-    <main class="store-page  page">
+    <main class="store-detail-page  page">
       <div class="store-page__in d-container">
-        <section class="page__page-nav">
-          <div class="m-container">
+        <div class="m-container page__page-nav">
+          <section class="page__section">
             <div class="page__side-nav">
               <div class="side-nav-block">
                 <h4 class="side-nav-block__title page-h4">Каталог</h4>
@@ -119,90 +119,73 @@
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
         <div class="store-page__wrap">
           <div class="m-container">
-            <section class="store-page__section">
-              <h2 class="section-title page__title-wrap text-left">Новинки</h2>
-              <ul class="card-deck">
-                <li class="card-deck__item"><a class="card-horizontal" href="#">
-                    <p class="card-horizontal__img"><img src="i/store/pin.png"/></p>
-                    <div class="card-horizontal__body">
-                      <p class="card-horizontal__title card-horizontal__wrap">Запил классной штуки</p>
-                      <p class="card-horizontal__price card-horizontal__wrap">2000 ₽</p>
-                      <p class="card-horizontal__tag card-horizontal__wrap">Безопасность</p>
-                    </div></a>
-                </li>
-                <li class="card-deck__item"><a class="card-horizontal" href="#">
-                    <p class="card-horizontal__img"><img src="i/store/vk.png"/></p>
-                    <div class="card-horizontal__body">
-                      <p class="card-horizontal__title card-horizontal__wrap">Установка полезной фичи</p>
-                      <p class="card-horizontal__price card-horizontal__wrap">2000 ₽</p>
-                      <p class="card-horizontal__tag card-horizontal__wrap">SEO</p>
-                    </div></a>
-                </li>
-                <li class="card-deck__item"><a class="card-horizontal" href="#">
-                    <p class="card-horizontal__img"><img src="i/store/store.png"/></p>
-                    <div class="card-horizontal__body">
-                      <p class="card-horizontal__title card-horizontal__wrap">Открытие специального учета</p>
-                      <p class="card-horizontal__price card-horizontal__wrap">1000 ₽</p>
-                      <p class="card-horizontal__tag card-horizontal__wrap">Навигация</p>
-                    </div></a>
-                </li>
-                <li class="card-deck__item"><a class="card-horizontal" href="#">
-                    <p class="card-horizontal__img"><img src="i/store/barcode.png"/></p>
-                    <div class="card-horizontal__body">
-                      <p class="card-horizontal__title card-horizontal__wrap">Установка полезной фичи</p>
-                      <p class="card-horizontal__price card-horizontal__wrap">1000 ₽</p>
-                      <p class="card-horizontal__tag card-horizontal__wrap">Безопасность</p>
-                    </div></a>
-                </li>
-                <li class="card-deck__item"><a class="card-horizontal" href="#">
-                    <p class="card-horizontal__img"><img src="i/store/chat.png"/></p>
-                    <div class="card-horizontal__body">
-                      <p class="card-horizontal__title card-horizontal__wrap">Запил классной штуки</p>
-                      <p class="card-horizontal__price card-horizontal__wrap">Бесплатно</p>
-                      <p class="card-horizontal__tag card-horizontal__wrap">Аналитика</p>
-                    </div></a>
-                </li>
-              </ul>
-            </section>
-          </div>
-          <div class="m-container">
-            <section class="store-page__section">
-              <h2 class="section-title page__title-wrap text-left">Рекомендуем для продвижения</h2>
-              <ul class="card-deck">
-                <li class="card-deck__item"><a class="card-horizontal" href="#">
-                    <p class="card-horizontal__img"><img src="i/store/counter.png"/></p>
-                    <div class="card-horizontal__body">
-                      <p class="card-horizontal__title card-horizontal__wrap">Установка счетчика Яндекс.Метрики</p>
-                      <p class="card-horizontal__price card-horizontal__wrap">3000 ₽</p>
-                      <p class="card-horizontal__tag card-horizontal__wrap">SEO</p>
-                    </div></a>
-                </li>
-                <li class="card-deck__item"><a class="card-horizontal" href="#">
-                    <p class="card-horizontal__img"><img src="i/store/https.png"/></p>
-                    <div class="card-horizontal__body">
-                      <p class="card-horizontal__title card-horizontal__wrap">Подключение хлебных крошек</p>
-                      <p class="card-horizontal__price card-horizontal__wrap">1000 ₽</p>
-                      <p class="card-horizontal__tag card-horizontal__wrap">SEO</p>
-                    </div></a>
-                </li>
-                <li class="card-deck__item"><a class="card-horizontal" href="#">
-                    <p class="card-horizontal__img"><img src="i/store/pin.png"/></p>
-                    <div class="card-horizontal__body">
-                      <p class="card-horizontal__title card-horizontal__wrap">Установка SSL-сертификата на сайт</p>
-                      <p class="card-horizontal__price card-horizontal__wrap">3000 ₽</p>
-                      <p class="card-horizontal__tag card-horizontal__wrap">SEO</p>
-                    </div></a>
-                </li>
-              </ul>
-            </section>
-          </div>
-          <div class="m-container">
             <section class="page__section">
-              <h2 class="section-title page__title-wrap text-left">Рекомендуем для безопасности</h2>
+              <h2 class="page__title-wrap text-left section-title">Установка классной штуки на сайт</h2>
+              <div class="store-page__spacer">
+                <div class="store-page__offer">
+                  <div class="offer">
+                    <div class="offer__img"><img src="i/store/store.png"/></div>
+                    <dl class="offer__props">
+                      <dl class="offer__dl">
+                        <dd class="offer__dd">Цена</dd>
+                        <dt class="offer__dt">3000 ₽</dt>
+                      </dl>
+                      <dl class="offer__dl">
+                        <dd class="offer__dd">Категория</dd>
+                        <dt class="offer__dt">Для увеличения продаж</dt>
+                      </dl>
+                      <dl class="offer__dl">
+                        <dd class="offer__dd">Срок выполнения</dd>
+                        <dt class="offer__dt">1 день</dt>
+                      </dl>
+                    </dl>
+                  </div>
+                </div>
+                <div class="store-page__button">
+                  <button class="button--blue button" type="submit">Добавить на свой сайт</button>
+                </div>
+              </div>
+              <div class="store-page__spacer">
+                <div class="store-page__description block-description">
+                  <p>Во всяком случае,&nbsp<a href="#">так обещают на официальном сайте</a>, тогда как в действительности после обновления что-то
+                    обязательно ломается, а сотрудник техподдержки отказывается помогать.
+                  </p>
+                  <p>Давайте разберемся, почему так происходит, и на что стоит обратить внимание, чтобы не попасть в нехорошую ситуацию.</p>
+                  <h3>При создании обращения вы можете задать:</h3>
+                  <ol>
+                    <li>Проект</li>
+                    <li>Заголовок</li>
+                    <li>Тип задачи</li>
+                    <li>Подробное описание</li>
+                    <li>Прикрепить файлы, помогающие отразить суть обращения</li>
+                    <li>Срочность</li>
+                  </ol>
+                  <h3>При создании обращения вы можете задать:</h3>
+                  <ul>
+                    <li>Проект</li>
+                    <li>Заголовок</li>
+                    <li>Тип задачи</li>
+                    <li>Подробное описание</li>
+                    <li>Прикрепить файлы, помогающие отразить суть обращения</li>
+                    <li>Срочность</li>
+                  </ul>
+                  <figure><img src="i/store/97jdt3kt.png"/></figure>
+                  <p>Данный тип необходимо использовать для задач связанных с доработкой дизайна ваших проектов. По задаче будет дана точная оценка в часах с учетом возможных рисков и только после вашего согласования мы приступим к работе.</p>
+                  <p>Применяется для исправления нами допущенных ошибок. Перед началом работ проводится аудит есть ли ошибка. В случае если ошибка возникла по нашей вине, то время затраченное на ее исправление не будет включено в счет по итогам месяца.</p>
+                  <p>Данный тип необходимо использовать для задач связанных с доработкой дизайна ваших проектов. По задаче будет дана точная оценка в часах с учетом возможных рисков и только после вашего согласования мы приступим к работе.</p>
+                  <p>Применяется для исправления нами допущенных ошибок. Перед началом работ проводится аудит есть ли ошибка. В случае если ошибка возникла по нашей вине, то время затраченное на ее исправление не будет включено в счет по итогам месяца.</p>
+                  <div class="block-description__button">
+                    <button class="button--blue button" type="submit">Добавить на свой сайт</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="page__section">
+              <h2 class="section-title page__title-wrap text-left">Также рекомендуем</h2>
               <ul class="card-deck">
                 <li class="card-deck__item"><a class="card-horizontal" href="#">
                     <p class="card-horizontal__img"><img src="i/store/counter.png"/></p>

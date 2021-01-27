@@ -7,23 +7,22 @@
 
 mixin marketPage
     .store-page__in.d-container
-        section.store-page__page-nav.page__section
+        section.page__page-nav
             .m-container
-
-                .store-page__side-nav
+                .page__side-nav
                     +sideNavBlock("Каталог", marketNav)
         .store-page__wrap
-            section.store-page__section.page__section
-                .m-container
-                    h2.store-page__section-title.section-title.page__title-wrap Новинки
+            .m-container
+                section.store-page__section
+                    h2.section-title.page__title-wrap.text-left Новинки
                     include store-page-new
 
-            section.store-page__section.page__section
-                .m-container
-                    h2.store-page__section-title.section-title.page__title-wrap Рекомендуем для продвижения
+            .m-container
+                section.store-page__section
+                    h2.section-title.page__title-wrap.text-left Рекомендуем для продвижения
                     include store-page-promotion
 
-            section.store-page__section.page__section
-                .m-container
-                    h2.store-page__section-title.section-title.page__title-wrap Рекомендуем для безопасности
+            .m-container
+                section.page__section
+                    h2.section-title.page__title-wrap.text-left Рекомендуем для безопасности
                     include store-page-security

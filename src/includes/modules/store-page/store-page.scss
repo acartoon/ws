@@ -6,9 +6,25 @@
     padding-top: 0;
     background: color(white);
 
-    &__section-title {
-        text-align: left;
+    &__wrap {
+        padding-top: 72px;
+
+        @include desktopStyle {
+            padding-top: 0;
+            flex: 1 0;
+        }
     }
+
+    &__spacer {
+        margin-bottom: 48px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #EBEBEB;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
 
     &__in {
 
@@ -19,45 +35,21 @@
         }
     }
 
-    &__page-nav {
-        padding-top: 40px;
-        padding-bottom: 48px;
-        background: color(light_grey);
-
-        @include desktopStyle {
-            width: 300px;
-            padding: 0;
-            margin-right: 60px;
-            background: transparent;
-        }
+    &__offer {
+        margin-bottom: 48px;
     }
 
-    &__wrap {
-
-        @include desktopStyle {
-            flex: 1 0;
-        }
-    }
-
-    &__side-nav {
-        margin-right: -20px;
-
-        @media (min-width: 480px) {
-            margin-right: -30px;
-        }
-
-        @include desktopStyle {
-            margin: 0;
-        }
-    }
 
     &__section {
+        margin-bottom: 96px;
         padding-bottom: 40px;
         border-bottom: 1px solid color(gray92);
+    }
 
-        &:last-child {
-            padding-bottom: 0;
-            border-bottom: none;
-        }
+    &__button {
+        max-width: 320px;
+    }
+
+    &__description {
     }
 }

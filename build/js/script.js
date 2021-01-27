@@ -311,30 +311,10 @@ function onInitForm(formClass, params) {
         onSendAjax(paramsAjax);
     });
 }
-// side-nav
-
-$(document).ready(function(){
-
-    $('[data-slider="side-nav"]').slick({
-        variableWidth: true,
-        arrows: false,
-        mobileFirst: true,
-        responsive: [
-            {
-                breakpoint: 1023,
-                settings: "unslick",
-            }
-        ]
-    });
-});
-var mainNav = $('.main-nav');
-
-
-$('.burger').on('click', function () {
-   $(this).toggleClass('open');
-    mainNav.toggleClass('show');
-    onOverflow();
-});
+//
+// function changeUrl(link) {
+//     history.pushState(null, null, link);
+// }
 // инициализация карты на странице контакты
 // ****************************************
 
@@ -466,6 +446,30 @@ onInitForm('.js-form-questions', {
     url: '',
 });
 
+// side-nav
+
+$(document).ready(function(){
+
+    $('[data-slider="side-nav"]').slick({
+        variableWidth: true,
+        arrows: false,
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 1023,
+                settings: "unslick",
+            }
+        ]
+    });
+});
+var mainNav = $('.main-nav');
+
+
+$('.burger').on('click', function () {
+   $(this).toggleClass('open');
+    mainNav.toggleClass('show');
+    onOverflow();
+});
 $("#dropzone").dropzone({
     url: "post",
     maxFiles: 4,

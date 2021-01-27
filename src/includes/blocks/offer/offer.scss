@@ -1,0 +1,80 @@
+/******************* offer *********************/
+
+@import "src/style/_";
+
+.offer {
+
+    @media (min-width: 480px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 160px;
+        height: 160px;
+        margin-bottom: 40px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        background: #FAFAFA;
+
+        @media (min-width: 576px) {
+            margin-right: 40px;
+        }
+
+        @media (min-width: 861px) {
+            margin-bottom: 0;
+        }
+
+        img {
+            height: 24px;
+        }
+    }
+
+    &__props {
+        margin: 0 0 -40px;
+
+        @media (min-width: 480px) {
+            display: flex;
+            flex: 1 0 auto;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__dd {
+        margin: 0 0 16px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.05em;
+        color: color(black);
+    }
+
+    &__dt {
+        margin: 0;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+        color: color(black);
+
+    }
+
+    &__dl {
+        margin: 0 0 40px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+        color: color(black);
+
+        @media (min-width: 576px) {
+            margin-right: 56px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
