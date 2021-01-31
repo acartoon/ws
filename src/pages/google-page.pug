@@ -1,0 +1,19 @@
+extends ../includes/layout/layout.pug
+
+block var
+    include ../includes/_var
+    - var headerImage = paramsPage.INDEX.image;
+    - var pageTitle = paramsPage.INDEX.pageMainTitle;
+    - var contentClassModifier = paramsPage.INDEX.class
+    - var isContainer = true;
+
+
+block header
+    .page-header__wrap
+        .page-header__block
+            +partner()
+        .page-header__block
+            +minPrice()
+        h1.page-header__title.page-title=paramsPage.INDEX.header
+block content
+    h2 главная страница сайта

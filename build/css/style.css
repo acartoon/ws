@@ -413,7 +413,7 @@ body {
 }
 
 .block-description p {
-  margin: 0 0 40px;
+  margin: 0 0 48px;
   font-weight: 300;
   font-size: 18px;
   line-height: 165%;
@@ -874,7 +874,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin-right: -16px;
-    margin-bottom: 32px;
+    margin-bottom: -32px;
     margin-left: -16px;
   }
 }
@@ -1088,6 +1088,10 @@ body {
   color: #000000;
   letter-spacing: 0.01em;
   word-break: break-word;
+}
+
+.card--cases .card__title {
+  margin-bottom: 92px;
 }
 
 .card__link {
@@ -2842,18 +2846,62 @@ html.mfp-helper.ios .modal-dialog {
 /******************* cases-detail-page *********************/
 
 .cases-detail-page {
+  padding-bottom: 0;
   background: transparent;
 }
 
-.cases-detail-page__section {
+.cases-detail-page__footer {
+  padding-bottom: 96px;
+  background: #F8F8FA;
+}
+
+@media (min-width: 1024px) {
+  .cases-detail-page__footer {
+    padding-bottom: 140px;
+  }
+}
+
+.cases-detail-page__button {
+  max-width: 320px;
+  margin: 58px auto 0;
+}
+
+.cases-detail-page__container {
   max-width: 870px;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+@media (min-width: 480px) {
+  .cases-detail-page__container {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cases-detail-page__container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.cases-detail-page__more {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+@media (min-width: 1024px) {
+  .cases-detail-page__more {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
 }
 
 .cases-detail-page__head {
-  max-width: 870px;
-  margin: 0 auto 64px;
+  margin-bottom: 64px;
 }
 
 .cases-detail-page_img {

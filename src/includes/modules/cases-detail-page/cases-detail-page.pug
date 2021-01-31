@@ -1,14 +1,16 @@
 
 mixin casesDetailPage
-    section.cases-detail-page__head
+    section.cases-detail-page__head.cases-detail-page__container.d-none.d-xl-block
         +caseHeader
-    section.page__section.cases-detail-page__section
+    section.page__section.cases-detail-page__container
         .block-description
             include description
-    .page__bg-gray
-        section.page__section
-
-        section.casess-page__form
+    .cases-detail-page__footer
+        section.cases-detail-page__more.container
+            include cases-more-list
+            .cases-detail-page__button
+                +buttonBlue(btnText.cases)
+        section.cases-detail-page__container
             .page__title-wrap
                 h2.page-subtitle.page__subtitle Свяжитесь с нами
                 p.page__subheading.page-subheading Мы работаем со всей страной от Владивостока до Калининграда
