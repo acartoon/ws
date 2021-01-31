@@ -13,7 +13,7 @@ $padding: 16px;
         display: flex;
         flex-wrap: wrap;
         margin-right: -$padding;
-        margin-bottom: $padding * 2;
+        margin-bottom: -$padding * 2;
         margin-left: -$padding;
     }
 

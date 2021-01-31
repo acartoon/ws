@@ -1,0 +1,60 @@
+/******************* cases-detail-page *********************/
+
+@import "src/style/_";
+
+.cases-detail-page {
+    padding-bottom: 0;
+    background: transparent;
+
+    &__footer {
+        padding-bottom: 96px;
+        background: color(light_grey);
+
+        @include desktopStyle {
+            padding-bottom: 140px;
+        }
+    }
+
+    &__button {
+        max-width: 320px;
+        margin: 58px auto 0;
+    }
+
+    &__container {
+        max-width: 870px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 20px;
+        padding-left: 20px;
+
+        @media (min-width: 480px) {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+
+        @include desktopStyle {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    &__more {
+        padding-top: 96px;
+        padding-bottom: 96px;
+
+        @include desktopStyle {
+            padding-top: 140px;
+            padding-bottom: 140px;
+        }
+    }
+
+    &__head {
+        margin-bottom: 64px;
+    }
+
+    &_img {
+        width: auto;
+        height: 80px;
+    }
+
+}

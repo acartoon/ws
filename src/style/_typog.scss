@@ -162,9 +162,33 @@
         color: color(blue);
     }
 
+    footer {
+        position: relative;
+        margin-top: 48px;
+        padding-top: 54px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 165%;
+        font-family: $fontOpenSans;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 6px;
+            display: block;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: url("i/case-detail/footer.svg");
+            background-repeat: no-repeat;
+        }
+    }
+
     figure {
         margin: 0 0 48px;
         line-height: 0;
+        border-radius: 4px;
 
         img {
             max-width: 100%;
@@ -172,8 +196,15 @@
         }
     }
 
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        margin-bottom: 48px;
+        border-radius: 4px;
+    }
+
     p {
-        margin: 0 0 40px;
+        margin: 0 0 48px;
         font-weight: 300;
         font-size: 18px;
         line-height: 165%;

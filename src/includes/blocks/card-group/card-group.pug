@@ -2,7 +2,4 @@ mixin cardGroup(arr, type)
     ul.card-group
         each val in arr
             li._item
-                if(type == cardType.CASES)
-                    +cardIcons(val)
-                else
-                    +card(val)
+                +card(val)

@@ -42,6 +42,16 @@
         }
     }
 
+
+    &--cases-detail {
+        min-height: 580px;
+
+        @media (min-width: $sm) {
+            min-height: 470px;
+        }
+    }
+
+
     &__in {
         display: flex;
         flex-wrap: wrap;
@@ -175,11 +185,15 @@
         position: absolute;
         top: 50%;
         left: 50%;
+        width: 100%;
+        margin: 0 auto;
         padding-right: 20px;
         padding-left: 20px;
+        box-sizing: border-box;
         transform: translate(-50%, -50%);
+        max-width: 960px;
 
-        @media (min-width: $xl) {
+        @include desktopStyle {
             position: static;
             transform: none;
             padding-right: 0;

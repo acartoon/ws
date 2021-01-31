@@ -184,7 +184,16 @@
             <form class="form js-form-partners">
               <div class="form__in">
                 <div class="form__input">
-                  <label class="form-input--error form-input">
+                  <label class="form-input">
+                    <div class="form-input__wrap">
+                      <p class="form-input__label">Ваше имя</p>
+                      <p class="form-input__error" data-field-error="data-field-error">Введите Ваше имя</p>
+                    </div>
+                    <input class="form-input__input" data-type="text" type="text" placeholder="Введите имя и фамилию" required="required" value=""/>
+                  </label>
+                </div>
+                <div class="form__input">
+                  <label class="form-input">
                     <div class="form-input__wrap">
                       <p class="form-input__label">Адрес электронной почты</p>
                       <p class="form-input__error" data-field-error="data-field-error">Неверный формат почты</p>
@@ -200,40 +209,6 @@
                     </div>
                     <input class="form-input__input" data-type="tel" type="tel" placeholder="X (XXX) XX-XX-XX" required="required" value=""/>
                   </label>
-                </div>
-                <div class="form__input">
-                  <label class="form-input">
-                    <div class="form-input__wrap">
-                      <p class="form-input__label">ваш Вопрос</p>
-                      <p class="form-input__error" data-field-error="data-field-error">Напишите свой вопрос</p>
-                    </div>
-                    <textarea class="form-input__input" data-type="textarea" placeholder="Напишите свой вопрос" value=""></textarea>
-                  </label>
-                </div>
-                <div class="form__input">
-                  <div id="dropzone-template-container">
-                    <div class="dropzone-block__preview dz-preview dz-file-preview">
-                      <div class="dropzone-block__img"><img data-dz-thumbnail="" src="i/dropzone/file.svg"/></div>
-                      <div class="dropzone-block__details">
-                        <div class="dropzone-block__filename" data-dz-name=""></div>
-                        <div class="dropzone-block__wrap">
-                          <div class="dropzone-block__size" data-dz-size=""></div><span class="dropzone-block__success-mark"></span><span class="dropzone-block__error-mark">Ошибка загрузки</span>
-                          <div class="dropzone-block__message" data-dz-errormessage=""></div>
-                        </div>
-                        <div class="dropzone-block__progress"><span class="dropzone-block__upload" data-dz-uploadprogress=""></span></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-input__wrap">
-                    <p class="form-input__label">Ваши реквизиты</p>
-                  </div>
-                  <div class="dropzone-block">
-                    <div class="dropzone-block__container">
-                      <p class="dropzone-block__title">Прикрепить или перетащить файлы</p>
-                      <div class="dropzone-block__clickable" id="dropzone"></div>
-                    </div>
-                    <div class="dropzone-block__files dropzone"></div>
-                  </div>
                 </div>
               </div>
               <div class="form__button">

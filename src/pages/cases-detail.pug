@@ -1,0 +1,14 @@
+extends ../includes/layout/layout.pug
+block var
+    include ../includes/_var
+    - var headerImage = paramsPage.CASES_DETAIL.image;
+    - var pageTitle = paramsPage.CASES_DETAIL.pageMainTitle;
+    - var contentClassModifier = paramsPage.CASES_DETAIL.class
+    - var isContainer = false;
+
+
+
+block header
+    h1.page-header__title.page-title=paramsPage.CASES_DETAIL.header
+block content
+    +casesDetailPage
