@@ -6,8 +6,14 @@ mixin card(item, className)
                     img(src=`i/clients-logo/${item.icon}.png` alt='')
         if(item.img)
             p._img
-            p._img
                 img(src=`i/${item.img}.png`)
         ._body
             p._title=item.title
             p._link Читать
+
+mixin cardIn(param)
+    .card
+        ._in
+            p._text=param.text
+            ._img-wrap
+                img(src=param.img alt=param.alt)

@@ -46,6 +46,25 @@
     letter-spacing: 0.5px;
 }
 
+.subject {
+    margin: 0 0 19px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 61px;
+    letter-spacing: 0.05em;
+}
+
+.text-red {
+    color: #E03E31;
+}
+
+.text-green {
+    color: #00A700;
+}
+
+.text-orange {
+    color: #FCA600;
+}
 
 .section-title {
 
@@ -142,6 +161,14 @@
         opacity: 0.8;
         transition: opacity 200ms ease-in;
     }
+}
+
+.text-xs {
+    margin: 0;
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: 0.05em;
+    color: #6C6C6C;
 }
 
 .text-right {
