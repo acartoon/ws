@@ -1,7 +1,10 @@
 mixin modal(params)
     div(class=`modal--${params.class}` id=params.id).modal
         ._in
-            h4(class=`modal__${params.titleClass}`).gradient-text=params.title
+            .modal__subheading
+                h4(class=`modal__${params.titleClass}`).gradient-text=params.title
+                if(params.subtitle)
+                    h3.page-subheading=params.subtitle
             //button(type='button')._close.button-close
             ._body
                 block

@@ -1,0 +1,27 @@
+-
+    var authorizationList = [
+        {
+            isError: false,
+            label: 'Адрес электронной почты',
+            errorText: 'Неверный формат почты',
+            requireType: 'email',
+            type: 'email',
+            placeholder: 'Введите адрес электронной почты',
+            isRequire: true,
+            value: ''
+        },
+        {
+            isError: false,
+            label: 'Пароль',
+            errorText: 'Неверный пароль',
+            requireType: 'password',
+            type: 'password',
+            placeholder: 'Введите пароль',
+            isRequire: true,
+            value: ''
+        },
+    ]
+
+mixin formAuthorization
+    .page__form
+        +form(authorizationList, 'authorization', btnText.enter, false)

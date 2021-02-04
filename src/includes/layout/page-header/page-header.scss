@@ -42,6 +42,10 @@
         }
     }
 
+    &--index {
+        min-height: 580px;
+    }
+
 
     &--cases-detail {
         min-height: 580px;
@@ -67,8 +71,8 @@
         }
     }
 
-    &__title {
-        //margin-bottom: 16px;
+    &__title:not(:last-child) {
+        margin-bottom: 16px;
         //position: absolute;
         //top: 50%;
         //left: 50%;
@@ -99,7 +103,7 @@
     }
 
     &__block {
-        width: 221px;
+        width: 227px;
         margin-right: auto;
         margin-left: auto;
 
@@ -186,12 +190,17 @@
         top: 50%;
         left: 50%;
         width: 100%;
+        max-width: 960px;
         margin: 0 auto;
         padding-right: 20px;
         padding-left: 20px;
         box-sizing: border-box;
         transform: translate(-50%, -50%);
-        max-width: 960px;
+
+        .page-header--index & {
+            position: static;
+            transform: none;
+        }
 
         @include desktopStyle {
             position: static;

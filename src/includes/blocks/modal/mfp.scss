@@ -166,22 +166,22 @@ button::-moz-focus-inner {
         content: "";
         position: absolute;
         top: 50%;
-        left: 0;
-        width: 100%;
+        left: 50%;
+        width: 30px;
         height: 1px;
         background: color(blue);
-        transform: translateY(-50%) rotate(45deg);
+        transform: translate(-50%, -50%) rotate(45deg);
     }
 
     &::after {
         content: "";
         position: absolute;
         top: 50%;
-        left: 0;
-        width: 100%;
+        left: 50%;
+        width: 30px;
         height: 1px;
         background: color(blue);
-        transform: translateY(-50%) rotate(-45deg);
+        transform: translate(-50%, -50%) rotate(-45deg);
     }
 }
 

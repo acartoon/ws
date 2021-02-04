@@ -24,8 +24,11 @@ mixin button(text)
 mixin buttonWhite(text)
     +_button(text, 'button--white')
 
+mixin buttonCallback(text)
+    button(type="button" data-toggle="modal" data-target="callback").button.button--white=text
+
 mixin buttonLogin()
-    +_buttonDeep('button--icon ')
+    button(type="button" class="button--icon" data-toggle="modal" data-target="authorization").button
         span Личный кабинет
         i._icon
             +loginSvg

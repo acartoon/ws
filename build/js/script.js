@@ -213,6 +213,7 @@ function closePopup() {
 function onBtnCloseClick() {
     closePopup();
     $('#id-success-form').off('click', '.js-modal-close', onBtnCloseClick);
+    $('#id-error-form').off('click', '.js-modal-close', onBtnCloseClick);
 }
 
 /**
@@ -228,7 +229,10 @@ function onOpenPopup(params) {
         },
         callbacks: {
             open: function () {
-                params.closePopup();
+
+                if(params.closePopup) {
+                    params.closePopup();
+                }
             },
         },
         type: params.type,
@@ -243,12 +247,14 @@ function onOpenPopup(params) {
  * */
 
 function openSuccessFormPopup() {
+
     onOpenPopup({
         src: '#id-success-form',
         type: 'inline',
         closeBtnInside: true,
         showCloseBtn: true,
         closePopup: function () {
+
             $('#id-success-form').on('click', '.js-modal-close', onBtnCloseClick);
         },
     });
@@ -410,7 +416,7 @@ if ($('#map').length) {
             // title: 'Work Solutions',
 
             // Укажем свою иконку для маркера
-            icon: 'i/marker.png'
+            // icon: 'i/marker.png'
         });
 
         // Создаем наполнение для информационного окна
@@ -445,8 +451,28 @@ if ($('#map').length) {
         }, 250);
 
     });
-
 }
+
+if($("#dropzone").length) {
+    initDropzone({
+        el: $("#dropzone"),
+        maxFiles: false,
+        maxFilesize: 256,
+        previewTemplate: $('#dropzone-template-container').html(),
+        previewsContainer: '.dropzone-block__files'
+
+    })
+}
+
+// функция отправки формы на странице кейсов
+onInitForm('.js-form-authorization', {
+    url: '',
+});
+
+// функция отправки формы на странице кейсов
+onInitForm('.js-form-callback', {
+    url: '',
+});
 
 // функция отправки формы на странице кейсов
 onInitForm('.js-form-cases', {
@@ -470,20 +496,52 @@ onInitForm('.js-form-questions', {
     url: '',
 });
 
-$("#dropzone").dropzone({
-    url: "post",
-    maxFiles: 4,
-    maxFilesize: 256,
-    chunkSize: false,
-    addRemoveLinks: true,
-    acceptedFiles: 'image/*',
-    previewTemplate: document.querySelector('#dropzone-template-container').innerHTML,
-    previewsContainer: '.dropzone-block__files',
-    createImageThumbnails: false,
-});
+function initDropzone(params) {
+    params.el.dropzone({
+        url: "post",
+        maxFiles: params.maxFiles,
+        maxFilesize: params.maxFilesize,
+        chunkSize: false,
+        addRemoveLinks: true,
+        acceptedFiles: 'image/*',
+        previewTemplate: params.previewTemplate,
+        previewsContainer: params.previewsContainer,
+        createImageThumbnails: false,
+    });
+
+    // $("#dropzone").dropzone({
+    //     url: "post",
+    //     maxFiles: 4,
+    //     maxFilesize: 256,
+    //     chunkSize: false,
+    //     addRemoveLinks: true,
+    //     acceptedFiles: 'image/*',
+    //     previewTemplate: document.querySelector('#dropzone-template-container').innerHTML,
+    //     previewsContainer: '.dropzone-block__files',
+    //     createImageThumbnails: false,
+    // });
+}
+
 // удалить при интеграции
 // как пример для активного элемента списка
 
 $('.site-nav__link').on('click', function () {
     $(this).toggleClass('site-nav__link--active');
+})
+//открытие модальных окон
+
+$('[data-toggle="modal"]').on('click', function (evt) {
+    evt.preventDefault();
+    var modal = $(this).attr('data-target');
+    onOpenPopup({
+        src: '#' + modal,
+        type: 'inline',
+        closeBtnInside: true,
+        showCloseBtn: true,
+        closePopup: function () {
+            $('#id-success-form').on('click', '.js-modal-close', onBtnCloseClick);
+            $('#id-error-form').on('click', '.js-modal-close', onBtnCloseClick);
+        },
+    });
+
 })

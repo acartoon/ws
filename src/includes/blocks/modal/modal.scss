@@ -10,6 +10,8 @@
     padding: 54px 20px 66px;
     background: color(white);
 
+
+
     &__in {
         max-width: 560px;
         margin: 0 auto;
@@ -31,12 +33,16 @@
     }
 
     &__title {
-        margin: 0;
+        margin: 0 auto;
         font-weight: 200;
         font-size: 52px;
         line-height: 60px;
         font-family: $fontHelvetica;
         font-style: normal;
+    }
+
+    &__title:not(:last-child) {
+        margin-bottom: 8px;
     }
 
     &__subheading {

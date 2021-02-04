@@ -69,7 +69,7 @@ if ($('#map').length) {
             // title: 'Work Solutions',
 
             // Укажем свою иконку для маркера
-            icon: 'i/marker.png'
+            // icon: 'i/marker.png'
         });
 
         // Создаем наполнение для информационного окна
@@ -104,5 +104,15 @@ if ($('#map').length) {
         }, 250);
 
     });
+}
 
+if($("#dropzone").length) {
+    initDropzone({
+        el: $("#dropzone"),
+        maxFiles: false,
+        maxFilesize: 256,
+        previewTemplate: $('#dropzone-template-container').html(),
+        previewsContainer: '.dropzone-block__files'
+
+    })
 }
