@@ -1,0 +1,11 @@
+.tagline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -5px;
+
+    &__item {
+        margin: 5px;
+        line-height: 0;
+    }
+}

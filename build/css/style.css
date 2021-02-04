@@ -73,6 +73,10 @@ body {
   background: #ffffff;
 }
 
+.d-flex {
+  display: flex;
+}
+
 /************ стили сетки ***************/
 
 .d-none {
@@ -540,6 +544,10 @@ body {
   .page__title-wrap {
     margin-bottom: 72px;
   }
+}
+
+.page__modals {
+  display: none;
 }
 
 .page__page-nav {
@@ -2114,22 +2122,22 @@ button::-moz-focus-inner {
   content: "";
   position: absolute;
   top: 50%;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  width: 30px;
   height: 1px;
   background: #0ABAEE;
-  transform: translateY(-50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .mfp-close::after {
   content: "";
   position: absolute;
   top: 50%;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  width: 30px;
   height: 1px;
   background: #0ABAEE;
-  transform: translateY(-50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .mfp-close-btn-in .mfp-close {
@@ -2529,12 +2537,16 @@ html.mfp-helper.ios .modal-dialog {
 }
 
 .modal__title {
-  margin: 0;
+  margin: 0 auto;
   font-weight: 200;
   font-size: 52px;
   line-height: 60px;
   font-family: "Helvetica Neue", "Arial", sans-serif;
   font-style: normal;
+}
+
+.modal__title:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .modal__subheading {
@@ -3006,6 +3018,18 @@ html.mfp-helper.ios .modal-dialog {
 .social-links__link:hover {
   border-color: #ffffff;
   transition: border-color 200ms ease-in;
+}
+
+.tagline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -5px;
+}
+
+.tagline__item {
+  margin: 5px;
+  line-height: 0;
 }
 
 /******************* blog-page *********************/
@@ -3791,6 +3815,10 @@ html.mfp-helper.ios .modal-dialog {
   }
 }
 
+.page-header--index {
+  min-height: 580px;
+}
+
 .page-header--cases-detail {
   min-height: 580px;
 }
@@ -3818,6 +3846,10 @@ html.mfp-helper.ios .modal-dialog {
   }
 }
 
+.page-header__title:not(:last-child) {
+  margin-bottom: 16px;
+}
+
 .page-header__h3 {
   margin-top: 16px;
   text-align: center;
@@ -3843,7 +3875,7 @@ html.mfp-helper.ios .modal-dialog {
 }
 
 .page-header__block {
-  width: 221px;
+  width: 227px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -3940,12 +3972,17 @@ html.mfp-helper.ios .modal-dialog {
   top: 50%;
   left: 50%;
   width: 100%;
+  max-width: 960px;
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
   box-sizing: border-box;
   transform: translate(-50%, -50%);
-  max-width: 960px;
+}
+
+.page-header--index .page-header__body {
+  position: static;
+  transform: none;
 }
 
 @media (min-width: 1024px) {

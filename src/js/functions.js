@@ -213,6 +213,7 @@ function closePopup() {
 function onBtnCloseClick() {
     closePopup();
     $('#id-success-form').off('click', '.js-modal-close', onBtnCloseClick);
+    $('#id-error-form').off('click', '.js-modal-close', onBtnCloseClick);
 }
 
 /**
@@ -228,7 +229,10 @@ function onOpenPopup(params) {
         },
         callbacks: {
             open: function () {
-                params.closePopup();
+
+                if(params.closePopup) {
+                    params.closePopup();
+                }
             },
         },
         type: params.type,
@@ -243,12 +247,14 @@ function onOpenPopup(params) {
  * */
 
 function openSuccessFormPopup() {
+
     onOpenPopup({
         src: '#id-success-form',
         type: 'inline',
         closeBtnInside: true,
         showCloseBtn: true,
         closePopup: function () {
+
             $('#id-success-form').on('click', '.js-modal-close', onBtnCloseClick);
         },
     });
