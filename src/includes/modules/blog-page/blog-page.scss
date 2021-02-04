@@ -1,0 +1,14 @@
+/******************* blog-page *********************/
+
+@import "src/style/_";
+
+
+.blog-page {
+    &__card {
+        margin-bottom: 48px;
+    }
+}
+
+.blog-detail-page {
+    background: color(white);
+}

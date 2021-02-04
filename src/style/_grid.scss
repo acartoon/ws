@@ -19,6 +19,18 @@ $grid-breakpoints: (
     display: block !important;
 }
 
+.row {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-3 {
+    width: 33.3333%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
 
 @each $key, $breakpoints in $grid-breakpoints {
 

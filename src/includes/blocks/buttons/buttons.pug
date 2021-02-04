@@ -5,7 +5,7 @@ mixin _buttonSubmit(text, mixin)
     button(type="submit" class=`${mixin}`).button=text
 
 mixin _buttonDeep(mixin)
-    button(type="button" class=`${mixin}`).button
+    button(type="button" class=mixin).button
         block
 
 mixin buttonBlue(text)
@@ -25,7 +25,7 @@ mixin buttonWhite(text)
     +_button(text, 'button--white')
 
 mixin buttonLogin()
-    +_buttonDeep('button--icon')
+    +_buttonDeep('button--icon ')
         span Личный кабинет
         i._icon
             +loginSvg
