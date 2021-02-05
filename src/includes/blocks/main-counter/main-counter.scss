@@ -1,0 +1,32 @@
+/************* main-counter *************/
+
+@import "src/style/_";
+
+.main-counter {
+    width: 220px;
+    height: 220px;
+    padding: 50px;
+    box-sizing: border-box;
+    background: color(white);
+    border: 1px solid #ECECEC;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 20px 30px 60px rgba(11, 24, 36, 0.1);
+
+    &__count {
+        margin-bottom: 8px;
+        font-weight: 100;
+        font-size: 60px;
+        font-family: $fontHelvetica;
+        line-height: 60px;
+        text-align: center;
+        color: #009EE3;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 140%;
+        color: #000000;
+    }
+}

@@ -1,0 +1,125 @@
+/************ double-stage-block ***************/
+
+@import "src/style/_";
+
+
+.double-stage-block {
+    $_this: &;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__item {
+        display: block;
+        margin: 0 0 64px;
+        border-radius: 4px;
+        padding: 0;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 86.46%);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include desktopStyle {
+            display: flex;
+            align-items: center;
+            background: none;
+            margin-bottom: 72px;
+        }
+    }
+
+    &__in {
+        @include desktopStyle {
+            max-width: 602px;
+            margin-left: auto;
+        }
+    }
+
+    &__title {
+        margin: 0 0 20px;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 41px;
+        letter-spacing: 0.5px;
+    }
+
+    &__content {
+        padding: 40px 20px 30px;
+
+
+        @media (min-width: 480px) {
+            padding-right: 48px;
+            padding-left: 48px;
+        }
+
+        @include desktopStyle {
+            flex: 1;
+            padding-bottom: 40px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 20%);
+            border-radius: 4px;
+
+            &::before {
+                bottom: 4px;
+                left: auto;
+                width: 8px;
+                height: calc(100% - 8px);
+            }
+
+            #{$_this}__item:nth-child(even) & {
+                background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 20%);
+
+                &::before {
+                    right: auto;
+                    left: 4px;
+                }
+            }
+        }
+    }
+
+
+    &__text {
+        font-weight: 300;
+        margin: 0;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 165%;
+        color: #000000;
+    }
+
+    &__img {
+        margin: 0 20px;
+        padding: 0;
+        border-radius: 4px;
+        box-shadow: (8px 12px 25px rgba(11, 24, 36, 0.1));
+        line-height: 0;
+
+        @media (min-width: 480px) {
+            margin-right: 48px;
+            margin-left: 48px;
+        }
+
+        @include desktopStyle {
+            flex: 0 0 auto;
+            max-width: 530px;
+            width: 50%;
+            margin: 0;
+
+            #{$_this}__item:nth-child(odd) & {
+                order: -1;
+            }
+        }
+
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+
+
+.color-block {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 86.46%);
+    border-radius: 4px;
+}

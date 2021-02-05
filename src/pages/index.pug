@@ -5,7 +5,7 @@ block var
     - var headerImage = paramsPage.INDEX.image;
     - var pageTitle = paramsPage.INDEX.pageMainTitle;
     - var contentClassModifier = paramsPage.INDEX.class
-    - var isContainer = true;
+    - var isContainer = false;
 
 
 block header
@@ -14,4 +14,4 @@ block header
         .page-header__tagline
             +tagline
 block content
-    h2 главная страница сайта
+    +indexPage

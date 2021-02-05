@@ -1,0 +1,11 @@
+/************ index-page ***************/
+
+.index-page {
+    //background: transparent;
+
+    @media (min-width: 992px) {
+        position: relative;
+        margin-top: -110px;
+        padding-top: 0;
+    }
+}

@@ -27,6 +27,10 @@
         background: linear-gradient(77.35deg, rgba(48, 166, 216, 0.6) 0%, rgba(84, 211, 146, 0.6) 100%);
     }
 
+    @media (min-width: 992px) {
+        z-index: 0;
+    }
+
     @media (min-width: $desktop) {
         //max-width: 1300px;
         margin-right: auto;

@@ -1,0 +1,128 @@
+/************ double-stage-block ***************/
+
+@import "src/style/_";
+
+
+.double-stage-block-num {
+    $_this: &;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: block-num;
+
+    &__item {
+        position: relative;
+        display: block;
+        margin: 0 0 64px;
+        padding: 0;
+        border-radius: 4px;
+
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+
+        @include desktopStyle {
+            display: flex;
+            align-items: center;
+            margin-bottom: 72px;
+            background: none;
+        }
+    }
+
+    &__in {
+        @include desktopStyle {
+            max-width: 602px;
+            margin-left: auto;
+        }
+    }
+
+    &__title {
+        margin: 0 0 20px;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 41px;
+        letter-spacing: 0.5px;
+    }
+
+    &__content {
+        margin-bottom: 30px;
+        padding-left: 51px;
+
+        &::before {
+            top: 0;
+            bottom: 0px;
+            left: 0;
+            width: 8px;
+            height: 100%;
+        }
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 18px;
+            counter-increment: block-num;
+            content: counter(block-num);
+            font-weight: 550;
+            font-size: 40px;
+            line-height: 115%;
+            text-align: center;
+            letter-spacing: 2px;
+            color: #7CA0D8;
+            font-family: $fontHelvetica;
+        }
+
+        @media (min-width: 480px) {
+            padding-left: 72px;
+
+            @media (min-width: 480px) {
+                &::after {
+                    left: 23px;
+                    font-size: 54px;
+                }
+            }
+        }
+
+        @include desktopStyle {
+            margin-bottom: 0;
+        }
+    }
+
+
+    &__text {
+        font-weight: 300;
+        margin: 0;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 165%;
+        color: #000000;
+    }
+
+    &__img {
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+
+
+        @include desktopStyle {
+            flex: 0 0 auto;
+            width: 56%;
+            max-width: 720px;
+            margin: 0;
+
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+
+
+.color-block {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 86.46%);
+    border-radius: 4px;
+}

@@ -158,7 +158,7 @@ function (_Emitter) {
       // Exposing the emitter class, mainly for tests
       this.prototype.Emitter = Emitter;
       /*
-       This is a list of all available events you can register on a dropzone object.
+       This is a double-stage-block of all available events you can register on a dropzone object.
         You can register an event handler like this:
         dropzone.on("dragEnter", function() { });
         */
@@ -348,7 +348,7 @@ function (_Emitter) {
 
         /**
          * The default implementation of `accept` checks the file's mime type or
-         * extension against this list. This is a comma separated list of mime
+         * extension against this double-stage-block. This is a comma separated double-stage-block of mime
          * types or file extensions.
          *
          * Eg.: `image/*,application/pdf,.psd`
@@ -2018,7 +2018,7 @@ function (_Emitter) {
       if (this.files.length === 0) {
         return this.emit("reset");
       }
-    } // Removes all files that aren't currently processed from the list
+    } // Removes all files that aren't currently processed from the double-stage-block
 
   }, {
     key: "removeAllFiles",
@@ -3098,7 +3098,7 @@ Dropzone.optionsForElement = function (element) {
   } else {
     return undefined;
   }
-}; // Holds a list of all dropzone instances
+}; // Holds a double-stage-block of all dropzone instances
 
 
 Dropzone.instances = []; // Returns the dropzone for given element if any
@@ -3206,7 +3206,7 @@ Dropzone.discover = function () {
 // But what to do when browsers *theoretically* support an API, but crash
 // when using it.
 //
-// This is a list of regular expressions tested against navigator.userAgent
+// This is a double-stage-block of regular expressions tested against navigator.userAgent
 //
 // ** It should only be used on browser that *do* support the API, but
 // incorrectly **
@@ -3397,7 +3397,7 @@ Dropzone.getElements = function (els, name) {
   }
 
   if (elements == null || !elements.length) {
-    throw new Error("Invalid `".concat(name, "` option provided. Please provide a CSS selector, a plain HTML element or a list of those."));
+    throw new Error("Invalid `".concat(name, "` option provided. Please provide a CSS selector, a plain HTML element or a double-stage-block of those."));
   }
 
   return elements;

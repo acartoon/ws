@@ -2,11 +2,13 @@
 
 
 /************ стили сетки ***************/
+
 $grid-breakpoints: (
     ex: $ex,
     sm: 480,
     m: $m,
     ml: 640,
+    lm: 768,
     l: 992,
     xl: 1024,
 );
@@ -30,6 +32,7 @@ $grid-breakpoints: (
     padding-right: 15px;
     padding-left: 15px;
 }
+
 
 
 @each $key, $breakpoints in $grid-breakpoints {

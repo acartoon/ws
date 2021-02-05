@@ -143,6 +143,18 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  .d-lm-block {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .d-lm-none {
+    display: none;
+  }
+}
+
 @media (min-width: 992px) {
   .d-l-block {
     display: block;
@@ -176,6 +188,13 @@ body {
   font-family: "Helvetica Neue";
   font-style: normal;
   src: url("..//../fonts/helveticaneuecyr-thin-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  src: url("..//../fonts/HelveticaNeueCyr-Medium.woff") format("woff");
 }
 
 @font-face {
@@ -608,6 +627,27 @@ body {
   .page__section {
     margin-bottom: 140px;
   }
+}
+
+/************ _line-block ***************/
+
+.line-block {
+  position: relative;
+}
+
+.line-block::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background: linear-gradient(260.07deg, #326BD2 0%, #5CD384 100%);
+  border-radius: 2px;
+  opacity: 0.6;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  top: 4px;
+  right: 4px;
+  left: 4px;
+  width: calc(100% - 8px);
+  height: 8px;
 }
 
 /***************** advantages-block ************************/
@@ -1392,7 +1432,7 @@ body {
   box-shadow: 0px 12px 24px rgba(11, 24, 36, 0.08);
 }
 
-/******************* case-list *********************/
+/******************* case-double-stage-block *********************/
 
 .case-list {
   margin: 0;
@@ -1438,7 +1478,7 @@ body {
   border-radius: 4px;
 }
 
-/******************* end case-list *********************/
+/******************* end case-double-stage-block *********************/
 
 /**************** conditions-block *****************/
 
@@ -1493,6 +1533,259 @@ body {
 }
 
 /********************** end disclaimer **************************/
+
+/************ double-stage-block ***************/
+
+.double-stage-block-num {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: block-num;
+}
+
+.double-stage-block-num__item {
+  position: relative;
+  display: block;
+  margin: 0 0 64px;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.double-stage-block-num__item:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  .double-stage-block-num__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 72px;
+    background: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .double-stage-block-num__in {
+    max-width: 602px;
+    margin-left: auto;
+  }
+}
+
+.double-stage-block-num__title {
+  margin: 0 0 20px;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 41px;
+  letter-spacing: 0.5px;
+}
+
+.double-stage-block-num__content {
+  margin-bottom: 30px;
+  padding-left: 51px;
+}
+
+.double-stage-block-num__content::before {
+  top: 0;
+  bottom: 0px;
+  left: 0;
+  width: 8px;
+  height: 100%;
+}
+
+.double-stage-block-num__content::after {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  counter-increment: block-num;
+  content: counter(block-num);
+  font-weight: 550;
+  font-size: 40px;
+  line-height: 115%;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #7CA0D8;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+}
+
+@media (min-width: 480px) {
+  .double-stage-block-num__content {
+    padding-left: 72px;
+  }
+}
+
+@media (min-width: 480px) and (min-width: 480px) {
+  .double-stage-block-num__content::after {
+    left: 23px;
+    font-size: 54px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .double-stage-block-num__content {
+    margin-bottom: 0;
+  }
+}
+
+.double-stage-block-num__text {
+  font-weight: 300;
+  margin: 0;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 165%;
+  color: #000000;
+}
+
+.double-stage-block-num__img {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+@media (min-width: 1024px) {
+  .double-stage-block-num__img {
+    flex: 0 0 auto;
+    width: 56%;
+    max-width: 720px;
+    margin: 0;
+  }
+}
+
+.double-stage-block-num__img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.color-block {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 86.46%);
+  border-radius: 4px;
+}
+
+/************ double-stage-block ***************/
+
+.double-stage-block {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.double-stage-block__item {
+  display: block;
+  margin: 0 0 64px;
+  border-radius: 4px;
+  padding: 0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 86.46%);
+}
+
+.double-stage-block__item:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  .double-stage-block__item {
+    display: flex;
+    align-items: center;
+    background: none;
+    margin-bottom: 72px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .double-stage-block__in {
+    max-width: 602px;
+    margin-left: auto;
+  }
+}
+
+.double-stage-block__title {
+  margin: 0 0 20px;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 41px;
+  letter-spacing: 0.5px;
+}
+
+.double-stage-block__content {
+  padding: 40px 20px 30px;
+}
+
+@media (min-width: 480px) {
+  .double-stage-block__content {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .double-stage-block__content {
+    flex: 1;
+    padding-bottom: 40px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 20%);
+    border-radius: 4px;
+  }
+
+  .double-stage-block__content::before {
+    bottom: 4px;
+    left: auto;
+    width: 8px;
+    height: calc(100% - 8px);
+  }
+
+  .double-stage-block__item:nth-child(even) .double-stage-block__content {
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 20%);
+  }
+
+  .double-stage-block__item:nth-child(even) .double-stage-block__content::before {
+    right: auto;
+    left: 4px;
+  }
+}
+
+.double-stage-block__text {
+  font-weight: 300;
+  margin: 0;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 165%;
+  color: #000000;
+}
+
+.double-stage-block__img {
+  margin: 0 20px;
+  padding: 0;
+  border-radius: 4px;
+  box-shadow: 8px 12px 25px rgba(11, 24, 36, 0.1);
+  line-height: 0;
+}
+
+@media (min-width: 480px) {
+  .double-stage-block__img {
+    margin-right: 48px;
+    margin-left: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .double-stage-block__img {
+    flex: 0 0 auto;
+    max-width: 530px;
+    width: 50%;
+    margin: 0;
+  }
+
+  .double-stage-block__item:nth-child(odd) .double-stage-block__img {
+    order: -1;
+  }
+}
+
+.double-stage-block__img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.color-block {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 86.46%);
+  border-radius: 4px;
+}
 
 /*************** footer-app ****************/
 
@@ -1886,6 +2179,54 @@ body {
 }
 
 /************* end form *************/
+
+/************* main-counter *************/
+
+.main-counter-list {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-right: -25px;
+  margin-left: -25px;
+  padding: 0;
+  list-style: none;
+}
+
+.main-counter-list__item {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+/************* main-counter *************/
+
+.main-counter {
+  width: 220px;
+  height: 220px;
+  padding: 50px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #ECECEC;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 20px 30px 60px rgba(11, 24, 36, 0.1);
+}
+
+.main-counter__count {
+  margin-bottom: 8px;
+  font-weight: 100;
+  font-size: 60px;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  line-height: 60px;
+  text-align: center;
+  color: #009EE3;
+}
+
+.main-counter__text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 140%;
+  color: #000000;
+}
 
 /*********** map-pin *************/
 
@@ -2638,7 +2979,7 @@ html.mfp-helper.ios .modal-dialog {
   }
 }
 
-/********** partner-list ***********/
+/********** partner-double-stage-block ***********/
 
 .partner-list {
   margin: 0;
@@ -2811,7 +3152,7 @@ html.mfp-helper.ios .modal-dialog {
   background-image: url("..//i/icons/beginning.svg");
 }
 
-/************** questions-list  *******************/
+/************** questions-double-stage-block  *******************/
 
 .questions-list {
   margin: 0;
@@ -3175,6 +3516,16 @@ html.mfp-helper.ios .modal-dialog {
 @media (min-width: 1024px) {
   .contacts-page__map {
     height: 100%;
+  }
+}
+
+/************ index-page ***************/
+
+@media (min-width: 992px) {
+  .index-page {
+    position: relative;
+    margin-top: -110px;
+    padding-top: 0;
   }
 }
 
@@ -3795,6 +4146,12 @@ html.mfp-helper.ios .modal-dialog {
   width: 100%;
   height: 100%;
   background: linear-gradient(77.35deg, rgba(48, 166, 216, 0.6) 0%, rgba(84, 211, 146, 0.6) 100%);
+}
+
+@media (min-width: 992px) {
+  .page-header {
+    z-index: 0;
+  }
 }
 
 @media (min-width: 1024px) {
