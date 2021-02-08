@@ -27,12 +27,24 @@ $grid-breakpoints: (
     margin-left: -15px;
 }
 
+.row-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.order-xl-first {
+
+    @include desktopStyle {
+        order: -1;
+    }
+}
+
 .col-3 {
     width: 33.3333%;
     padding-right: 15px;
     padding-left: 15px;
 }
-
 
 
 @each $key, $breakpoints in $grid-breakpoints {

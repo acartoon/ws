@@ -4,14 +4,14 @@
 
 .footer-app {
     display: block;
+    align-items: center;
+    box-sizing: border-box;
     width: 138px;
     height: 40px;
     border: 1px solid transparentize(color(white), 0.5);
     border-radius: 4px;
-    align-items: center;
-    box-sizing: border-box;
-    transition: border-color 200ms ease-in;
     cursor: pointer;
+    transition: border-color 200ms ease-in;
 
     &:hover {
         border-color: color(white);

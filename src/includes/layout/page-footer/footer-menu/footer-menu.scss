@@ -5,10 +5,10 @@ $margin: 10px;
 
 .footer-menu {
     margin: 0;
-    padding: 0;
-    list-style: none;
     margin-top: -$margin;
     margin-bottom: -$margin;
+    padding: 0;
+    list-style: none;
 
     &__item {
         display: block;
@@ -32,6 +32,7 @@ $margin: 10px;
         //        transition: border-color 200ms ease-in;
         //    }
         //}
+
         @include desktopStyle {
             text-align: left;
         }

@@ -3,7 +3,6 @@
 @import "../../../style/_";
 
 .contacts-page {
-
     &__section {
         padding-bottom: 94px;
 
@@ -14,8 +13,8 @@
 
 
     .gm-style-iw.gm-style-iw-c {
-        padding: 0 !important;
         max-width: none !important;
+        padding: 0 !important;
     }
 
     .gm-style-iw-d {
@@ -24,11 +23,11 @@
     }
 
     &__in {
+        overflow: hidden;
 
         border: 2px solid #ECECEC;
         border-radius: 4px;
         box-shadow: 20px 30px 60px rgba(11, 24, 36, 0.1);
-        overflow: hidden;
 
         @include desktopStyle {
             display: flex;
@@ -46,7 +45,7 @@
 
         @include desktopStyle {
             width: 523px;
-        };
+        }
     }
 
     &__map {

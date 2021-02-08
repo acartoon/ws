@@ -39,7 +39,6 @@ $speed: 250ms;
 
     &__wrapper {
         position: fixed;
-        visibility: hidden;
         top: 0;
         right: 0;
         bottom: 0;
@@ -48,22 +47,23 @@ $speed: 250ms;
         display: flex;
         flex-direction: column;
         background: color(white);
+        visibility: hidden;
         opacity: 0;
         transition: opacity $speed ease-in;
 
 
         .main-nav.show & {
+            z-index: 10;
             visibility: visible;
             opacity: 1;
-            z-index: 10;
             transition: opacity $speed ease-in;
         }
 
         @media (min-width: $desktop) {
             position: static;
-            visibility: visible;
             width: 100%;
             background: transparent;
+            visibility: visible;
             opacity: 1;
         }
     }
@@ -92,7 +92,6 @@ $speed: 250ms;
     &__user-nav {
         flex: 0 0 auto;
     }
-
 }
 
 /************* end основаная навигация ****************/

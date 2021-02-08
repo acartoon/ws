@@ -33,6 +33,7 @@
     }
 
     &__in {
+
         @include desktopStyle {
             max-width: 602px;
             margin-left: auto;
@@ -53,25 +54,25 @@
 
         &::before {
             top: 0;
-            bottom: 0px;
+            bottom: 0;
             left: 0;
             width: 8px;
             height: 100%;
         }
 
         &::after {
+            content: counter(block-num);
             position: absolute;
             top: 0;
             left: 18px;
-            counter-increment: block-num;
-            content: counter(block-num);
             font-weight: 550;
             font-size: 40px;
             line-height: 115%;
-            text-align: center;
-            letter-spacing: 2px;
-            color: #7CA0D8;
             font-family: $fontHelvetica;
+            text-align: center;
+            color: #7CA0D8;
+            letter-spacing: 2px;
+            counter-increment: block-num;
         }
 
         @media (min-width: 480px) {
@@ -86,18 +87,19 @@
         }
 
         @include desktopStyle {
+            margin-right: 48px;
             margin-bottom: 0;
         }
     }
 
 
     &__text {
-        font-weight: 300;
         margin: 0;
-        font-style: normal;
+        font-weight: 300;
         font-size: 18px;
         line-height: 165%;
         color: #000000;
+        font-style: normal;
     }
 
     &__img {
@@ -111,7 +113,6 @@
             width: 56%;
             max-width: 720px;
             margin: 0;
-
         }
 
         img {

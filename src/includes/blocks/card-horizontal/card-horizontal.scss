@@ -3,11 +3,18 @@
 @import "src/style/_";
 
 .card-horizontal {
+    $_this: &;
+
     position: relative;
     display: flex;
-    text-decoration: none;
-    color: color(black);
     overflow: hidden;
+    color: color(black);
+    text-decoration: none;
+
+    &--v2 {
+        flex-direction: column;
+        align-items: center;
+    }
 
 
     &__icon-blok {
@@ -25,9 +32,18 @@
         margin-right: 20px;
         overflow: hidden;
         line-height: 0;
-        border-radius: 4px;
         background: color(gray98);
-        box-shadow: inset 0 0 0 2px color(grey);
+        border-radius: 4px;
+        //box-shadow: inset 0 0 0 2px color(grey);
+        border: 2px solid color(grey);
+        box-sizing: border-box;
+
+
+        #{$_this}--v2 & {
+            margin-right: 0;
+            margin-bottom: 20px;
+            box-shadow: 0px 10px 20px rgba(11, 24, 36, 0.2);
+        }
 
 
         img {
@@ -49,6 +65,12 @@
             flex: 1 1 auto;
             flex-direction: column;
             justify-content: space-between;
+        }
+
+        #{$_this}--v2 & {
+            width: 100%;
+            max-width: none;
+            text-align: center;
         }
     }
 
@@ -72,14 +94,14 @@
 
     &__title {
         margin: 0 0 20px;
+        overflow: hidden;
         font-weight: 600;
         font-size: 18px;
         line-height: 142%;
         color: color(black);
         letter-spacing: 0.02em;
-        text-overflow: ellipsis;
-        overflow: hidden;
         white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     &__link {
@@ -94,7 +116,6 @@
     &__wrap {
         margin-bottom: 6px;
     }
-
 }
 
 /******************* end case-block *********************/

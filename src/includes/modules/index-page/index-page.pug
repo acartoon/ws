@@ -3,12 +3,49 @@ mixin indexPage
         .container
             +mainCounterList
 
-    .page__section
+    .page__section.page__bg-gray.index-page__section
         .container
             .page__title-wrap.section-title Поддержка сайта — просто, как 1-2-3
             +doubleStageBlock
 
-    .page__section
+    .page__section.index-page__section
         .container
             .page__title-wrap.section-title Единственная в России система хостингов сайтов на 1С-Битрикс
             +doubleStageBlockNum
+
+    .page__section.index-page__in
+        .container
+            .page__title-wrap
+                .page__section-title.section-title Магазин задач
+                .page-subheading Моментально узнавайте стоимость и сроки выполнения популярных доработок — решения еще никогда не принимались так легко!
+            .index-page__tasks-list
+                include tasks-list
+            .index-page__button
+                +button(btnText.all)
+
+    .page__section.index-page__in
+        .container
+            .index-page__reg-block
+                include reg-block
+    .page__section.index-page__section.page__bg-gray
+        .container
+            .page__row
+                .wrap
+                    include balloon
+                p.index-page__img.order-xl-first
+                    img(src="i/index/application.png" atl="Изображение приложения")
+    .page__section.index-page__section
+        .container
+            .page__section-title.section-title Работаем со всей Россией
+            .page__narrow-wrap.page-subheading.text-left Поддерживаем сайты для бизнеса со всех уголков страны — от Калининграда до Владивостока.
+            p.index-page__map
+                img(src="i/index/map.png" alt="Карта России")
+    .page__section
+        .container.container-small
+            .page__title-wrap.page__section-title.section-title Наши партнеры
+            +partners
+    .page__section
+        .container
+            .page__title-wrap.page__section-title.section-title Что входит в поддержку?
+                include included-support.pug
+

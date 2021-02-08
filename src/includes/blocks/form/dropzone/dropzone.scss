@@ -7,16 +7,15 @@
 }
 
 .dropzone-block {
-
     &__container {
         position: relative;
+        z-index: 100;
+        box-sizing: border-box;
         min-height: 70px;
         max-height: 70px;
         padding: 23px 20px;
-        box-sizing: border-box;
         border: 1px dashed #0ABAEE;
         cursor: pointer;
-        z-index: 100;
 
         &:hover .dropzone-block__clickable {
             background: rgba(10, 186, 238, 0.08);
@@ -27,8 +26,8 @@
     .dropzone &__preview {
         display: flex;
         width: auto;
-        margin: 0 0 12px;
         min-height: 0;
+        margin: 0 0 12px;
         overflow: hidden;
 
         &:last-child {
@@ -38,12 +37,12 @@
 
     &__progress {
         position: relative;
+        box-sizing: border-box;
         width: 80px;
         height: 8px;
-        border: 1px solid color(D8D8D8);
-        box-sizing: border-box;
-        border-radius: 16px;
         overflow: hidden;
+        border: 1px solid color(gainsboro);
+        border-radius: 16px;
 
         .dz-complete & {
             opacity: 0;
@@ -53,11 +52,11 @@
 
     &__upload {
         position: absolute;
-        display: block;
-        background: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
-        left: 0;
         top: 0;
         bottom: 0;
+        left: 0;
+        display: block;
+        background: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
         transition: width 1000ms ease-in;
     }
 
@@ -67,21 +66,21 @@
     }
 
     &__filename {
+        margin-bottom: 4px;
         font-weight: 300;
         font-size: 18px;
         line-height: 24px;
         color: color(black);
         letter-spacing: 0.05em;
-        margin-bottom: 4px;
     }
 
     &__size {
+        display: none;
+        margin-right: 4px;
         font-weight: 300;
         font-size: 12px;
         line-height: 16px;
         color: color(placeholder);
-        display: none;
-        margin-right: 4px;
 
         strong {
             font-weight: 300;
@@ -106,8 +105,8 @@
         width: 24px;
         height: 24px;
         font-size: 0;
-        transition: opacity 300ms ease-in;
         background: url("i/dropzone/remove.svg");
+        transition: opacity 300ms ease-in;
 
         &:hover {
             opacity: 0.8;
@@ -159,12 +158,12 @@
         &::before {
             content: "";
             position: absolute;
+            top: 50%;
+            left: 0;
             width: 24px;
             height: 24px;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
             background: url("i/dropzone/attach-file.svg");
+            transform: translateY(-50%);
         }
     }
 
@@ -179,11 +178,11 @@
     }
 
     &__files {
-        border: 0;
         min-height: 0;
-        padding: 0;
         margin-top: 20px;
+        padding: 0;
         background: transparent;
+        border: 0;
     }
 
     &__error-mark {
@@ -201,6 +200,4 @@
     .dz-error-message {
         display: none !important;
     }
-
-
 }

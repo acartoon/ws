@@ -6,7 +6,7 @@
   "scripts": {
     "start": "gulp start",
     "build": "gulp build",
-    "fix": "stylelint --fix"
+    "fix": "stylelint  src/**/*.scss --fix"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",

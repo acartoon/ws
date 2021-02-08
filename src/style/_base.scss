@@ -40,6 +40,10 @@ body {
     margin-left: auto;
 }
 
+.container-small {
+    max-width: 1137px;
+}
+
 .m-container {
 
     @media (max-width: 1023px) {
@@ -60,10 +64,10 @@ body {
 
     @include desktopStyle {
         max-width: 1300px;
+        margin-right: auto;
+        margin-left: auto;
         padding-right: 30px;
         padding-left: 30px;
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 

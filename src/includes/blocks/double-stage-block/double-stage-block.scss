@@ -13,9 +13,9 @@
     &__item {
         display: block;
         margin: 0 0 64px;
-        border-radius: 4px;
         padding: 0;
         background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 86.46%);
+        border-radius: 4px;
 
         &:last-child {
             margin-bottom: 0;
@@ -24,12 +24,13 @@
         @include desktopStyle {
             display: flex;
             align-items: center;
-            background: none;
             margin-bottom: 72px;
+            background: none;
         }
     }
 
     &__in {
+
         @include desktopStyle {
             max-width: 602px;
             margin-left: auto;
@@ -78,21 +79,12 @@
     }
 
 
-    &__text {
-        font-weight: 300;
-        margin: 0;
-        font-style: normal;
-        font-size: 18px;
-        line-height: 165%;
-        color: #000000;
-    }
-
     &__img {
         margin: 0 20px;
         padding: 0;
+        line-height: 0;
         border-radius: 4px;
         box-shadow: (8px 12px 25px rgba(11, 24, 36, 0.1));
-        line-height: 0;
 
         @media (min-width: 480px) {
             margin-right: 48px;
@@ -101,8 +93,8 @@
 
         @include desktopStyle {
             flex: 0 0 auto;
-            max-width: 530px;
             width: 50%;
+            max-width: 530px;
             margin: 0;
 
             #{$_this}__item:nth-child(odd) & {

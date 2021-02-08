@@ -1,5 +1,5 @@
-mixin cardHorizontal(item)
-    a(href="#").card-horizontal
+mixin cardHorizontal(item, modifier)
+    a(href="#" class=`card-horizontal--${modifier}`).card-horizontal
         p._img
             img(src=`i/${item.img}`)
         ._body

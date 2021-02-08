@@ -1,11 +1,86 @@
 /************ index-page ***************/
 
+@import "src/style/_";
+
 .index-page {
-    //background: transparent;
+    background: transparent;
 
     @media (min-width: 992px) {
         position: relative;
         margin-top: -110px;
         padding-top: 0;
     }
+
+    &__button {
+        max-width: 315px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &__balloon {
+        max-width: 480px;
+        margin-bottom: 72px;
+
+        @media (min-width: 480px) {
+            margin-bottom: 88px;
+        }
+
+        @include desktopStyle {
+            margin-bottom: 0;
+            margin-left: 80px;
+
+            &:before {
+                top: auto;
+                bottom: 4px;
+            }
+        }
+    }
+
+
+    &__img {
+        max-width: 560px;
+        @include base-img-style;
+    }
+
+    &__tasks-list {
+        margin-bottom: 64px;
+    }
+
+    &__in {
+        padding-top: 0;
+        padding-bottom: 96px;
+
+        @include desktopStyle {
+            padding-bottom: 140px;
+        }
+    }
+
+    &__section {
+        padding-top: 96px;
+        padding-bottom: 96px;
+        margin-bottom: 0;
+
+
+        @include desktopStyle {
+            padding-top: 140px;
+            padding-bottom: 140px;
+
+        }
+    }
+
+    &__reg-block {
+        max-width: 876px;
+        margin: 0 auto;
+    }
+
+    &__map {
+        @include base-img-style;
+
+        @media (min-width: 992px) {
+            margin-top: -60px;
+            position: relative;
+            z-index: -1;
+        }
+    }
 }
+

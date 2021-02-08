@@ -15,6 +15,7 @@ $gradient: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
 }
 
 @mixin desktopStyle() {
+
     @media (min-width: $desktop) {
         @content;
     }
@@ -69,4 +70,22 @@ $gradient: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
     &:-ms-input-placeholder {
         @content;
     }
+}
+
+
+@mixin base-img-style() {
+    line-height: 0;
+    margin: 0;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+}
+
+@mixin base-list-style {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }

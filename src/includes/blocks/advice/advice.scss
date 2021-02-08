@@ -11,18 +11,18 @@ $margin: 48px;
     counter-reset: advice;
 
     &__img {
+        box-sizing: border-box;
         margin: 0 0 $margin;
         line-height: 0;
-        box-sizing: border-box;
-        border: 1px solid #D8D8D8;
+        border: 1px solid color(gainsboro);
         border-radius: 4px;
     }
 
     &__title {
         font-size: 26px;
         line-height: 35px;
-        letter-spacing: 0.5px;
         color: #2D2D2D;
+        letter-spacing: 0.5px;
     }
 
 
@@ -54,10 +54,10 @@ $margin: 48px;
 
 
     &__in {
+        box-sizing: border-box;
         padding: 128px 30px 30px;
         background: #F8F8FA;
         border: 2px solid #ECECEC;
-        box-sizing: border-box;
         border-radius: 4px;
     }
 

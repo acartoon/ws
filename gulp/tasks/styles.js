@@ -14,7 +14,7 @@ module.exports = function styles() {
     .pipe(sourcemaps.init())
     .pipe(order([
         'style/*.scss',
-        'includes/blocks/**/*.scss',
+        'includes/partners/**/*.scss',
         'includes/modules/**/*.scss',
     ]), { base: './src' })
     .pipe(sass({sourceMap: true})

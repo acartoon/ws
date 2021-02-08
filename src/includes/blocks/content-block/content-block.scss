@@ -1,0 +1,55 @@
+/************ content-block ***************/
+
+@import "src/style/_";
+
+
+.content-block {
+    position: relative;
+    padding: 38px 20px 40px;
+    border-radius: 4px;
+    box-shadow: 8px 12px 25px rgba(11, 24, 36, 0.1);
+
+    &__title {
+        margin: 0 0 24px;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 41px;
+        text-align: center;
+        letter-spacing: 0.5px;
+    }
+
+    &__text {
+        margin: 0 0 40px;
+        text-align: center;
+    }
+
+    &__button {
+        max-width: 407px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &__icon {
+        width: 100px;
+        height: 100px;
+        background: url("i/index/reg-block-icon.svg");
+        background-repeat: no-repeat;
+
+        &--development {
+            background: url("i/index/icon/development.png");
+        }
+
+        &--content {
+            background: url("i/index/icon/content.png");
+        }
+
+        &--technical {
+            background: url("i/index/icon/technical-work.png");
+        }
+    }
+}
+
+
+.balloon {
+
+}

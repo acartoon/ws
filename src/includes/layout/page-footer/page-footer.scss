@@ -48,9 +48,9 @@
         text-align: center;
 
         @include desktopStyle {
+            flex: 1 0;
             order: -1;
             text-align: left;
-            flex: 1 0;
         }
     }
 
