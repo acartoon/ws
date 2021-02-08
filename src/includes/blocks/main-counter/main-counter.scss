@@ -14,6 +14,7 @@
     box-shadow: 20px 30px 60px rgba(11, 24, 36, 0.1);
 
     &__count {
+        @include gradientText;
         margin-bottom: 8px;
         font-weight: 100;
         font-size: 60px;

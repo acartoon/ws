@@ -1,22 +1,18 @@
 mixin indexPage
-    .main-page__counter.d-none.d-lm-block
-        .container
-            +mainCounterList
-
     .page__section.page__bg-gray.index-page__section
         .container
-            .page__title-wrap.section-title Поддержка сайта — просто, как 1-2-3
+            .page__title-wrap.section-title.section-title--index Поддержка сайта — просто, как 1-2-3
             +doubleStageBlock
 
     .page__section.index-page__section
         .container
-            .page__title-wrap.section-title Единственная в России система хостингов сайтов на 1С-Битрикс
+            .page__title-wrap.section-title.section-title--index Единственная в России система хостингов сайтов на 1С-Битрикс
             +doubleStageBlockNum
 
     .page__section.index-page__in
         .container
             .page__title-wrap
-                .page__section-title.section-title Магазин задач
+                .page__section-title.section-title.section-title--index Магазин задач
                 .page-subheading Моментально узнавайте стоимость и сроки выполнения популярных доработок — решения еще никогда не принимались так легко!
             .index-page__tasks-list
                 include tasks-list
@@ -42,10 +38,13 @@ mixin indexPage
                 img(src="i/index/map.png" alt="Карта России")
     .page__section
         .container.container-small
-            .page__title-wrap.page__section-title.section-title Наши партнеры
+            .page__title-wrap.section-title.section-title--index Наши партнеры
             +partners
-    .page__section
+    .page__section.index-page__section.page__bg-gray
         .container
-            .page__title-wrap.page__section-title.section-title Что входит в поддержку?
-                include included-support.pug
+            .page__title-wrap.section-title.section-title--index Что входит в поддержку?
+            include included-support.pug
+    .page__section.index-page__section.page__bg-gray
+        .container
+            +ticket
 

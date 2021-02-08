@@ -81,6 +81,11 @@
         font-size: 60px;
         line-height: 68px;
     }
+
+    &--index {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .page-subtitle {
@@ -297,4 +302,29 @@
     font-size: 18px;
     line-height: 165%;
     color: color(black)
+}
+
+.list {
+   @include base-list-style;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-bottom: -30px;
+    margin-left: -15px;
+
+
+    &__item {
+        margin-bottom: 30px;
+
+        @media(min-width: 640px) {
+            display: flex;
+            width: calc(50% - 30px);
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+
+        @include desktopStyle {
+            width: calc(33.3333% - 30px);
+        }
+    }
 }

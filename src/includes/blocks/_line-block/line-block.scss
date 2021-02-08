@@ -19,4 +19,14 @@
         transform: matrix(-1, 0, 0, 1, 0, 0);
         opacity: 0.6;
     }
+
+    &--bottom {
+        padding-top: 20px !important;
+
+        &::before {
+            top: auto;
+            bottom: 4px;
+
+        }
+    }
 }

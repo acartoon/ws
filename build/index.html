@@ -6,9 +6,14 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-    <link rel="preload" href="/fonts/helveticaneuecyr-thin-webfont.woff2" as="font" crossorigin="anonymous"/>
-    <link rel="preload" href="/fonts/opensans-bold-webfont.woff2" as="font" crossorigin="anonymous"/>
     <link rel="preload" href="/fonts/opensans-light-webfont.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="/fonts/opensans-light-webfont.woff" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="/fonts/opensans-regular-webfont.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="/fonts/opensans-regular-webfont.woff" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="/fonts/opensans-bold-webfont.woff" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="/fonts/opensans-bold-webfont.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="/fonts/helveticaneuecyr-thin-webfont.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="/fonts/helveticaneuecyr-thin-webfont.woff" as="font" crossorigin="anonymous"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link href="css/libs/slick.css" rel="stylesheet"/>
     <link href="css/libs/slick-theme.css" rel="stylesheet"/>
@@ -172,37 +177,35 @@
               </div>
             </div>
           </div>
+          <div class="page-header__counter d-none d-l-block">
+            <ul class="main-counter-list">
+              <li class="main-counter-list__item">
+                <div class="main-counter">
+                  <div class="main-counter__count">244</div>
+                  <div class="main-counter__text">проекта на поддержке</div>
+                </div>
+              </li>
+              <li class="main-counter-list__item">
+                <div class="main-counter">
+                  <div class="main-counter__count">97</div>
+                  <div class="main-counter__text">обращений в работе</div>
+                </div>
+              </li>
+              <li class="main-counter-list__item">
+                <div class="main-counter">
+                  <div class="main-counter__count">61</div>
+                  <div class="main-counter__text">проблем решили за месяц</div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
     <main class="index-page  page">
-      <div class="main-page__counter d-none d-lm-block">
-        <div class="container">
-          <ul class="main-counter-list">
-            <li class="main-counter-list__item">
-              <div class="main-counter">
-                <div class="main-counter__count">244</div>
-                <div class="main-counter__text">проекта на поддержке</div>
-              </div>
-            </li>
-            <li class="main-counter-list__item">
-              <div class="main-counter">
-                <div class="main-counter__count">97</div>
-                <div class="main-counter__text">обращений в работе</div>
-              </div>
-            </li>
-            <li class="main-counter-list__item">
-              <div class="main-counter">
-                <div class="main-counter__count">61</div>
-                <div class="main-counter__text">проблем решили за месяц</div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
       <div class="page__section page__bg-gray index-page__section">
         <div class="container">
-          <div class="page__title-wrap section-title">Поддержка сайта — просто, как 1-2-3</div>
+          <div class="page__title-wrap section-title section-title--index">Поддержка сайта — просто, как 1-2-3</div>
           <ul class="double-stage-block">
             <li class="double-stage-block__item">
               <div class="double-stage-block__content line-block">
@@ -236,7 +239,7 @@
       </div>
       <div class="page__section index-page__section">
         <div class="container">
-          <div class="page__title-wrap section-title">Единственная в России система хостингов сайтов на 1С-Битрикс</div>
+          <div class="page__title-wrap section-title section-title--index">Единственная в России система хостингов сайтов на 1С-Битрикс</div>
           <ul class="double-stage-block-num">
             <li class="double-stage-block-num__item">
               <div class="double-stage-block-num__content line-block">
@@ -271,7 +274,7 @@
       <div class="page__section index-page__in">
         <div class="container">
           <div class="page__title-wrap">
-            <div class="page__section-title section-title">Магазин задач</div>
+            <div class="page__section-title section-title section-title--index">Магазин задач</div>
             <div class="page-subheading">Моментально узнавайте стоимость и сроки выполнения популярных доработок — решения еще никогда не принимались так легко!</div>
           </div>
           <div class="index-page__tasks-list">
@@ -334,7 +337,7 @@
       <div class="page__section index-page__in">
         <div class="container">
           <div class="index-page__reg-block">
-            <div class="content-block line-block"><i class="content-block__icon"></i>
+            <div class="content-block line-block"><i class="content-block__icon block-center"></i>
               <p class="content-block__title">Не нашли подходящее решение?</p>
               <p class="content-block__text content-block-text">Бесплатно зарегистрируйтесь в личном кабинете и поставьте первую задачу на оценку.</p>
               <div class="content-block__button">
@@ -371,7 +374,7 @@
       </div>
       <div class="page__section">
         <div class="container container-small">
-          <div class="page__title-wrap page__section-title section-title">Наши партнеры</div>
+          <div class="page__title-wrap section-title section-title--index">Наши партнеры</div>
           <ul class="partners">
             <li class="partners__item"><img src="i/index/partners/1-1.png"/></li>
             <li class="partners__item"><img src="i/index/partners/1-2.png"/></li>
@@ -384,58 +387,77 @@
           </ul>
         </div>
       </div>
-      <div class="page__section">
+      <div class="page__section index-page__section page__bg-gray">
         <div class="container">
-          <div class="page__title-wrap page__section-title section-title">Что входит в поддержку?
-            <ul class="list">
-              <li class="list__item">
-                <div class="content-block">line-block<i class="icon"></i>
-                  <h3 class="content-block__title">Развитие проекта</h3>
-                  <ul>
-                    <li>Доработка текущего функционала</li>
-                    <li>Доработка текущего функционала</li>
-                    <li>Доработка дизайна интерфейса</li>
-                    <li>Интеграция с платежными системами</li>
-                    <li>Интеграция со сторонними сервисами</li>
-                    <li>Интеграция с 1С</li>
-                    <li>Интеграция с Мой склад</li>
-                    <li>Композитный сайт</li>
-                    <li>Интеграция интернет-магазина c онлайн-кассой, в соответствии с 54-ФЗ</li>
-                  </ul>
-                </div>
-              </li>
-              <li class="list__item">
-                <div class="content-block">line-block
-                  <h3 class="content-block__title">Развитие проекта</h3>
-                  <ul>
-                    <li>Добавление графики, видео, презентаций</li>
-                    <li>Размещение новостей, статей, обзоров</li>
-                    <li>Разработка баннеров</li>
-                    <li>Верстка новых страниц</li>
-                    <li>Верстка новых страниц</li>
-                    <li>Настройка импорта/экспорта</li>
-                    <li>Дизайн и верстка макетов email-рассылки</li>
-                    <li>Подготовка отчетов и презентаций в PDF</li>
-                    <li>Установка кодов метрик различных систем</li>
-                  </ul>
-                </div>
-              </li>
-              <li class="list__item">
-                <div class="content-block">line-block
-                  <h3 class="content-block__title">Технические работы</h3>
-                  <ul>
-                    <li>Устранение ошибок в работе сайта</li>
-                    <li>Обновление редакции "1С-Битрикс"</li>
-                    <li>Функциональное тестирование</li>
-                    <li>Размещение сайта на хостинге</li>
-                    <li>Переезд с одного хостинга на другой</li>
-                    <li>Автоматическое резервное копирование</li>
-                    <li>Удаление вирусов, устранение уязвимостей</li>
-                    <li>Оптимизация работы и ускорение загрузки</li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
+          <div class="page__title-wrap section-title section-title--index">Что входит в поддержку?</div>
+          <ul class="list">
+            <li class="list__item">
+              <div class="content-block line-block line-block--bottom"><i class="content-block__icon content-block__icon--development"></i>
+                <h3 class="content-block__title text-left">Развитие проекта</h3>
+                <ul>
+                  <li>Доработка текущего функционала</li>
+                  <li>Доработка текущего функционала</li>
+                  <li>Доработка дизайна интерфейса</li>
+                  <li>Интеграция с платежными системами</li>
+                  <li>Интеграция со сторонними сервисами</li>
+                  <li>Интеграция с 1С</li>
+                  <li>Интеграция с Мой склад</li>
+                  <li>Композитный сайт</li>
+                  <li>Интеграция интернет-магазина c онлайн-кассой, в соответствии с 54-ФЗ</li>
+                </ul>
+              </div>
+            </li>
+            <li class="list__item">
+              <div class="content-block line-block line-block--bottom"><i class="content-block__icon content-block__icon--content"></i>
+                <h3 class="content-block__title text-left">Развитие проекта</h3>
+                <ul>
+                  <li>Добавление графики, видео, презентаций</li>
+                  <li>Размещение новостей, статей, обзоров</li>
+                  <li>Разработка баннеров</li>
+                  <li>Верстка новых страниц</li>
+                  <li>Верстка новых страниц</li>
+                  <li>Настройка импорта/экспорта</li>
+                  <li>Дизайн и верстка макетов email-рассылки</li>
+                  <li>Подготовка отчетов и презентаций в PDF</li>
+                  <li>Установка кодов метрик различных систем</li>
+                </ul>
+              </div>
+            </li>
+            <li class="list__item">
+              <div class="content-block line-block line-block--bottom"><i class="content-block__icon content-block__icon--technical"></i>
+                <h3 class="content-block__title text-left">Технические работы</h3>
+                <ul>
+                  <li>Устранение ошибок в работе сайта</li>
+                  <li>Обновление редакции "1С-Битрикс"</li>
+                  <li>Функциональное тестирование</li>
+                  <li>Размещение сайта на хостинге</li>
+                  <li>Переезд с одного хостинга на другой</li>
+                  <li>Автоматическое резервное копирование</li>
+                  <li>Удаление вирусов, устранение уязвимостей</li>
+                  <li>Оптимизация работы и ускорение загрузки</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="page__section index-page__section page__bg-gray">
+        <div class="container">
+          <div class="ticket">
+            <div class="ticket__img"></div>
+            <div class="ticket__content">
+              <div class="ticket__content-in">
+                <div class="ticket__section-title section-title block-center">Прозрачная лотерея с тремя подарками!</div>
+                <div class="ticket__text content-block-text text-center">Сотрите защитный слой и узнайте, что подготовили для вас специалисты “WS Support"</div>
+                <div class="canvas"></div>
+              </div>
+            </div>
+            <div class="ticket__detachable"><i class="ticket__detachable-in"></i>
+              <div class="ticket__detachable-content">
+                <p>001</p>
+                <p>wssupport.ru</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

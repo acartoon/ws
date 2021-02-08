@@ -20,6 +20,8 @@
     &__title-wrap {
         margin-bottom: 64px;
         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
 
         @include desktopStyle {
             margin-bottom: 72px;

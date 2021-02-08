@@ -2,9 +2,14 @@ mixin head(pageTitle)
     head
         meta(charset='UTF-8')
         meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
-        link(rel="preload" href="/fonts/helveticaneuecyr-thin-webfont.woff2" as="font" crossorigin="anonymous")
-        link(rel="preload" href="/fonts/opensans-bold-webfont.woff2" as="font" crossorigin="anonymous")
         link(rel="preload" href="/fonts/opensans-light-webfont.woff2" as="font" crossorigin="anonymous")
+        link(rel="preload" href="/fonts/opensans-light-webfont.woff" as="font" crossorigin="anonymous")
+        link(rel="preload" href="/fonts/opensans-regular-webfont.woff2" as="font" crossorigin="anonymous")
+        link(rel="preload" href="/fonts/opensans-regular-webfont.woff" as="font" crossorigin="anonymous")
+        link(rel="preload" href="/fonts/opensans-bold-webfont.woff" as="font" crossorigin="anonymous")
+        link(rel="preload" href="/fonts/opensans-bold-webfont.woff2" as="font" crossorigin="anonymous")
+        link(rel="preload" href="/fonts/helveticaneuecyr-thin-webfont.woff2" as="font" crossorigin="anonymous")
+        link(rel="preload" href="/fonts/helveticaneuecyr-thin-webfont.woff" as="font" crossorigin="anonymous")
         meta(http-equiv='X-UA-Compatible', content='ie=edge')
         +styles
         title #{pageTitle ? pageTitle : 'pageTitle'}
