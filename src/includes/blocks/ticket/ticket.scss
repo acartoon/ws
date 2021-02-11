@@ -209,8 +209,12 @@
 
 .canvas {
     display: block;
-    width: 392px;
+    width: 100%;
+    max-width: 392px;
     height: 88px;
-    background-color: gold;
     margin: auto;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: url("i/index/icon/coin.png") 0 40, pointer;
 }

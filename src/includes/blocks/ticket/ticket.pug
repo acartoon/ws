@@ -5,9 +5,11 @@ mixin ticket
             ._content-in
                 ._section-title.section-title.block-center Прозрачная лотерея с тремя подарками!
                 ._text.content-block-text.text-center Сотрите защитный слой и узнайте, что подготовили для вас специалисты “WS Support"
-                .canvas
+                .canvas#ticket-container
+                    canvas#ticket-canvas
+                    p.ticketScreen__text#ticketResultBtn Скидка 10% на первый заказ
         ._detachable
             i._detachable-in
             ._detachable-content
-                p 001
+                p#ticketNumber 001
                 p wssupport.ru
