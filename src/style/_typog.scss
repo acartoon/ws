@@ -146,6 +146,8 @@
     text-decoration: none;
     border-bottom: 1px solid transparentize(color(white), 0.7);
     transition: border-color 200ms ease-in;
+    text-decoration: underline;
+    cursor: pointer;
 
 
     &:hover {

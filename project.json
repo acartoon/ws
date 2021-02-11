@@ -1,13 +1,17 @@
 {
-  "projectName": "gen beauty",
+  "projectName": "html-wssupport-2021",
   "pages": {
-    "components.html": "Компоненты",
+    "components.html": "Основные компоненты",
     "index.html": "Главная",
-    "catalog.html": "Каталог",
-    "product.html": "Карточка товара",
-    "product-states.html": "Карточка товара",
-    "new-pass.html": "Восстановление пароля",
-    "basket.html": "Корзина",
-    "all-reg.html": "Регистрация/авторизация/смена пароля"
+    "questions.html": "Вопросы и ответы",
+    "cases.html": "Кейсы",
+    "cases-detail.html": "Детальная кейса",
+    "partners.html": "Партнерская программа",
+    "blog.html": "Блог",
+    "blog-detail.html": "Детальная блога",
+    "store": "Магазин задач",
+    "store-detail": "Магазин задач детально",
+    "contacts.html": "Контакты",
+    "form-states.html": "Состояния форм"
   }
 }

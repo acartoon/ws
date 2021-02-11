@@ -2,12 +2,13 @@ mixin ticket
     .ticket
         ._img
         ._content
-            ._content-in
+            ._content-in.text-center
                 ._section-title.section-title.block-center Прозрачная лотерея с тремя подарками!
-                ._text.content-block-text.text-center Сотрите защитный слой и узнайте, что подготовили для вас специалисты “WS Support"
-                .canvas#ticket-container
+                ._text.content-block-text Сотрите защитный слой и узнайте, что подготовили для вас специалисты “WS Support"
+                .ticket__canvas#ticket-container
                     canvas#ticket-canvas
-                    p.ticketScreen__text#ticketResultBtn Скидка 10% на первый заказ
+                    p.ticket__sale#ticketResultBtn Скидка 10% на первый заказ
+                a(data-toggle="modal" data-target="sale").ticket__link.hidden-default.text-link.blue-color#ticketLink Воспользоваться скидкой
         ._detachable
             i._detachable-in
             ._detachable-content

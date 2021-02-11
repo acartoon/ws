@@ -87,6 +87,14 @@ body {
   text-align: center;
 }
 
+.blue-color {
+  color: #0ABAEE !important;
+}
+
+.hidden-default {
+  visibility: hidden;
+}
+
 /************ стили сетки ***************/
 
 .d-none {
@@ -422,6 +430,8 @@ body {
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   transition: border-color 200ms ease-in;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .text-link:hover {
@@ -4086,8 +4096,44 @@ html.mfp-helper.ios .modal-dialog {
   .ticket__content {
     flex: 1;
     padding-top: 152px;
-    padding-bottom: 174px;
+    padding-bottom: 105px;
   }
+}
+
+.ticket__canvas {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 392px;
+  height: 88px;
+  margin: auto;
+  background-color: white;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: url("..//i/index/icon/coin.png") 0 40, pointer;
+}
+
+.ticket__canvas canvas {
+  position: relative;
+  z-index: 2;
+}
+
+.ticket__sale {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.ticket__link {
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 .ticket__content-in {
@@ -4096,10 +4142,17 @@ html.mfp-helper.ios .modal-dialog {
   margin-right: auto;
 }
 
-.ticket__canvas {
-  width: 100%;
+.ticket__canvas-wrap {
   max-width: 392px;
+}
+
+.ticket__canvas {
+  position: relative;
+  width: 100%;
+  max-height: 392px;
   height: 112px;
+  margin-bottom: 38px;
+  border: 2px solid #ECECEC;
 }
 
 @media (min-width: 480px) {
@@ -4295,18 +4348,6 @@ html.mfp-helper.ios .modal-dialog {
     border-right: 16px solid white;
     border-left: 0;
   }
-}
-
-.canvas {
-  display: block;
-  width: 100%;
-  max-width: 392px;
-  height: 88px;
-  margin: auto;
-  background-color: white;
-  border-radius: 12px;
-  overflow: hidden;
-  cursor: url("..//i/index/icon/coin.png") 0 40, pointer;
 }
 
 /*************** footer-app ****************/

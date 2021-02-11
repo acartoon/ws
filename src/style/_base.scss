@@ -1,6 +1,6 @@
+/************ базовые стили ***************/
 @import "_";
 
-/************ базовые стили ***************/
 
 body {
     margin: 0;
@@ -83,4 +83,12 @@ body {
     margin-right: auto;
     margin-left: auto;
     text-align: center;
+}
+
+.blue-color {
+    color: color(blue) !important;
+}
+
+.hidden-default {
+    visibility: hidden;
 }

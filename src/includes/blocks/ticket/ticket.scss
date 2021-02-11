@@ -50,9 +50,44 @@
         @include desktopStyle {
             flex: 1;
             padding-top: 152px;
-            padding-bottom: 174px;
+            padding-bottom: 105px;
         }
+    }
 
+    &__canvas {
+        position: relative;
+        display: block;
+        width: 100%;
+        max-width: 392px;
+        height: 88px;
+        margin: auto;
+        background-color: white;
+        border-radius: 14px;
+        overflow: hidden;
+        cursor: url("i/index/icon/coin.png") 0 40, pointer;
+
+        canvas {
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    &__sale {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    &__link {
+        text-align: center;
+        font-size: 18px;
+        line-height: 30px;
     }
 
     &__content-in {
@@ -61,10 +96,27 @@
         margin-right: auto;
     }
 
-    &__canvas {
-        width: 100%;
+    &__canvas-wrap {
         max-width: 392px;
+    }
+
+    &__canvas {
+        position: relative;
+        width: 100%;
+        max-height: 392px;
+        //padding-bottom: 22.44%;
         height: 112px;
+        margin-bottom: 38px;
+        border: 2px solid #ECECEC;
+
+
+        //canvas {
+        //    position: absolute;
+        //    left: 0;
+        //    right: 0;
+        //    top: 0;
+        //    bottom: 0;
+        //}
 
         @media (min-width: 480px) {
             height: 88px;
@@ -207,14 +259,3 @@
     }
 }
 
-.canvas {
-    display: block;
-    width: 100%;
-    max-width: 392px;
-    height: 88px;
-    margin: auto;
-    background-color: white;
-    border-radius: 12px;
-    overflow: hidden;
-    cursor: url("i/index/icon/coin.png") 0 40, pointer;
-}
