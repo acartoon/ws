@@ -1,4 +1,4 @@
-/********** partner-list ***********/
+/********** partner-double-stage-block ***********/
 
 @import "src/style/_";
 
@@ -67,8 +67,8 @@ $marging: 15px;
 
         @media (min-width: $ml) {
             display: flex;
-            width: 50%;
             box-sizing: border-box;
+            width: 50%;
             padding-right: $marging;
             padding-left: $marging;
         }

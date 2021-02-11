@@ -1,0 +1,18 @@
+/************ index-page ***************/
+
+@import "src/style/_";
+
+.apps {
+    @include base-list-style;
+    margin: -12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__item {
+        @include base-img-style;
+        width: 138px;
+        margin: 12px;
+    }
+
+}

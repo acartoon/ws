@@ -1,0 +1,46 @@
+extends ../../blocks/card-deck/card-deck
+block arr
+    -
+        var arr = [
+            {
+                title: 'Настройка поиска по артикулу',
+                img: 'index/3-1.png',
+                price: '2000 ₽',
+                tag: 'Для интернет-магазина'
+            },
+            {
+                title: 'Уставновка яндекс метрики на сайт',
+                img: 'index/3-2.png',
+                price: '1500 ₽',
+                tag: 'SEO'
+            },
+            {
+                title: 'Настройка редиректа со старого сайта',
+                img: 'index/3-3.png',
+                price: '1500 ₽',
+                tag: 'Навигация'
+            },
+            {
+                title: 'Запил классной штуки',
+                img: 'index/3-4.png',
+                price: '2250 ₽',
+                tag: 'Безопасность'
+            },
+            {
+                title: 'Запил классной штуки',
+                img: 'index/3-5.png',
+                price: '3000 ₽',
+                tag: 'Поддержка клиентов'
+            },
+            {
+                title: 'Запил классной штуки',
+                img: 'index/3-6.png',
+                price: '4000 ₽',
+                tag: 'Для увеличения продаж'
+            },
+        ];
+
+    - var modifier = 'column';
+
+block mixin
+    +cardHorizontal(val, 'v2')

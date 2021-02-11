@@ -2,11 +2,13 @@
 
 
 /************ стили сетки ***************/
+
 $grid-breakpoints: (
     ex: $ex,
     sm: 480,
     m: $m,
     ml: 640,
+    lm: 768,
     l: 992,
     xl: 1024,
 );
@@ -23,6 +25,19 @@ $grid-breakpoints: (
     display: flex;
     margin-right: -15px;
     margin-left: -15px;
+}
+
+.row-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.order-xl-first {
+
+    @include desktopStyle {
+        order: -1;
+    }
 }
 
 .col-3 {

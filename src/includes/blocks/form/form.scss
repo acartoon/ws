@@ -24,10 +24,10 @@
 
     &__dropzone {
         position: relative;
-        min-height: 70px;
-        max-height: 70px;
         z-index: 100;
         box-sizing: border-box;
+        min-height: 70px;
+        max-height: 70px;
         border: 1px dashed #0ABAEE;
         cursor: pointer;
 

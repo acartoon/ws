@@ -10,8 +10,8 @@
         padding-top: 72px;
 
         @include desktopStyle {
-            padding-top: 0;
             flex: 1 0;
+            padding-top: 0;
         }
     }
 

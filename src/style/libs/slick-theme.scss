@@ -22,19 +22,27 @@ $slick-opacity-on-hover: 1 !default;
 $slick-opacity-not-active: 0.25 !default;
 
 @function slick-image-url($url) {
+
     @if function-exists(image-url) {
+
         @return image-url($url);
     }
+
     @else {
+
         @return url($slick-loader-path + $url);
     }
 }
 
 @function slick-font-url($url) {
+
     @if function-exists(font-url) {
+
         @return font-url($url);
     }
+
     @else {
+
         @return url($slick-font-path + $url);
     }
 }
@@ -43,18 +51,20 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-list {
     .slick-loading & {
-        background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
+        background: #ffffff slick-image-url("ajax-loader.gif") center center no-repeat;
     }
 }
 
 /* Icons */
+
 @if $slick-font-family == "slick" {
+
     @font-face {
+        font-weight: normal;
         font-family: "slick";
+        font-style: normal;
         src: slick-font-url("slick.eot");
         src: slick-font-url("slick.eot?#iefix") format("embedded-opentype"), slick-font-url("slick.woff") format("woff"), slick-font-url("slick.ttf") format("truetype"), slick-font-url("slick.svg#slick") format("svg");
-        font-weight: normal;
-        font-style: normal;
     }
 }
 
@@ -63,36 +73,41 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-prev,
 .slick-next {
     position: absolute;
-    display: block;
-    height: 20px;
-    width: 20px;
-    line-height: 0px;
-    font-size: 0px;
-    cursor: pointer;
-    background: transparent;
-    color: transparent;
     top: 50%;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
+    display: block;
+    width: 20px;
+    height: 20px;
     padding: 0;
+    font-size: 0;
+    line-height: 0px;
+    color: transparent;
+    background: transparent;
     border: none;
     outline: none;
-    &:hover, &:focus {
-        outline: none;
-        background: transparent;
+    transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
         color: transparent;
-        &:before {
+        background: transparent;
+        outline: none;
+
+        &::before {
             opacity: $slick-opacity-on-hover;
         }
     }
-    &.slick-disabled:before {
+
+    &.slick-disabled::before {
         opacity: $slick-opacity-not-active;
     }
-    &:before {
-        font-family: $slick-font-family;
+
+    &::before {
         font-size: 20px;
         line-height: 1;
+        font-family: $slick-font-family;
         color: $slick-arrow-color;
         opacity: $slick-opacity-default;
         -webkit-font-smoothing: antialiased;
@@ -102,12 +117,15 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-prev {
     left: -25px;
+
     [dir="rtl"] & {
-        left: auto;
         right: -25px;
+        left: auto;
     }
-    &:before {
+
+    &::before {
         content: $slick-prev-character;
+
         [dir="rtl"] & {
             content: $slick-next-character;
         }
@@ -116,12 +134,15 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-next {
     right: -25px;
+
     [dir="rtl"] & {
-        left: -25px;
         right: auto;
+        left: -25px;
     }
-    &:before {
+
+    &::before {
         content: $slick-next-character;
+
         [dir="rtl"] & {
             content: $slick-prev-character;
         }
@@ -137,48 +158,54 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-dots {
     position: absolute;
     bottom: -25px;
-    list-style: none;
     display: block;
-    text-align: center;
-    padding: 0;
-    margin: 0;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
     li {
         position: relative;
         display: inline-block;
-        height: 20px;
         width: 20px;
+        height: 20px;
         margin: 0 5px;
         padding: 0;
         cursor: pointer;
+
         button {
-            border: 0;
-            background: transparent;
             display: block;
-            height: 20px;
             width: 20px;
-            outline: none;
-            line-height: 0px;
-            font-size: 0px;
-            color: transparent;
+            height: 20px;
             padding: 5px;
+            font-size: 0;
+            line-height: 0px;
+            color: transparent;
+            background: transparent;
+            border: 0;
+            outline: none;
             cursor: pointer;
-            &:hover, &:focus {
+
+            &:hover,
+            &:focus {
                 outline: none;
-                &:before {
+
+                &::before {
                     opacity: $slick-opacity-on-hover;
                 }
             }
-            &:before {
+
+            &::before {
+                content: $slick-dot-character;
                 position: absolute;
                 top: 0;
                 left: 0;
-                content: $slick-dot-character;
                 width: 20px;
                 height: 20px;
-                font-family: $slick-font-family;
                 font-size: $slick-dot-size;
                 line-height: 20px;
+                font-family: $slick-font-family;
                 text-align: center;
                 color: $slick-dot-color;
                 opacity: $slick-opacity-not-active;
@@ -186,7 +213,8 @@ $slick-opacity-not-active: 0.25 !default;
                 -moz-osx-font-smoothing: grayscale;
             }
         }
-        &.slick-active button:before {
+
+        &.slick-active button::before {
             color: $slick-dot-color-active;
             opacity: $slick-opacity-default;
         }

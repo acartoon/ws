@@ -1,0 +1,21 @@
+-
+    var list = [
+        {
+            count: 244,
+            title: 'проекта на поддержке',
+        },
+        {
+            count: 97,
+            title: 'обращений в работе',
+        },
+        {
+            count: 61,
+            title: 'проблем решили за месяц',
+        },
+    ]
+
+mixin mainCounterList
+    ul.main-counter-list
+        each val in list
+            li._item
+                +mainCounter(val)

@@ -15,15 +15,14 @@
 
     &__qr {
         display: none;
-        margin: 8px 0 0;
+        box-sizing: border-box;
         width: 138px;
         height: 138px;
+        margin: 8px 0 0;
         padding: 8px;
-        border-radius: 4px;
-        box-sizing: border-box;
         background: color(white);
+        border-radius: 4px;
     }
-
 }
 
 @keyframes footerQr {

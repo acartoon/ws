@@ -4,9 +4,9 @@
 
 .page-header {
     position: relative;
-    min-height: 470px;
     z-index: 3;
     box-sizing: border-box;
+    min-height: 470px;
     padding: 30px 20px 29px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -27,11 +27,30 @@
         background: linear-gradient(77.35deg, rgba(48, 166, 216, 0.6) 0%, rgba(84, 211, 146, 0.6) 100%);
     }
 
+    &__tagline {
+        margin-bottom: 91px;
+    }
+
+
+    &__counter {
+        position: relative;
+        top: 140px;
+    }
+
+    @media (min-width: 992px) {
+        z-index: 0;
+    }
+
     @media (min-width: $desktop) {
         //max-width: 1300px;
         margin-right: auto;
         margin-left: auto;
         padding-top: 8px;
+    }
+
+
+    &--index {
+        z-index: 5;
     }
 
     &--partners {
@@ -189,12 +208,12 @@
         position: absolute;
         top: 50%;
         left: 50%;
+        box-sizing: border-box;
         width: 100%;
         max-width: 960px;
         margin: 0 auto;
         padding-right: 20px;
         padding-left: 20px;
-        box-sizing: border-box;
         transform: translate(-50%, -50%);
 
         .page-header--index & {
@@ -204,9 +223,9 @@
 
         @include desktopStyle {
             position: static;
-            transform: none;
             padding-right: 0;
             padding-left: 0;
+            transform: none;
         }
     }
 }

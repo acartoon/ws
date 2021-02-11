@@ -1,0 +1,21 @@
+/************* main-counter *************/
+
+@import "src/style/_";
+
+$margin: 25px;
+
+.main-counter-list {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-right: -$margin;
+    margin-left: -$margin;
+    padding: 0;
+    list-style: none;
+
+
+    &__item {
+        margin-right: $margin;
+        margin-left: $margin;
+    }
+}

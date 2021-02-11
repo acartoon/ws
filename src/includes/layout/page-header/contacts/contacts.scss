@@ -45,8 +45,8 @@
         }
 
         @media (min-width: $preheaderPoint) {
-            flex-wrap: nowrap;
             flex-direction: row;
+            flex-wrap: nowrap;
         }
 
         @media (min-width: $desktop) {
