@@ -1,12 +1,14 @@
 mixin _partnersList(mixin, list, state)
-    ul(class=state ? "partner-double-stage-block--arrow": "").partner-list
+    ul(class=state ? "partner-list--arrow": "").partner-list
         each val in list
-            li._item
-                if(mixin == 'benefit')
+            if(mixin == 'benefit')
+                li._item
                     +benefitBlock(val)
-                else if(mixin == 'conditions')
+            else if(mixin == 'conditions')
+                li._item
                     +conditionsBlock(val)
-                else if(mixin == 'advantages')
+            else if(mixin == 'advantages')
+                li._item
                     +advantagesBlock(val)
 
 
@@ -14,5 +16,5 @@ mixin partnersList(mixin, list)
     +_partnersList(mixin, list)
 
 mixin partnersListArrow(mixin, list)
-    - var state = "arrow";
+    - var state = "advantages";
     +_partnersList(mixin, list, state)

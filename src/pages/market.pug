@@ -1,0 +1,14 @@
+extends ../includes/layout/layout.pug
+
+block var
+    include ../includes/_var
+     - var headerImage = paramsPage.YM.image;
+     - var pageTitle = paramsPage.YM.header;
+     - var contentClassModifier = paramsPage.BLOG_DETAIL.class
+    - var isContainer = false;
+    - var isShowBtnUp = paramsPage.YM.btnUp
+
+block header
+        h1.page-header__title.page-title=paramsPage.YM.header
+block content
+    +ymPage

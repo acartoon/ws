@@ -1,0 +1,27 @@
+-
+    var saleList = [
+        {
+            isError: false,
+            label: 'Адрес электронной почты',
+            errorText: 'Неверный формат почты',
+            requireType: 'email',
+            type: 'email',
+            placeholder: 'Введите адрес электронной почты',
+            isRequire: true,
+            value: ''
+        },
+        {
+            isError: false,
+            label: 'Номер телефона',
+            errorText: 'Введите номер телефона',
+            requireType: 'tel',
+            type: 'tel',
+            placeholder: 'X (XXX) XX-XX-XX',
+            isRequire: true,
+            value: ''
+        },
+    ]
+
+mixin formSale
+    .page__form
+        +form(saleList, 'sale', btnText.sale)

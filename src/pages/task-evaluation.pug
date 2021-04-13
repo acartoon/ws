@@ -1,0 +1,15 @@
+extends ../includes/layout/layout.pug
+
+block var
+    include ../includes/_var
+     - var headerImage = paramsPage.TASK.image;
+     - var pageTitle = paramsPage.TASK.header;
+     - var contentClassModifier = paramsPage.BLOG_DETAIL.class
+    - var isContainer = false;
+    - var isShowBtnUp = paramsPage.BLOG_DETAIL.btnUp
+
+
+block header
+        h1.page-header__title.page-title=paramsPage.TASK.header
+block content
+    +taskEvaluation

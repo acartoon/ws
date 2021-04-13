@@ -3,6 +3,9 @@
 @import "src/style/_";
 
 .partners {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

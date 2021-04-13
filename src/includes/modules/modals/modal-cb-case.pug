@@ -1,0 +1,11 @@
+-
+    var paramNewCase = {
+        class: "modal",
+        title: "Оставьте контактные данные. Мы свяжемся с вами для уточнения деталей заказа",
+        id: "new-case",
+        titleClass: "subtitle"
+    }
+
+mixin modalCbCase
+    +modal(paramNewCase)
+        +formNewCase('new-case')

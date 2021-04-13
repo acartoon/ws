@@ -6,6 +6,7 @@
     background: color(light_grey);
 
     @include desktopStyle {
+        padding-top: 140px;
         padding-bottom: 140px;
     }
 
@@ -28,6 +29,21 @@
         }
     }
 
+    &__subtitle-wrap {
+        margin-bottom: 64px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include desktopStyle {
+            margin-bottom: 80px;
+        }
+    }
+
+    &__wrap-small {
+        max-width: 521px;
+    }
+
     &__modals {
         display: none;
     }
@@ -48,20 +64,32 @@
 
 
     &__side-nav {
-        margin-right: -20px;
 
-        @media (min-width: 480px) {
-            margin-right: -30px;
-        }
+        .swiper-container {
+            margin-right: -20px;
+            margin-left: -20px;
+            padding-left: 10px;
 
-        @include desktopStyle {
-            margin: 0;
+            @media (min-width: 480px) {
+                margin-right: -30px;
+                margin-left: -30px;
+                padding-left: 20px;
+            }
+
+            @include desktopStyle {
+                margin: 0;
+                padding-left: 0;
+            }
         }
     }
 
 
     &__subtitle {
         margin-bottom: 24px;
+
+        @include desktopStyle {
+            margin-bottom: 40px;
+        }
     }
 
     &__bg-gray {
@@ -100,5 +128,24 @@
             flex-wrap: nowrap;
             align-items: center;
         }
+    }
+
+    &__wrapper {
+        padding-top: 96px;
+        padding-bottom: 96px;
+
+        @include desktopStyle {
+            padding-top: 140px;
+            padding-bottom: 140px;
+        }
+    }
+
+    &__footer {
+        padding-bottom: 96px;
+        background: color(light_grey);
+
+         @include desktopStyle {
+             padding-bottom: 140px;
+         }
     }
 }

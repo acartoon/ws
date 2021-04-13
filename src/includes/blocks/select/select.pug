@@ -1,0 +1,7 @@
+mixin select(params)
+    div(class=params.wrapper).select-block
+        span.select-block__error Выберете проект
+        select&attributes({'data-select': params.attr})._select
+            option(val='placeholder')
+            each val, index in params.options
+                option(val=index)=val

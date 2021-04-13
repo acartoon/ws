@@ -2,9 +2,15 @@
 
 @import "src/style/_";
 
-.footer-app {
+.app {
     $this: &;
+    display: block;
+    align-items: center;
+    box-sizing: border-box;
+    width: 138px;
+    height: 40px;
     line-height: 0;
+    cursor: pointer;
 
     &:hover {
         #{$this}__qr {

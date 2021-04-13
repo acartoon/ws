@@ -1,0 +1,18 @@
+-
+    var paramSelectedProject = {
+        class: "modal",
+        title: "Проект добавлен",
+        id: "success-select-case",
+        titleClass: "subtitle",
+    }
+
+-
+    var paramsSelect = {
+        wrapper: 'modal__select',
+        attr: 'select-project',
+        options: ['WS Support', 'очень очень длинный проект', 'MyNewProject.com', 'MyLittlePony']
+    }
+
+mixin modalSuccessSelectCase
+    +modal(paramSelectedProject)
+        +buttonAttr({mixin: 'button--blue js-modal-close', text: 'Закрыть'})

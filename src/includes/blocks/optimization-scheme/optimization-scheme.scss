@@ -1,0 +1,329 @@
+/*************** optimization-scheme ****************/
+
+@import "src/style/_";
+
+@mixin point901 {
+    @media (min-width: 901px) {
+        @content;
+    }
+}
+
+@mixin point1280 {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin separator {
+    position: relative;
+    margin: 0 0 30px;
+    padding-top: 95px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 3px;
+        height: 80px;
+        transform: translateX(-50%);
+        background: url('i/blog-detail/line-vertic.svg');
+    }
+
+    @include point901 {
+        padding-top: 0;
+        margin-right: 30px;
+        width: calc((100% - 295px) / 2);
+
+        &:not(:first-child):before {
+            background: url('i/blog-detail/line-horiz.svg');
+            left: 0;
+            top: 50%;
+            width: 94px;
+            height: 4px;
+            transform: translateY(-50%) ;
+        }
+    }
+
+
+}
+
+.optimization-scheme {
+    //padding: 96px 20px;
+    //background: color(light_grey);
+
+
+    @media(min-width: 480px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    &__in {
+        max-width: 1158px;
+        margin: 0 auto;
+
+        @include point901 {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        @include point1280 {
+            justify-content: space-between;
+
+        }
+    }
+
+    &__dl {
+        margin: 0 0 15px;
+        padding: 0;
+        text-align: center;
+        font-family: $fontOpenSans;
+
+        @include point901 {
+            text-align: left;
+        }
+    }
+
+    &__dd {
+        margin: 0 0 7px;
+        padding: 0;
+        font-size: 26px;
+        line-height: 35px;
+        letter-spacing: 0.5px;
+        color: #2D2D2D;
+        font-weight: 400;
+
+    }
+
+    &__dt {
+        margin: 0;
+        padding: 0;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 61px;
+        letter-spacing: 0.05em;
+    }
+
+
+    &__item {
+        text-align: center;
+        position: relative;
+        margin: 0 0 30px;
+        padding-top: 95px;
+        box-sizing: border-box;
+        @include separator;
+
+        &:after {
+            top: 80px;
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: #D4D4D4;
+        }
+
+        @include point901 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            margin-right: 30px;
+            padding-top: 0;
+            padding-left: 118px;
+            width: calc((100% - 295px) / 2);
+
+            min-height: 130px;
+
+
+
+            &:after {
+                top: 0;
+                height: 130px;
+                width: 4px;
+                left: 96px;
+            }
+        }
+
+        @include point1280 {
+            margin-right: 0;
+            max-width: 268px;
+            margin-right: 41px;
+
+            &:nth-child(6) {
+                margin-left: auto;
+            }
+
+
+            &:after {
+                left: 98px;
+            }
+        }
+    }
+
+    &__text {
+        margin: 0;
+        font-size: 18px;
+        line-height: 165%;
+        color: #464646;
+        font-weight: 300;
+
+        @include point901 {
+            text-align: left;
+        }
+    }
+
+
+    &__status {
+        @include separator;
+
+        &:before:first-child {
+            content: none;
+        }
+
+        @include point901 {
+            position: relative;
+            width: 235px;
+            margin: 0;
+            text-align: left;
+
+            &:before {
+                content: none;
+            }
+        }
+
+        @include point1280 {
+            width: 180px;
+            margin-right: 59px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+
+    &__second-status {
+        @include point901 {
+            margin-top: -160px;
+        }
+
+        @include point1280 {
+            margin-top: 0;
+            margin-right: 0;
+            padding-left: 118px;
+
+
+            &:before {
+                content: '';
+            }
+        }
+    }
+
+    &__last-status {
+        @include point901 {
+            margin-top: 65px;
+            width: 100%;
+        }
+
+        @include point1280 {
+            margin: 0;
+            padding-left: 118px;
+            width: auto;
+
+
+            &:before {
+                content: '';
+            }
+        }
+    }
+
+
+    &__status-separatop {
+        display: none;
+
+        @include point901 {
+            display: block;
+            width: 100%;
+            position: relative;
+            padding-top: 180px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-top: -180px;
+
+                .optimization-scheme__separatop {
+                    &:before {
+                        content: none;
+                    }
+                }
+
+            }
+
+            @include point1280 {
+                position: relative;
+                padding-top: 200px;
+                top: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+
+
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__separatop {
+
+        @include point901 {
+            position: absolute;
+            top: 34%;
+            display: block;
+            //margin-top: 180px;
+            left: 235px;
+            width: calc(60%);
+            height: 4px;
+            background: url("i/blog-detail/line-horiz.svg");
+
+            &:before {
+                position: absolute;
+                content: '';
+                display: block;
+                left: 0;
+                height: 215px;
+                width: 4px;
+                background: url('i/blog-detail/line-vertic.svg');
+            }
+
+            &:after {
+                position: absolute;
+                content: '';
+                display: block;
+                left: 100%;
+                top: -160px;
+                height: 160px;
+                width: 4px;
+                background: url('i/blog-detail/line-vertic.svg');
+            }
+        }
+
+        @include point1280 {
+            top: 50%;
+            width: 828px;
+            left: auto;
+            right: 92px;
+
+            &:after {
+                right: 0;
+                left: auto;
+
+            }
+        }
+    }
+}
+

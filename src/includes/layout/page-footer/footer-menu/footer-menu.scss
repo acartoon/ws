@@ -20,6 +20,10 @@ $margin: 10px;
         text-align: center;
         text-decoration: none;
 
+        span, a {
+            text-decoration: none;
+        }
+
         //span {
         //    position: relative;
         //    border-bottom: 1px solid transparentize(color(white), 0.7);

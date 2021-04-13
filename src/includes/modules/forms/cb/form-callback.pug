@@ -1,0 +1,27 @@
+-
+    var callbackList = [
+        {
+            isError: false,
+            label: 'Ваше имя',
+            errorText: 'Введите Ваше имя',
+            requireType: 'text',
+            type: 'text',
+            placeholder: '',
+            isRequire: true,
+            value: ''
+        },
+        {
+            isError: false,
+            label: 'Номер телефона',
+            errorText: 'Введите номер телефона',
+            requireType: 'tel',
+            type: 'tel',
+            placeholder: 'X (XXX) XX-XX-XX',
+            isRequire: true,
+            value: ''
+        },
+    ]
+
+mixin formCallback
+    .page__form
+        +form(callbackList, 'callback', btnText.callback)

@@ -3,29 +3,52 @@
 @import "src/style/_";
 
 $marging: 8px;
-$transition: background 250ms ease-in;
+$transition: none;
 
 .side-nav {
-    display: flex;
+    //display: flex;
 
     @include desktopStyle {
         display: block;
     }
 
     &__wrap {
-        display: inline-block;
+        display: inline-block !important;
         margin: 0 $marging;
+        width: auto;
+
 
         @include desktopStyle {
-            display: block;
+            display: block !important;
             margin: 0;
         }
     }
+
+    &__btn-nav-next {
+        right: 20px;
+
+        @include desktopStyle {
+            display: none;
+        }
+    }
+
+    &__btn-nav-prev {
+        left: 20px;
+        &:before {
+            transform: translate(-50%, -50%) rotate(180deg);
+        }
+
+        @include desktopStyle {
+            display: none;
+        }
+    }
+
 
 
     &__item {
         display: block;
         padding: $marging 20px;
+        background: color(white);
 
         font-size: 16px;
         line-height: 40px;
@@ -33,6 +56,7 @@ $transition: background 250ms ease-in;
         text-decoration: none;
         letter-spacing: 0.05em;
         border-radius: 4px;
+        font-weight: 300;
         box-shadow: inset 0 0 0 2px color(grey);
 
         @include desktopStyle {
@@ -46,7 +70,7 @@ $transition: background 250ms ease-in;
 
             @include desktopStyle {
                 background: color(bg);
-                transition: $transition;
+                //transition: $transition;
             }
         }
 
@@ -71,6 +95,7 @@ $transition: background 250ms ease-in;
 
             @include desktopStyle {
                 padding-left: 40px;
+                background: color(bg);
             }
         }
     }

@@ -10,7 +10,7 @@ $marging: 30px;
     padding: 0;
     list-style: none;
 
-    @media (min-width: $ml) {
+    @media (min-width: 720px) {
         overflow: hidden; /* Fix for firefox and IE 10-11  */
         column-count: 2;
         column-gap: 30px;

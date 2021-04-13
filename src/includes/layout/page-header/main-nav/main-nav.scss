@@ -15,13 +15,25 @@ $speed: 250ms;
         }
     }
 
+    &__content {
+        max-width: 371px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (min-width: $desktop) {
+            max-width: none;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 0;
+            overflow: inherit;
+        }
+    }
+
     &__body {
         padding-bottom: 56px;
         overflow-y: auto;
 
-        @media (min-width: $desktop) {
-            display: flex;
-            justify-content: space-between;
+        @include desktopStyle {
             padding-bottom: 0;
             overflow: inherit;
         }
@@ -72,13 +84,14 @@ $speed: 250ms;
         margin-bottom: 20px;
 
         @media (min-width: $desktop) {
-            margin-right: 16px;
+            margin-right: 0;
             margin-bottom: 0;
+            flex: 1;
         }
     }
 
     &__login {
-        margin-bottom: 50px;
+        margin-bottom: 56px;
 
         @media (min-width: $mobMenu) {
             margin-bottom: 0;
@@ -91,6 +104,7 @@ $speed: 250ms;
 
     &__user-nav {
         flex: 0 0 auto;
+        margin-left: 16px;
     }
 }
 

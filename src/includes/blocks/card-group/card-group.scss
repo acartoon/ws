@@ -18,13 +18,14 @@ $padding: 16px;
     }
 
     &__item {
-        margin-bottom: $padding * 2;
+        margin-bottom: 30px;
 
         &:last-child {
             margin-bottom: 0;
         }
 
         @media (min-width: $ml) {
+            margin-bottom: $padding * 2;
             display: flex;
             box-sizing: border-box;
             width: 50%;

@@ -21,7 +21,7 @@ $transition: border-color $speed ease-in, text-decoration-color $speed ease-in;
     &__link {
         display: block;
         box-sizing: border-box;
-        padding: 12px 12px 20px;
+        padding: 12px 20px 20px;
         font-weight: 300;
         font-size: 24px;
         line-height: 33px;
@@ -32,11 +32,9 @@ $transition: border-color $speed ease-in, text-decoration-color $speed ease-in;
         letter-spacing: 0.5px;
 
         &:hover {
-
-        }
-
-        @media (min-width: 480px) {
-            text-align: center;
+            @media (max-width: 1023px) {
+                color: rgba(0, 0, 0, 0.6);
+            }
         }
 
         @media (min-width: $desktop) {
@@ -46,6 +44,7 @@ $transition: border-color $speed ease-in, text-decoration-color $speed ease-in;
             line-height: 19px;
             color: color(white);
             text-decoration-line: underline;
+            text-align: center;
             border: 1px solid transparent;
             border-radius: 4px;
             transition: $transition;
@@ -67,7 +66,7 @@ $transition: border-color $speed ease-in, text-decoration-color $speed ease-in;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin: 0 63px -6px;
+        margin: 0 -6px -6px;
     }
 }
 

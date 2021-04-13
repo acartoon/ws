@@ -28,18 +28,18 @@
         {
             title: 'Генерации прайс-листа каталога товаров в xls-формате',
             icon: 'kitchen-team',
-            img: 'cases/price-double-stage-block'
+            img: 'cases/price-list'
         },
         {
             title: 'Создание пользовательского типа свойства заказа',
             icon: '',
             img: 'cases/properties'
         },
-        {
-            title: 'Генерации прайс-листа каталога товаров в xls-формате',
-            icon: '',
-            img: 'cases/price-double-stage-block'
-        },
+        // {
+        //     title: 'Генерации прайс-листа каталога товаров в xls-формате',
+        //     icon: '',
+        //     img: 'cases/price-list'
+        // },
         {
             title: 'Создание robots.txt, sitemap.xml и счетчиков для разных поддоменов',
             icon: '',
@@ -53,4 +53,4 @@
     ]
 
 mixin caseList
-    +cardGroup(casesList, cardType.CASES)
+    +cardGroup(casesList, 'card--hover card--cases')

@@ -6,11 +6,27 @@
     padding-top: 0;
     background: color(white);
 
+    &__title-wrap {
+        margin-bottom: 48px;
+        margin-left: 0;
+        margin-right: auto;
+        text-align: left;
+
+        font-size: 40px;
+        line-height: 50px;
+
+        @media(min-width: 480px) {
+            font-size: 48px;
+            line-height: 60px;
+        }
+
+    }
+
     &__wrap {
         padding-top: 72px;
 
         @include desktopStyle {
-            flex: 1 0;
+            width: calc(100% - 360px);
             padding-top: 0;
         }
     }
@@ -41,15 +57,18 @@
 
 
     &__section {
-        margin-bottom: 96px;
+        margin-bottom: 72px;
         padding-bottom: 40px;
         border-bottom: 1px solid color(gray92);
+
+        @include desktopStyle {
+            margin-bottom: 96px;
+        }
     }
 
     &__button {
         max-width: 320px;
+
     }
 
-    &__description {
-    }
 }

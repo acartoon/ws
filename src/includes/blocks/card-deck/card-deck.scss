@@ -19,6 +19,12 @@ $padding: 20px;
         margin-left: -$padding;
     }
 
+    .index-page__tasks-list & {
+        @media (max-width: 479px) {
+            margin-bottom: -40px;
+        }
+    }
+
     &--column {
 
         @media (min-width: $sm) {
@@ -32,11 +38,25 @@ $padding: 20px;
     }
 
     &__item {
-        margin-bottom: $padding * 2;
+        margin-bottom: 30px;
 
         &:last-child {
             margin-bottom: 0;
         }
+
+        @media (min-width: $ml) {
+            display: flex;
+            box-sizing: border-box;
+            width: 50%;
+            padding-right: $padding;
+            padding-left: $padding;
+
+            &:last-child {
+                margin-bottom: $padding * 2;
+            }
+        }
+
+
         #{$_this}--column & {
 
             @media (min-width: $sm) {
@@ -50,15 +70,15 @@ $padding: 20px;
 
         }
 
-        @media (min-width: $ml) {
-            display: flex;
-            box-sizing: border-box;
-            width: 50%;
-            padding-right: $padding;
-            padding-left: $padding;
+        #{$_this}--v2 {
+            @include desktopStyle {
+                width: 33.333%;
+            }
+        }
 
-            &:last-child {
-                margin-bottom: $padding * 2;
+        .index-page__tasks-list & {
+            @media (max-width: 479px) {
+                margin-bottom: 40px;
             }
         }
     }

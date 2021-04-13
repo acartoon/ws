@@ -1,17 +1,20 @@
 {
   "projectName": "html-wssupport-2021",
   "pages": {
-    "components.html": "Основные компоненты",
     "index.html": "Главная",
-    "questions.html": "Вопросы и ответы",
+    "faq.html": "Вопросы и ответы",
     "cases.html": "Кейсы",
     "cases-detail.html": "Детальная кейса",
     "partners.html": "Партнерская программа",
     "blog.html": "Блог",
-    "blog-detail.html": "Детальная блога",
-    "store": "Магазин задач",
-    "store-detail": "Магазин задач детально",
+    "store.html": "Магазин задач",
+    "store-detail.html": "Магазин задач детально",
     "contacts.html": "Контакты",
-    "form-states.html": "Состояния форм"
+    "form-states.html": "Состояния форм",
+    "market.html": "Как подключить интернет-магазин на 1С-Битрикс к Яндекс.Маркет",
+    "update-bitrix.html": "Чем опасно самостоятельное обновление «1С-Битрикс»",
+    "task-evaluation.html": "Как мы проводим оценку задач",
+    "google-page.html": "Google Page Insights: что это и как улучшить показатели своего сайта"
+
   }
 }

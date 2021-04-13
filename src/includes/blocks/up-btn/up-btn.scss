@@ -1,0 +1,44 @@
+/******************* up-btn *********************/
+
+@import "src/style/_";
+
+
+.up-btn {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    z-index: 1000;
+    border: none;
+    box-sizing: border-box;
+    background: url("i/icons/up-btn.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+    transition: background 200ms ease-in, opacity 300ms ease-in;
+    cursor: pointer;
+    opacity: 0;
+    outline: none;
+
+    &:hover {
+        background: url("i/icons/up-btn-hover.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50px;
+        transition: background 200ms ease-in;
+    }
+
+    @include desktopStyle {
+        right: 50px;
+        bottom: 50px;
+        width: 70px;
+        height: 70px;
+        background-size: 60px;
+
+        &:hover {
+            background-size: 60px;
+        }
+    }
+}

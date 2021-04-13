@@ -21,6 +21,17 @@ $gradient: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
     }
 }
 
+@mixin link {
+    font-family: $fontOpenSans;
+    color: color(blue);
+    transition: opacity 300ms ease-in;
+
+    &:hover {
+        opacity: 0.8;
+        transition: opacity 300ms ease-in;
+    }
+
+}
 
 @function get ($map, $key) {
 
@@ -89,3 +100,4 @@ $gradient: linear-gradient(80.07deg, #326BD2 0%, #5CD384 100%);
     padding: 0;
     list-style: none;
 }
+

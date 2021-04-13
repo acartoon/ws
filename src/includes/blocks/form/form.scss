@@ -28,7 +28,7 @@
         box-sizing: border-box;
         min-height: 70px;
         max-height: 70px;
-        border: 1px dashed #0ABAEE;
+        border: 1px dashed color(blue);
         cursor: pointer;
 
         &:hover .form__dropzone {

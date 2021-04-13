@@ -17,6 +17,10 @@
         padding: 0 !important;
     }
 
+    .gm-style .gm-style-iw-c {
+        border-radius: 4px;
+    }
+
     .gm-style-iw-d {
         min-height: auto !important;
         overflow: auto !important;
@@ -25,7 +29,7 @@
     &__in {
         overflow: hidden;
 
-        border: 2px solid #ECECEC;
+        border: 2px solid color(grey);
         border-radius: 4px;
         box-shadow: 20px 30px 60px rgba(11, 24, 36, 0.1);
 
@@ -45,12 +49,18 @@
 
         @include desktopStyle {
             width: 523px;
+            border-left: 2px solid color(grey);
         }
     }
 
     &__map {
         width: 100%;
         height: 480px;
+
+
+        @media (min-width: 480px) {
+            height: 651px;
+        }
 
         button {
             display: none !important;

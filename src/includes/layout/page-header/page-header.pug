@@ -1,5 +1,6 @@
 mixin pageHeader(image, contentClassModifier)
-    header.page-header(class=`page-header--${contentClassModifier}` style=`background-image: url(/i/header/${image}.png)`)
+    header.page-header(class=`page-header--${contentClassModifier}` style=`background-image: url(i/header/${image}.png)`)
+        ._decor
         ._in
             ._preheader.d-none.d-m-block
                 ._contacts

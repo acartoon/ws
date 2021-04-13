@@ -1,0 +1,16 @@
+-
+    var paramAddProject = {
+        class: "modal",
+        title: "Добавить к проекту WS Support?",
+        id: "add-case",
+        titleClass: "subtitle"
+    }
+
+mixin modalAddCase
+    +modal(paramAddProject)
+        .button-wrapper
+            +buttonAttr({mixin: 'button--blue', text: 'Добавить', attr:{'data-toggle': 'modal-add-case'}})
+            +buttonAttr({
+                mixin: 'js-modal-close',
+                text: 'Отмена',
+            })

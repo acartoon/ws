@@ -1,0 +1,17 @@
+extends ../includes/layout/layout.pug
+
+block var
+    include ../includes/_var
+    - var headerImage = paramsPage.QUESTIONS.image;
+    - var pageTitle = paramsPage.QUESTIONS.pageMainTitle;
+    - var contentClassModifier = paramsPage.QUESTIONS.class;
+    - var isContainer = true;
+    - var isShowBtnUp = paramsPage.QUESTIONS.btnUp
+
+
+block header
+    h1.page-header__title.page-title=paramsPage.QUESTIONS.header
+    .page-header__btn
+        +buttonFaq
+block content
+    +questionsPage

@@ -6,10 +6,10 @@
     box-sizing: border-box;
     width: 220px;
     height: 220px;
-    padding: 50px;
+    padding: 50px 33px;
     text-align: center;
     background: color(white);
-    border: 1px solid #ECECEC;
+    border: 2px solid color(grey);
     border-radius: 50%;
     box-shadow: 20px 30px 60px rgba(11, 24, 36, 0.1);
 
@@ -29,5 +29,6 @@
         font-size: 18px;
         line-height: 140%;
         color: #000000;
+        font-family: $fontOpenSans;
     }
 }

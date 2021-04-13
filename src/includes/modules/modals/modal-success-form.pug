@@ -3,11 +3,12 @@
         class: "modal",
         title: "Спасибо за обращение",
         id: "id-success-form",
-        titleClass: "subtitle"
+        titleClass: "subtitle",
+        subtitle: 'Наш специалист перезвонит вам в ближайшее время'
     }
 mixin modalSuccessForm
     +modal(paramSuccessForm)
-        p.modal__subheading.page-subheading Наш специалист перезвонит вам в ближайшее время
+        //p.modal__subheading.page-subheading
         +buttonModal(btnText.ok)
 
 

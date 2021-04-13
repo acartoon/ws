@@ -1,5 +1,16 @@
-mixin sideNav(sideMenu)
+mixin _sideNav(sideMenu)
     div(data-slider="side-nav").side-nav
         each val, i in sideMenu
             ._wrap
                 a(href="#" class=(i == 0) ? "active" : "")._item=val
+
+
+
+mixin sideNav(sideMenu)
+    div(data-slider="side-nav").swiper-container
+        .swiper-wrapper.side-nav
+            each val, i in sideMenu
+                .side-nav__wrap.swiper-slide
+                    a(href="#" class=(i == 0) ? "active" : "").side-nav__item=val
+        .slider-btn-nav.slider-btn-nav--next.side-nav__btn-nav-next
+        .slider-btn-nav.slider-btn-nav--prev.side-nav__btn-nav-prev

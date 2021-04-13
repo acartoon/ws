@@ -15,6 +15,12 @@
         }
     }
 
+    &__link {
+        &.text-link {
+            text-decoration: none;
+        }
+    }
+
     &__item {
         margin-bottom: 56px;
         text-align: center;

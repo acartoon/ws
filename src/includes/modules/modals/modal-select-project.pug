@@ -1,0 +1,25 @@
+-
+    var paramProject = {
+        class: "modal",
+        title: "Добавить к проекту",
+        id: "select-project",
+        titleClass: "subtitle"
+    }
+
+-
+    var paramsSelect = {
+        wrapper: 'modal__select',
+        attr: 'select-project',
+        options: ['WS Support', 'очень очень длинный проект', 'MyNewProject.com', 'MyLittlePony']
+    }
+
+mixin modalSelectProject
+    +modal(paramProject)
+        form.js-form-select-project
+            +select(paramsSelect)
+            .button-wrapper
+                +buttonAttr({mixin: 'button--blue', text: 'Добавить', attr:{'type': 'submit'}})
+                +buttonAttr({
+                    mixin: 'js-modal-close',
+                    text: 'Отмена',
+                })

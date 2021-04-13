@@ -5,6 +5,7 @@
 .index-page {
     background: transparent;
     padding-top: 0;
+    padding-bottom: 0;
 
     @media (min-width: $l) {
         position: relative;
@@ -44,12 +45,14 @@
     }
 
     &__tasks-list {
-        margin-bottom: 64px;
+        margin: 0 auto 64px;
+        max-width: 1110px;
     }
 
     &__in {
         padding-top: 0;
         padding-bottom: 96px;
+        margin-bottom: 0;
 
         @include desktopStyle {
             padding-bottom: 140px;
@@ -60,6 +63,10 @@
         padding-top: 96px;
         padding-bottom: 96px;
         margin-bottom: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
 
         @include desktopStyle {
@@ -72,6 +79,10 @@
     &__section:first-child {
 
         @media (min-width: 992px) {
+            padding-top: 206px;
+        }
+
+        @media (min-width: 1024px) {
             padding-top: 250px;
         }
     }
@@ -88,6 +99,22 @@
             margin-top: -60px;
             position: relative;
             z-index: -1;
+        }
+    }
+
+    .card-deck {
+        @include desktopStyle {
+            margin-left: -30px;
+            margin-right: -30px;
+        }
+    }
+
+    .card-deck .card-deck__item {
+
+        @include desktopStyle {
+            width: 33.333%;
+            padding-left: 30px;
+            padding-right: 30px;
         }
     }
 }

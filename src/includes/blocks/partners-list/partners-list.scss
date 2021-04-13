@@ -37,18 +37,23 @@ $marging: 15px;
                 background: url("i/icons/arrow-down.svg") no-repeat center;
                 background-size: contain;
                 transform: translateX(-50%);
+            }
 
-                @media (min-width: $ml) {
+            &:last-child:before {
+                content: none;
+            }
+
+
+            @media (min-width: $ml) {
+                padding-right: 32px;
+                padding-bottom: 0;
+
+                &:before {
                     top: 50%;
                     right: 0;
                     left: auto;
                     transform: translateY(-50%) rotate(-90deg);
                 }
-            }
-
-            @media (min-width: $ml) {
-                padding-right: 32px;
-                padding-bottom: 0;
 
                 &:last-child {
                     margin-right: 0;

@@ -8,14 +8,19 @@ $margin: 48px;
     margin: 0;
     padding: 0;
     list-style: none;
-    counter-reset: advice;
 
     &__img {
+        max-width: 100%;
+        max-height: 100%;
         box-sizing: border-box;
         margin: 0 0 $margin;
         line-height: 0;
         border: 1px solid color(gainsboro);
         border-radius: 4px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     &__title {
@@ -27,24 +32,10 @@ $margin: 48px;
 
 
     &__item {
-        position: relative;
 
         &::before {
-            content: "";
-            position: absolute;
             top: 40px;
             left: 30px;
-            display: block;
-            width: 64px;
-            height: 64px;
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-
-        @for $i from 1 through 6 {
-            &:nth-child(#{$i})::before {
-                background-image: url("i/blog-detail/#{$i}.svg");
-            }
         }
     }
 
@@ -57,7 +48,7 @@ $margin: 48px;
         box-sizing: border-box;
         padding: 128px 30px 30px;
         background: #F8F8FA;
-        border: 2px solid #ECECEC;
+        border: 2px solid color(grey);
         border-radius: 4px;
     }
 

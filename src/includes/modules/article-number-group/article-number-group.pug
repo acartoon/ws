@@ -1,0 +1,6 @@
+mixin articleNumberGroup(params)
+    .article-number-group.number-list
+        each val in params
+            ._item.number-list__item
+                .page-h4=val.title
+                .content-block-text=val.text

@@ -31,6 +31,8 @@ $grid-breakpoints: (
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: -15px;
+    margin-bottom: -15px;
 }
 
 .order-xl-first {
@@ -39,11 +41,31 @@ $grid-breakpoints: (
         order: -1;
     }
 }
-
-.col-3 {
-    width: 33.3333%;
+.col-12 {
+    width: 100%;
     padding-right: 15px;
     padding-left: 15px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.col-ml-6 {
+    @media(min-width: 640px) {
+        width: 50%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+.col-lg-3 {
+    @include desktopStyle {
+        width: 33.3333%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
 
 
@@ -61,6 +83,28 @@ $grid-breakpoints: (
         @include get-adaptive($breakpoints) {
             display: none;
         }
+    }
+}
+
+.order-lg-1 {
+    @media (min-width: 1280px) {
+        order: 1;
+    }
+}
+.order-lg-2 {
+    @media (min-width: 1280px) {
+        order: 2;
+    }
+}
+
+.flex-baseline {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width: 992px) {
+        justify-content: flex-start;
     }
 }
 

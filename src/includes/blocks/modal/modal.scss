@@ -10,6 +10,9 @@
     padding: 54px 20px 66px;
     background: color(white);
 
+    &__select {
+        margin-bottom: 40px;
+    }
 
     &__in {
         max-width: 560px;
@@ -45,6 +48,11 @@
     }
 
     &__subheading {
-        margin-bottom: 56px;
+        margin: 0 auto 20px;
+        //max-width: 432px;
+
+        @include desktopStyle {
+            margin-bottom: 56px;
+        }
     }
 }

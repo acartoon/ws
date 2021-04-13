@@ -12,8 +12,9 @@ mixin card(item, className)
             p._link Читать
 
 mixin cardIn(param)
-    .card
+    .card.card--wrap
         ._in
             p._text=param.text
-            ._img-wrap
-                img(src=param.img alt=param.alt)
+            if(param.img)
+                ._img-wrap
+                    img(src=param.img alt=param.alt)

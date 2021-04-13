@@ -6,7 +6,7 @@
     position: relative;
     z-index: 3;
     box-sizing: border-box;
-    min-height: 470px;
+    min-height: 520px;
     padding: 30px 20px 29px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -25,16 +25,62 @@
         width: 100%;
         height: 100%;
         background: linear-gradient(77.35deg, rgba(48, 166, 216, 0.6) 0%, rgba(84, 211, 146, 0.6) 100%);
+        mix-blend-mode: hard-light;
     }
+
+    &__decor {
+       position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        z-index: -2;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+
+
+        mix-blend-mode: normal;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            z-index: -1;
+            background: rgba(138, 138, 138, 0.3);
+            mix-blend-mode: normal;
+
+        }
+
+        @include desktopStyle {
+
+        }
+    }
+
 
     &__tagline {
-        margin-bottom: 91px;
+        @include desktopStyle {
+            margin-bottom: 91px;
+        }
     }
 
+    &__btn {
+        margin: 20px auto 0;
+        text-align: center;
+
+        @include desktopStyle {
+            margin-top: 32px;
+        }
+    }
 
     &__counter {
-        position: relative;
-        top: 140px;
+        position: absolute;
+        bottom: -140px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     @media (min-width: 992px) {
@@ -51,27 +97,16 @@
 
     &--index {
         z-index: 5;
+        min-height: 800px;
     }
 
     &--partners {
-        min-height: 580px;
+        min-height: 520px;
 
-        @media (min-width: $sm) {
-            min-height: 470px;
-        }
     }
-
-    &--index {
-        min-height: 580px;
-    }
-
 
     &--cases-detail {
-        min-height: 580px;
-
-        @media (min-width: $sm) {
-            min-height: 470px;
-        }
+        min-height: 520px;
     }
 
 
@@ -85,8 +120,17 @@
         margin-bottom: 19px;
         margin-left: auto;
 
-        @media (min-width: $xl) {
+        @media (min-width: 992px) {
+            .page-header--index & {
+                margin-bottom: 138px;
+            }
+        }
+
+        @include desktopStyle {
             margin-bottom: 64px;
+            .page-header--index & {
+                margin-bottom: 96px;
+            }
         }
     }
 
@@ -106,6 +150,7 @@
     &__preheader {
 
         @media (min-width: 560px) {
+            padding-top: 4px;
             display: flex;
             flex: 1 0;
             justify-content: center;
@@ -113,6 +158,7 @@
         }
 
         @media (min-width: $desktop) {
+            padding-top: 0;
             flex: 0 0 100%;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -217,8 +263,10 @@
         transform: translate(-50%, -50%);
 
         .page-header--index & {
-            position: static;
-            transform: none;
+            @media(min-width: 992px) {
+                position: static;
+                transform: none;
+            }
         }
 
         @include desktopStyle {

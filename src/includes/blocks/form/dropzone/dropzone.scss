@@ -12,9 +12,8 @@
         z-index: 100;
         box-sizing: border-box;
         min-height: 70px;
-        max-height: 70px;
         padding: 23px 20px;
-        border: 1px dashed #0ABAEE;
+        border: 1px dashed color(blue);
         cursor: pointer;
 
         &:hover .dropzone-block__clickable {

@@ -8,6 +8,10 @@ function onOverflow() {
     $('body').toggleClass('overflow')
 }
 
+function onOverflowMob() {
+    $('body').toggleClass('overflow-mob')
+}
+
 var dataType = {
     TEL: 'tel',
     EMAIL: 'email',
@@ -116,6 +120,7 @@ function validateForm(form) {
                 showMaskOnHover: false
             });
         },
+
         addMaskEmail: function () {
             this.formEmail = form.find('input[' + this.attr + '="email"]');
             this.formEmail.inputmask('email', {
@@ -123,6 +128,12 @@ function validateForm(form) {
                 placeholder: "",
             });
         },
+
+        addResizeTextArea: function() {
+            var textarea = form.find('[' + this.attr + '="textarea"]');
+            autosize(textarea);
+        },
+
         isValidEmail: function(address) {
             var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
             return reg.test(address) == true;
@@ -158,6 +169,7 @@ function validateForm(form) {
 
             this.addMaskTel();
             this.addMaskEmail();
+            this.addResizeTextArea();
 
             this.input.each(function () {
                 var input = {};
@@ -207,7 +219,6 @@ function onSendAjax(params) {
 
 function closePopup() {
     $.magnificPopup.close();
-    onOverflow();
 }
 
 function onBtnCloseClick() {
@@ -229,10 +240,19 @@ function onOpenPopup(params) {
         },
         callbacks: {
             open: function () {
-
+                onOverflowMob();
                 if(params.closePopup) {
                     params.closePopup();
                 }
+            },
+            beforeClose: function () {
+                onOverflowMob();
+            },
+            afterClose: function () {
+                if(params.afterClose) {
+                    params.afterClose();
+                }
+
             },
         },
         type: params.type,
@@ -280,13 +300,14 @@ function openErrorFormPopup() {
 
 /**
  * функция инициализации валидации, отправки формы с обратными уведомлениями
- *
  * @param {formClass} класс формы
  * @param {params} параметры отправки запроса
  *
  * */
 function onInitForm(formClass, params) {
     var form = $(formClass);
+    if (!form.length) return;
+
     var validate = validateForm(form);
     validate.init();
 
@@ -305,19 +326,47 @@ function onInitForm(formClass, params) {
             onSuccess: function () {
                 openSuccessFormPopup();
                 form[0].reset();
-                onOverflow();
+                onOverflowMob();
             },
             onError: function () {
                 openErrorFormPopup();
                 form[0].reset();
-                onOverflow();
+                onOverflowMob();
             },
         }
 
         onSendAjax(paramsAjax);
     });
 }
-//
-// function changeUrl(link) {
-//     history.pushState(null, null, link);
-// }
+
+/**
+ * плавный скролл до блока
+ * принимает id блока до которого нужен скролл
+* */
+function scrollTo(id) {
+    var block = $('#' + id);
+    var scrollTop = block.offset().top;
+
+    $('html, body').animate({
+        scrollTop: scrollTop
+    }, 500);
+}
+
+$(document).on('click', '[data-scroll]',function () {
+    var idBlock = $(this).attr('data-scroll');
+    scrollTo(idBlock)
+})
+
+
+/**
+ * init select2
+ * */
+function initSelect2() {
+    var block = $('[data-select]');
+    block.select2({
+        dropdownParent: $('.select-block'),
+        minimumResultsForSearch: -1,
+        placeholder: 'Выберете проект',
+        width: '100%',
+    });
+}

@@ -1,8 +1,9 @@
 mixin questionsPage
     section.questions-page__list.page__section
+        h2.page__title-wrap.section-title.block-center Часто задаваемые вопросы
         +questionsList
     section.questions-page__form
         .page__title-wrap
-            h2.page-subtitle.page__subtitle Задайте вопрос
+            h2#callback.page-subtitle.page__subtitle Задайте вопрос
         .page__form
             +formQuestions

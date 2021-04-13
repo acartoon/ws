@@ -1,0 +1,14 @@
+extends ../includes/layout/layout.pug
+
+block var
+    include ../includes/_var
+    - var headerImage = paramsPage.UPDATE.image;
+    - var pageTitle = paramsPage.UPDATE.header;
+    - var contentClassModifier = paramsPage.BLOG_DETAIL.class
+    - var isContainer = false;
+    - var isShowBtnUp = paramsPage.UPDATE.btnUp
+
+block header
+        h1.page-header__title.page-title=paramsPage.UPDATE.header
+block content
+    +updateBitrix

@@ -10,12 +10,21 @@
     overflow: hidden;
     color: color(black);
     text-decoration: none;
+    transition: color 150ms ease-in;
+    width: 100%;
+    box-sizing: border-box;
+
+    &:hover {
+        .card-horizontal__title {
+            color: #5A5A5A;
+            transition: color 150ms ease-in;
+        }
+    }
 
     &--v2 {
         flex-direction: column;
         align-items: center;
     }
-
 
     &__icon-blok {
         position: absolute;
@@ -64,7 +73,7 @@
             display: flex;
             flex: 1 1 auto;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
         }
 
         #{$_this}--v2 & {
@@ -81,6 +90,10 @@
         line-height: 142%;
         color: color(black);
         letter-spacing: 0.02em;
+
+        .ruble {
+            color: #717171;
+        }
     }
 
     &__tag {
@@ -100,8 +113,8 @@
         line-height: 142%;
         color: color(black);
         letter-spacing: 0.02em;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+        //white-space: nowrap;
+        //text-overflow: ellipsis;
     }
 
     &__link {
@@ -118,5 +131,5 @@
     }
 }
 
-/******************* end case-block *********************/
+/******************* end case-card *********************/
 

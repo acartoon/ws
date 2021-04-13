@@ -9,15 +9,15 @@ mixin storeDetailPage
         .store-page__wrap
             .m-container
                 section.page__section
-                    h2.page__title-wrap.text-left.section-title Установка классной штуки на сайт
+                    h2.store-page__title-wrap.section-title Установка классной штуки на сайт
                     .store-page__spacer
                         .store-page__offer
                             +offer
                         .store-page__button
-                            +buttonBlue(btnText.offer)
+                            +buttonAttr({mixin: 'button--blue', text: btnText.offer, attr:{'data-toggle': 'modal', 'data-target': 'add-case'}})
                     .store-page__spacer
                         .store-page__description.block-description
                             +description
                 section.page__section
-                    h2.section-title.page__title-wrap.text-left Также рекомендуем
+                    h2.store-page__title-wrap.section-title Также рекомендуем
                     include store-page-promotion

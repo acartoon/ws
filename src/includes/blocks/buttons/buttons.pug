@@ -11,18 +11,25 @@ mixin _buttonDeep(mixin)
 mixin buttonBlue(text)
     +_buttonSubmit(text, 'button--blue')
 
+mixin buttonBlueScrollTo(text, scrollTo)
+        button(type="submit" data-scroll=`${scrollTo}`).button.button--blue=text
+
 mixin buttonModal(text)
     +_buttonSubmit(text, 'button--blue js-modal-close')
 
 mixin buttonGradient(text)
     +_buttonDeep('button--gradient')
-        span=text
+        span.text-gradient=text
+        span.button__hover.text-white=text
 
 mixin button(text)
     +_button(text, '')
 
 mixin buttonWhite(text)
     +_button(text, 'button--white')
+
+mixin buttonFaq(text)
+    button(type="submit" data-scroll=`callback`).button.button--white.button--big=btnText.faq
 
 mixin buttonCallback(text)
     button(type="button" data-toggle="modal" data-target="callback").button.button--white=text
@@ -32,4 +39,11 @@ mixin buttonLogin()
         span Личный кабинет
         i._icon
             +loginSvg
+
+
+mixin btnText(text, attr, val)
+    button&attributes({attr: val})=text
+
+mixin buttonAttr(param)
+    button(class=`${param.mixin}`)&attributes(param.attr).button=param.text
 

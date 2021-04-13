@@ -1,0 +1,9 @@
+.svg-map {
+    .svg__circle {
+        display: none;
+    }
+
+    .svg__circle.visible {
+        display: block;
+    }
+}

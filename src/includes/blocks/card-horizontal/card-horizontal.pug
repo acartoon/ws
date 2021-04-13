@@ -4,5 +4,8 @@ mixin cardHorizontal(item, modifier)
             img(src=`i/${item.img}`)
         ._body
             p._title.card-horizontal__wrap=item.title
-            p._price.card-horizontal__wrap=item.price
+            p._price.card-horizontal__wrap
+                | #{item.price}
+                if(item.price != 'Бесплатно')
+                    span.ruble &nbsp;₽
             p._tag.card-horizontal__wrap=item.tag

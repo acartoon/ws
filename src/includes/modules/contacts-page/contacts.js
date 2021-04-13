@@ -76,7 +76,9 @@ if ($('#map').length) {
         var contentString = "<div class=\"map-pin\">\n" +
             "                <div class=\"map-pin__in\">\n" +
             "                  <div class=\"map-pin__time\">9:00 — 18:00</div>\n" +
-            "                  <div class=\"map-pin__text\">по рабочим дням</div><a class=\"map-pin__link\" href=\"mailto:info@wssupport.ru\">info@wssupport.ru</a><a class=\"map-pin__link\" href=\"tel:88633226025\">8 (863) 322-60-25</a>\n" +
+            "                  <div class=\"map-pin__text\">по рабочим дням</div>" +
+            "                   <a class=\"map-pin__link\" href=\"tel:88633226025\">8 (863) 322-60-25</a>\n" +
+            "                   <a class=\"map-pin__link\" href=\"mailto:info@wssupport.ru\">info@wssupport.ru</a>" +
             "                </div>\n" +
             "              </div>";
 

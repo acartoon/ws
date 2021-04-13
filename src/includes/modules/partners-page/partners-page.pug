@@ -59,14 +59,16 @@ mixin partnersPage
         .container
             h2.page__title-wrap.section-title Условия партнерства
             +partnersListArrow('conditions', partnersConditions)
+            .partners-page__button
+                +buttonBlueScrollTo(btnText.conditions, 'partners-page-form')
 
     section.partners-page__section
         .container
             h2.page__title-wrap.section-title Почему нас выбирают?
             +partnersList('advantages', partnersAdvantages)
 
-    section.partners-page__section.partners-page__form
+    section.partners-page__section.partners-page__form#partners-page-form
         .container
             h2.page__title-wrap.page-subtitle Станьте нашим партнером
             .page__form
-                +formDefault('partners')
+                +formPartners('partners')

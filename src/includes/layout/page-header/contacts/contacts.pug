@@ -2,9 +2,9 @@ mixin _contactsBlock(mixin)
     - var mixin = mixin ? mixin : '';
     div(class=mixin).contacts
         ._item
-            a(href=contacts.email)._link=contacts.email
+            a(href=`mailto:${contacts.email}`)._link=contacts.email
         ._item
-            a(href=contacts.telLink)._link=contacts.tel
+            a(href=`tel:${contacts.telLink}`)._link=contacts.tel
 
 mixin contactsBlock()
     +_contactsBlock()

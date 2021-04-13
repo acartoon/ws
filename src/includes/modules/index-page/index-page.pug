@@ -13,7 +13,7 @@ mixin indexPage
         .container
             .page__title-wrap
                 .page__section-title.section-title.section-title--index Магазин задач
-                .page-subheading Моментально узнавайте стоимость и сроки выполнения популярных доработок — решения еще никогда не принимались так легко!
+                .page-subheading.container-min Моментально узнавайте стоимость и сроки выполнения популярных доработок — решения еще никогда не принимались так легко!
             .index-page__tasks-list
                 include tasks-list
             .index-page__button
@@ -34,17 +34,17 @@ mixin indexPage
         .container
             .page__section-title.section-title Работаем со всей Россией
             .page__narrow-wrap.page-subheading.text-left Поддерживаем сайты для бизнеса со всех уголков страны — от Калининграда до Владивостока.
-            p.index-page__map
-                img(src="i/index/map.png" alt="Карта России")
+            .index-page__map
+                +map
     .page__section
         .container.container-small
-            .page__title-wrap.section-title.section-title--index Наши партнеры
+            .page__title-wrap.section-title.section-title--index.small Наши партнеры
             +partners
     .page__section.index-page__section.page__bg-gray
         .container
             .page__title-wrap.section-title.section-title--index Что входит в поддержку?
             include included-support.pug
-    .page__section.index-page__section.page__bg-gray
+    .page__section.index-page__in.page__bg-gray
         .container
             +ticket
 

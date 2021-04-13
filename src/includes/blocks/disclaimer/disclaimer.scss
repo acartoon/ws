@@ -8,10 +8,17 @@
     line-height: 30px;
     text-align: center;
     color: color(disclaimer);
+    font-weight: 300;
 
     a {
         font-family: $fontOpenSans;
         color: color(blue);
+        transition: opacity 300ms ease-in;
+
+        &:hover {
+            opacity: 0.8;
+            transition: opacity 300ms ease-in;
+        }
     }
 }
 

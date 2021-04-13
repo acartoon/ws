@@ -1,4 +1,4 @@
-include layout/head
+include layout/head/head
 include blocks/buttons/buttons
 include blocks/icons/login
 include blocks/modal/modal
@@ -18,9 +18,10 @@ include blocks/double-stage-block-num/double-stage-block-num
 include blocks/apps/apps
 include blocks/partners/partners
 include blocks/ticket/ticket
+include blocks/map/map
 
 
-include blocks/case-block/case-block
+//include blocks/case-card/case-block
 include blocks/cases-list/cases-list
 
 
@@ -42,17 +43,34 @@ include blocks/card/card
 include blocks/card-group/card-group
 include blocks/card-horizontal/card-horizontal
 
+include blocks/select/select
+include blocks/sticky-wa/sticky-wa
+include blocks/up-btn/up-btn
+include blocks/optimization-scheme/optimization-scheme
+
 //
+include modules/blog-detail-footer/blog-detail-footer
+include modules/case-more/case-more
+include modules/article-number-group/article-number-group
+
 include modules/forms/form-default
-include modules/forms/form-questions
-include modules/forms/form-contacts
-include modules/forms/form-authorization
-include modules/forms/form-callback
+include modules/forms/faq/form-questions
+include modules/forms/contacts/form-contacts
+include modules/forms/aut/form-authorization
+include modules/forms/cb/form-callback
+include modules/forms/partners/form-partners
+include modules/forms/sale/form-sale
+include modules/forms/new-case/new-case
 
 include modules/modals/modal-success-form
 include modules/modals/modal-error-form
 include modules/modals/modal-authorization
 include modules/modals/modal-callback
+include modules/modals/modal-sale
+include modules/modals/modal-add-case
+include modules/modals/modal-select-project
+include modules/modals/modal-success-selected-case
+include modules/modals/modal-cb-case
 
 //страницы
 include modules/questions-page/questions-page
@@ -66,6 +84,9 @@ include modules/forms-states/forms-states
 include modules/store-detail-page/store-detail-page
 include modules/google-page/google-page
 include modules/index-page/index-page
+include modules/update-bitrix/update-bitrix
+include modules/task-evaluation/task-evaluation
+include modules/ym-page/ym-page
 
 // лайолит
 include layout/page-header/page-header
@@ -77,10 +98,11 @@ include layout/page-header/partner/partner
 include layout/page-header/min-price/min-price
 include layout/page-header/site-nav/site-nav
 include layout/page-header/main-nav/main-nav
-include layout/page-header/styles
+include layout/head/styles
+include layout/head/fonts
+include layout/scripts
 
 include layout/page-footer/page-footer
-include layout/page-footer/scripts
 include layout/page-footer/footer-links/footer-links
 include layout/page-footer/footer-contacts/footer-contacts
 include layout/page-footer/footer-menu/footer-menu

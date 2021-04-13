@@ -43,10 +43,15 @@
         font-size: 30px;
         line-height: 41px;
         letter-spacing: 0.5px;
+
+        @include desktopStyle {
+            font-size: 42px;
+            line-height: 57px;
+        }
     }
 
     &__content {
-        padding: 40px 20px 30px;
+        padding: 40px 20px;
 
 
         @media (min-width: 480px) {
@@ -84,11 +89,12 @@
         padding: 0;
         line-height: 0;
         border-radius: 4px;
-        box-shadow: (8px 12px 25px rgba(11, 24, 36, 0.1));
+        box-shadow: 8px 12px 25px rgba(11, 24, 36, 0.1);
 
         @media (min-width: 480px) {
             margin-right: 48px;
             margin-left: 48px;
+            box-shadow: 20px 30px 60px rgba(11, 24, 36, 0.1);
         }
 
         @include desktopStyle {
@@ -99,6 +105,10 @@
 
             #{$_this}__item:nth-child(odd) & {
                 order: -1;
+            }
+
+            #{$_this}__item:nth-child(even) & {
+                box-shadow: -20px 30px 60px rgba(11, 24, 36, 0.1);
             }
         }
 

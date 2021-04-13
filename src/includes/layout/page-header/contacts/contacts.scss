@@ -17,7 +17,7 @@
 
         &:hover,
         &:focus {
-            color: color(black);
+            text-decoration: underline;
         }
 
         @media (min-width: $mobMenu) {

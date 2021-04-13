@@ -2,10 +2,11 @@ extends ../includes/layout/layout.pug
 
 block var
     include ../includes/_var
-    - var headerImage = paramsPage.GOOGLE_PAGE.image;
-    - var pageTitle = paramsPage.GOOGLE_PAGE.pageMainTitle;
-    - var contentClassModifier = paramsPage.GOOGLE_PAGE.class
+    - var headerImage = paramsPage.BLOG_DETAIL.image;
+    - var pageTitle = paramsPage.GOOGLE_PAGE.header;
+    - var contentClassModifier = paramsPage.BLOG_DETAIL.class
     - var isContainer = false;
+    - var isShowBtnUp = paramsPage.GOOGLE_PAGE.btnUp
 
 
 block header

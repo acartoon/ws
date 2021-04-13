@@ -1,13 +1,13 @@
 -
     var arr = [
-        {name: "инстаграмм", img: "social_insta.svg"},
-        {name: "вконтакте", img: "social_vk.svg"},
-        {name: "фейсбук", img: "social_face.svg"}
+        {name: "Instagram", img: "social_insta.svg", _link: "https://www.instagram.com/ws_support/"},
+        {name: "Vkontakte", img: "social_vk.svg", _link: "https://vk.com/wsrostov"},
+        {name: "Facebook", img: "social_face.svg", _link: "https://www.facebook.com/wssupport/"}
     ]
 
 mixin socialLinks
     ul.social-links
         each val in arr
             li._item
-                a(href="#")._link=val.name
+                a(href=val._link target="_blank")._link=val.name
                     img(src=`i/footer/${val.img}` alt=val.name)

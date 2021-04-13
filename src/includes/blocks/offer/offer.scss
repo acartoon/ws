@@ -2,12 +2,24 @@
 
 @import "src/style/_";
 
+$mt: 30px;
+
 .offer {
 
     @media (min-width: 480px) {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
     }
+
+    @include desktopStyle {
+        margin-top: -$mt;
+    }
+
+    .ruble {
+        font-weight: 500;
+    }
+
 
     &__img {
         display: flex;
@@ -22,27 +34,65 @@
 
         @media (min-width: 576px) {
             margin-right: 40px;
+
         }
 
         @media (min-width: 861px) {
             margin-bottom: 0;
         }
 
+        @include desktopStyle {
+            margin-top: $mt;
+        }
+
+
         img {
             height: 24px;
         }
+
+
     }
 
     &__props {
-        margin: 0 0 -40px;
+        margin: 0;
 
         @media (min-width: 480px) {
             display: flex;
-            flex: 1 0 auto;
+            //flex: 1 0 auto;
             flex-wrap: wrap;
             justify-content: space-between;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        @include desktopStyle {
+            margin-top: $mt;
         }
     }
+
+    &__dl {
+        margin: 0 0 40px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+        color: color(black);
+
+        @media (min-width: 480px) {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        @media (min-width: 576px) {
+            margin-right: 56px;
+            margin-bottom: 0;
+            margin-left: 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
 
     &__dd {
         margin: 0 0 16px;
@@ -61,19 +111,4 @@
         color: color(black);
     }
 
-    &__dl {
-        margin: 0 0 40px;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 130%;
-        color: color(black);
-
-        @media (min-width: 576px) {
-            margin-right: 56px;
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
 }
